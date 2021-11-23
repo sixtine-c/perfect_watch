@@ -1,1 +1,32 @@
 // Specific CSS for your home-page
+
+.main-container {
+  height: 100vh;
+  max-height: 100vh;
+  position: fixed;
+  top: 0;
+  font-family: 'Hind', sans-serif;
+}
+
+.custom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  margin: 0;
+  width: 100vw;
+  background-color: blueviolet;
+  font-family: 'Hind', sans-serif;
+  &.blue {
+    background-color: cornflowerblue;
+  }
+}
+
+.next-question {
+  top: 100vh;
+}
+
+.visible-question {
+  top: 0;
+}
