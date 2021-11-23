@@ -10,7 +10,7 @@ def scrapping_method(page_number)
 
   request = Net::HTTP::Get.new(url)
   request["x-rapidapi-host"] = 'streaming-availability.p.rapidapi.com'
-  request["x-rapidapi-key"] = 'ff8764a8abmsh44ba9d0a973d4e8p166054jsn4cfba7d3235d'
+  request["x-rapidapi-key"] = ENV['RAPID_API']
   http.request(request)
 end
 
