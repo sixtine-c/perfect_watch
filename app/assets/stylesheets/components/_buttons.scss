@@ -1,12 +1,19 @@
+// Variable de couleur
+$buttons: #56AB91;
+
+
+// Tous les boutons de la page
 .btn-platforms {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 8px 25px;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   border-radius: 10px;
   text-decoration: none;
   color: white;
-  background-color: crimson;
+  background-color: $buttons;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: 20px;
   margin: 15px;
   &:hover {
@@ -14,6 +21,7 @@
   }
 }
 
+// Uniquement les boutons questions suivantes et retour
 .btn-next-question {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -22,7 +30,7 @@
   border-radius: 10px;
   text-decoration: none;
   color: white;
-  background-color: crimson;
+  background-color: $buttons;
   margin: 20px, 0;
   &:hover {
     color: yellow;
