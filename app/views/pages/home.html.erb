@@ -22,12 +22,12 @@
           </div>
         </div>
         <div class="btn-suivant text-end">
-          <%= link_to 'Question suivante', '#', class: 'btn-next-question effect effect-5' %>
+          <%= link_to 'Question suivante', '#', class: 'btn-question effect-next' %>
         </div>
     </div>
   </div>
 
-  <div class="custom-container next-question">
+  <div class="custom-container visible-question">
     <div class="">
       <div class="main-card">
         <h2 class='mb-4'>Quelle sera l'ambiance de ta soirée?</h2>
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="btn-suivant text-start">
-        <%= link_to 'Retour', '#', class: 'btn-next-question' %>
+        <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous' %>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="btn-suivant text-start">
-        <%= link_to 'Retour', '#', class: 'btn-next-question' %>
+        <%= link_to 'Question précedente', '#', class: 'btn-next-question' %>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="btn-suivant text-start">
-        <%= link_to 'Retour', '#', class: 'btn-next-question' %>
+        <%= link_to 'Question précedente', '#', class: 'btn-next-question' %>
       </div>
     </div>
   </div>
