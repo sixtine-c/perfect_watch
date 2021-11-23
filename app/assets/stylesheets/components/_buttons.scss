@@ -33,8 +33,7 @@ $overlay-color: #fff;
   background-color: $buttons;
   padding: 10px 0;
   border-radius: 10px;
-  margin: 20px, 0;
-  width: 190px;
+  width: 195px;
 }
 
 // Uniquement question suivante
@@ -75,7 +74,7 @@ $overlay-color: #fff;
   transition: all 0.2s linear 0s;
 
   &:before {
-    content: "\f054";
+    content: "\f053";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     display: flex;
@@ -85,20 +84,21 @@ $overlay-color: #fff;
     top: 0;
     right: 0px;
     height: 100%;
-    width: 30px;
+    width: 28px;
     background-color: rgba($overlay-color,0.3);
     border-radius: 50% 0 0 50%;
     transform: scale(0,1);
     transform-origin: right center;
     transition: all 0.2s linear 0s;
   }
-   &:hover {
+  &:hover {
     direction: rtl;
     text-indent: 15px;
     color: white;
 
     &:before {
       transform: scale(1,1);
+      text-indent: 0;
     }
   }
 }
