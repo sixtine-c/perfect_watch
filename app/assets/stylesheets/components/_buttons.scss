@@ -1,30 +1,104 @@
+// Variable de couleur
+$buttons: #56AB91;
+$button-hover: linear-gradient(to bottom right,rgba(86, 171, 145, 0), rgba(103, 185, 154, 1));
+$link-text-color: #fff;
+$overlay-color: #fff;
+
+
+// Tous les boutons de la page
 .btn-platforms {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 8px 25px;
   border-radius: 10px;
   text-decoration: none;
   color: white;
-  background-color: crimson;
+  background-color: $buttons;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: 20px;
   margin: 15px;
   &:hover {
-    color: yellow;
+    background: $button-hover;
+    color: white;
+    transition-duration: 1000ms;
   }
 }
 
-.btn-next-question {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 10px;
+// Uniquement les boutons questions suivantes et precedentes
+.btn-question {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
   text-decoration: none;
   color: white;
-  background-color: crimson;
+  background-color: $buttons;
+  padding: 10px 0;
+  border-radius: 10px;
   margin: 20px, 0;
-  &:hover {
-    color: yellow;
+  width: 190px;
+}
+
+// Uniquement question suivante
+.effect-next {
+  transition: all 0.2s linear 0s;
+
+  &:before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 30px;
+    background-color: rgba($overlay-color,0.3);
+    border-radius: 0 50% 50% 0;
+    transform: scale(0,1);
+    transform-origin: left center;
+    transition: all 0.2s linear 0s;
+  }
+   &:hover {
+    text-indent: 15px;
+    color: white;
+
+    &:before {
+      transform: scale(1,1);
+      text-indent: 0;
+    }
+  }
+}
+
+// Uniquement question précedente
+.effect-previous {
+  transition: all 0.2s linear 0s;
+
+  &:before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 100%;
+    width: 30px;
+    background-color: rgba($overlay-color,0.3);
+    border-radius: 50% 0 0 50%;
+    transform: scale(0,1);
+    transform-origin: right center;
+    transition: all 0.2s linear 0s;
+  }
+   &:hover {
+    direction: rtl;
+    text-indent: 15px;
+    color: white;
+
+    &:before {
+      transform: scale(1,1);
+    }
   }
 }
