@@ -4,7 +4,7 @@ $card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(
 .main-card {
   background-image: $card-home-color;
   margin-bottom: 50px;
-  padding: 100px;
+  padding: 75px;
   width: 800px;
   text-align: center;
   border-radius: 10px;
@@ -14,3 +14,10 @@ $card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(
   flex-direction: column;
   box-shadow: 0 4px 44px 2px rgba(37, 62, 54, 1);
 }
+
+// @media {
+//   .main-card {
+//     padding: 110px;
+//     width: 900px;
+//   }
+// }

@@ -5,7 +5,7 @@
       <div class="main-card">
         <h1>Perfect Watch</h1>
         <p>Tu ne sais pas quoi regarder?</p>
-        <%= link_to 'Parfait', '#', class: 'btn-platforms' %>
+        <%= link_to 'Parfait', '#', class: 'btn-general' %>
       </div>
     </div>
   </div>
@@ -13,12 +13,12 @@
   <div class="custom-container visible-question">
       <div class="">
         <div class="main-card">
-          <h2 class='mb-4'>Quels sont les services auxquels tu es abonné(e)?</h2>
-          <div class="platforms d-flex justify-content-between">
-            <%= link_to 'Netflix', '#', class: 'btn-platforms' %>
-            <%= link_to 'Prime Video', '#', class: 'btn-platforms' %>
-            <%= link_to 'Disney +', '#', class: 'btn-platforms' %>
-            <%= link_to 'Apple TV', '#', class: 'btn-platforms' %>
+          <h2 class='mb-5'>Quels sont les services auxquels tu es abonné(e)?</h2>
+          <div class="platforms d-flex flex-wrap justify-content-around">
+            <%= link_to 'Netflix', '#', class: 'btn-general' %>
+            <%= link_to 'Prime Video', '#', class: 'btn-general' %>
+            <%= link_to 'Disney +', '#', class: 'btn-general' %>
+            <%= link_to 'Apple TV', '#', class: 'btn-general' %>
           </div>
         </div>
         <div class="btn-suivant text-end">
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <div class="custom-container visible-question">
+  <div class="custom-container next-question">
     <div class="">
       <div class="main-card">
         <h2 class='mb-4'>Quelle sera l'ambiance de ta soirée?</h2>
@@ -51,8 +51,8 @@
       <div class="main-card">
         <h2 class='mb-4'>Combien de temps as-tu devant toi?</h2>
         <div class="platforms d-flex justify-content-between">
-          <%= link_to 'Moins de 2h', '#', class: 'btn-platforms' %>
-          <%= link_to 'Plus de 2h', '#', class: 'btn-platforms' %>
+          <%= link_to 'Moins de 2h', '#', class: 'btn-general' %>
+          <%= link_to 'Plus de 2h', '#', class: 'btn-general' %>
         </div>
       </div>
       <div class="btn-suivant text-start">
@@ -61,20 +61,22 @@
     </div>
   </div>
 
-  <div class="custom-container visible-question">
+  <div class="custom-container next-question">
     <div class="">
       <div class="main-card">
         <h2 class='mb-4'>Plutôt un incontournable ou une pépite?</h2>
         <div class="platforms d-flex justify-content-between">
-          <%= link_to 'Un incontournable!', '#', class: 'btn-platforms' %>
-          <%= link_to 'Une pépite!', '#', class: 'btn-platforms' %>
+          <%= link_to 'Un incontournable!', '#', class: 'btn-general' %>
+          <%= link_to 'Une pépite!', '#', class: 'btn-general' %>
         </div>
       </div>
+      <div class="d-flex justify-content-between">
       <div class="btn-suivant text-start">
         <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous' %>
       </div>
       <div class="text-end">
         <%= link_to 'Résultats', '#', class: 'btn-question effect-next' %>
+      </div>
       </div>
     </div>
   </div>
