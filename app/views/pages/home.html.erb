@@ -10,24 +10,27 @@
     </div>
   </div>
 
-  <div class="custom-container blue">
-    <div class="row">
-      <div class="col main-card">
-        <h2 class='mb-5'>Quels sont les services auxquels tu es abonné(e)?</h2>
-        <div class="platforms d-flex justify-content-between">
-          <%= link_to 'Netflix', '#', class: 'btn-platforms' %>
-          <%= link_to 'Prime Video', '#', class: 'btn-platforms' %>
-          <%= link_to 'Disney +', '#', class: 'btn-platforms' %>
-          <%= link_to 'Apple TV', '#', class: 'btn-platforms' %>
+  <div class="custom-container">
+      <div class="visible-question">
+        <div class="main-card">
+          <h2 class='mb-4'>Quels sont les services auxquels tu es abonné(e)?</h2>
+          <div class="platforms d-flex justify-content-between">
+            <%= link_to 'Netflix', '#', class: 'btn-platforms' %>
+            <%= link_to 'Prime Video', '#', class: 'btn-platforms' %>
+            <%= link_to 'Disney +', '#', class: 'btn-platforms' %>
+            <%= link_to 'Apple TV', '#', class: 'btn-platforms' %>
+          </div>
         </div>
-      </div>
+        <div class="btn-suivant text-end">
+          <%= link_to 'Question suivante', '#', class: 'btn-next-question' %>
+        </div>
     </div>
   </div>
 
-  <div class="custom-container blue visible-question">
-    <div class="row">
-      <div class="col main-card">
-        <h2 class='mb-5'>Quelle sera l'ambiance de ta soirée?</h2>
+  <div class="custom-container">
+    <div class="visible-question">
+      <div class="main-card">
+        <h2 class='mb-4'>Quelle sera l'ambiance de ta soirée?</h2>
         <div class="platforms d-flex justify-content-between">
             <%#= image_tag '#' %>
           <% @moods.each do |mood| %>
@@ -36,6 +39,39 @@
             </div>
           <% end %>
         </div>
+      </div>
+      <div class="btn-suivant text-start">
+        <%= link_to 'Retour', '#', class: 'btn-next-question' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-container next-question">
+    <div class="row">
+      <div class="col main-card">
+        <h2 class='mb-4'>Combien de temps as-tu devant toi?</h2>
+        <div class="platforms d-flex justify-content-between">
+          <%= link_to 'Moins de 2h', '#', class: 'btn-platforms' %>
+          <%= link_to 'Plus de 2h', '#', class: 'btn-platforms' %>
+        </div>
+      </div>
+      <div class="btn-suivant text-start">
+        <%= link_to 'Retour', '#', class: 'btn-next-question' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-container next-question">
+    <div class="row">
+      <div class="col main-card">
+        <h2 class='mb-4'>Plutôt un incontournable ou une pépite?</h2>
+        <div class="platforms d-flex justify-content-between">
+          <%= link_to 'Un incontournable!', '#', class: 'btn-platforms' %>
+          <%= link_to 'Une pépite!', '#', class: 'btn-platforms' %>
+        </div>
+      </div>
+      <div class="btn-suivant text-start">
+        <%= link_to 'Retour', '#', class: 'btn-next-question' %>
       </div>
     </div>
   </div>

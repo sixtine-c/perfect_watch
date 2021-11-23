@@ -9,4 +9,22 @@
   background-color: crimson;
   margin-top: 20px;
   margin: 15px;
+  &:hover {
+    color: yellow;
+  }
+}
+
+.btn-next-question {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: crimson;
+  margin: 20px, 0;
+  &:hover {
+    color: yellow;
+  }
 }

@@ -5,6 +5,7 @@
   max-height: 100vh;
   position: fixed;
   top: 0;
+  font-family: 'Hind', sans-serif;
 }
 
 .custom-container {
@@ -16,6 +17,7 @@
   margin: 0;
   width: 100vw;
   background-color: blueviolet;
+  font-family: 'Hind', sans-serif;
   &.blue {
     background-color: cornflowerblue;
   }
