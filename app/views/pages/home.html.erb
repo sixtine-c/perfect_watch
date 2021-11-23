@@ -56,12 +56,12 @@
         </div>
       </div>
       <div class="btn-suivant text-start">
-        <%= link_to 'Question précedente', '#', class: 'btn-next-question' %>
+        <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous' %>
       </div>
     </div>
   </div>
 
-  <div class="custom-container next-question">
+  <div class="custom-container visible-question">
     <div class="">
       <div class="main-card">
         <h2 class='mb-4'>Plutôt un incontournable ou une pépite?</h2>
@@ -71,7 +71,10 @@
         </div>
       </div>
       <div class="btn-suivant text-start">
-        <%= link_to 'Question précedente', '#', class: 'btn-next-question' %>
+        <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous' %>
+      </div>
+      <div class="text-end">
+        <%= link_to 'Résultats', '#', class: 'btn-question effect-next' %>
       </div>
     </div>
   </div>
