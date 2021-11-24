@@ -2,6 +2,7 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 
+
 Mood.create(name: "Bière & Pizza")
 Mood.create(name: "What's in the box ?")
 Mood.create(name: "Retour vers le passé")
@@ -23,7 +24,7 @@ genre_associated_what_inthebox.each do |genre|
    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 2)
 end
 
-genre_associated_retour_passe = [37,	99,	10752,	19763,	10764,	1,	36]
+genre_associated_retour_passe = [37,	99,	10752,	10763,	10764,	1,	36]
 
 genre_associated_retour_passe.each do |genre|
    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 3)
