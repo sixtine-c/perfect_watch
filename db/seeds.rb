@@ -11,47 +11,53 @@ Mood.create(name: "Ben & Jerry's (& Cry)")
 Mood.create(name: "I'm Going on an Adventure !")
 Mood.create(name: "Cocooning")
 
+count = Mood.first.id
 genre_associated_biere_pizza = [28,	35,	12,	14,	878, 16,	27]
 
 genre_associated_biere_pizza.each do |genre|
-   MoodGenre.create!(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 1)
+   MoodGenre.create!(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
-
+count +=1
 genre_associated_what_inthebox = [53,	80,	27,	2,	9648,	7]
 
 genre_associated_what_inthebox.each do |genre|
-   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 2)
+   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
+count +=1
 genre_associated_retour_passe = [37,	99,	10752,	10763,	10764,	1,	36]
 
 genre_associated_retour_passe.each do |genre|
-   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 3)
+   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
+count +=1
 genre_associated_kids = [10751,	14,	10749,	4,	16,	35,	3]
 
 genre_associated_kids.each do |genre|
-   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 4)
+   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
+count +=1
 genre_associated_ben_jerry = [10749,	18]
 
 genre_associated_ben_jerry.each do |genre|
-   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 5)
+   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
+count +=1
 genre_associated_adventure = [12,	14,	878,	9648]
 
 genre_associated_adventure.each do |genre|
-   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 6)
+   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
+count +=1
 genre_associated_cocooning = [35, 10749, 14]
 
 genre_associated_cocooning.each do |genre|
-   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 7)
+   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
 
