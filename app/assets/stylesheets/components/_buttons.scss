@@ -2,7 +2,23 @@
 $buttons: #56AB91;
 $link-text-color: #fff;
 $overlay-color: #fff;
+$buttons-beer-party: rgb(207, 138, 33);
+$buttons-history: rgb(128, 82, 45);
+$buttons-thriller: rgb(53, 53, 53);
+$buttons-kids: rgb(112, 149, 189);
+$buttons-adventure: rgb(98, 200, 95);
+$buttons-cocooning: rgba(182, 50, 9, 1);
+$buttons-icecream: rgb(108, 158, 147);
+$buttons-horror: rgb(53, 19, 9);
 
+$hover-beer-party: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, ($buttons-beer-party) 50%);
+$hover-history: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-history 50%);
+$hover-thriller: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-thriller 50%);
+$hover-kids: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-kids 50%);
+$hover-adventure: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-adventure 50%);
+$hover-cocooning: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-cocooning 50%);
+$hover-icecream: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-icecream 50%);
+$hover-horror: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-horror 50%);
 
 // Tous les boutons de la page
 .btn-general {
@@ -11,15 +27,52 @@ $overlay-color: #fff;
   border-radius: 10px;
   text-decoration: none;
   color: white;
-  background-color: $buttons;
-  // box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin-top: 20px;
   margin: 15px;
   display: block;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, #56AB91 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all .5s ease-out;
+  &.beer-party{
+    background: $hover-beer-party;
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  &.history {
+    background: $hover-history;
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  &.thriller {
+    background: $hover-thriller;
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  &.kids {
+    background: $hover-kids;
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  &.adventure {
+    background: $hover-adventure;
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  &.cocooning {
+    background: $hover-cocooning;
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  &.icecream {
+    background: $hover-icecream;
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  &.horror {
+    background: $hover-horror;
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
   &:hover {
     color: white;
     transition-duration: 500ms;

@@ -1,6 +1,6 @@
 <div class="main-container">
 
-  <div class="custom-container home-screen">
+  <div class="custom-container home-screen next-question">
     <div class="visible-question">
       <div class="main-card">
         <h1>Perfect Watch</h1>
@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <div class="custom-container visible-question">
+  <div class="custom-container next-question">
       <div class="">
         <div class="main-card">
           <h2 class='mb-5'>Quels sont les services auxquels tu es abonné(e)?</h2>
@@ -46,17 +46,17 @@
     </div>
   </div>
 
-  <div class="custom-container next-question">
+  <div class="custom-container visible-question horror">
     <div class="">
-      <div class="main-card">
+      <div class="main-card horror">
         <h2 class='mb-4'>Combien de temps as-tu devant toi?</h2>
         <div class="platforms d-flex justify-content-between">
-          <%= link_to 'Moins de 2h', '#', class: 'btn-general' %>
-          <%= link_to 'Plus de 2h', '#', class: 'btn-general' %>
+          <%= link_to 'Moins de 2h', '#', class: 'btn-general horror' %>
+          <%= link_to 'Plus de 2h', '#', class: 'btn-general horror' %>
         </div>
       </div>
       <div class="btn-suivant text-start">
-        <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous' %>
+        <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous horror' %>
       </div>
     </div>
   </div>

@@ -1,22 +1,24 @@
 // Variable couleur
-$card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(86, 171, 145, 0));
-$beer-party: linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 167, 33, 0));
-$history: linear-gradient(to bottom right, rgba(249, 207, 161, 1), rgba(166, 114, 71, 0));
-$thriller: linear-gradient(to bottom right, rgba(169, 170, 169, 1), rgba(26, 27, 26, 0));
-$kids: linear-gradient(to bottom right, rgba(216, 193, 191, 1), rgba(142, 149, 156, 0));
-$adventure: linear-gradient(to bottom right, rgba(188, 205, 95, 1), rgba(200, 178, 95, 0));
-$cocooning: linear-gradient(to bottom right, rgba(254, 162, 1, 1), rgba(182, 50, 9, 0));
-$icecream: linear-gradient(to bottom right, rgba(229, 236, 222, 1), rgba(162, 189, 140, 0));
-$horror: linear-gradient(to bottom right, rgba(153, 96, 51, 1), rgba(39, 14, 7, 0));
+@import 'pages/home';
 
-$shadow-beer-party: 0 4px 44px 2px rgba(117, 80, 23, 0);
-$shadow-history: 0 4px 44px 2px rgba(128, 88, 56, 0);
-$shadow-thriller: 0 4px 44px 2px rgba(51, 53, 51, 0);
-$shadow-kids: 0 4px 44px 2px rgba(119, 124, 129, 0);
-$shadow-adventure: 0 4px 44px 2px rgba(148, 131, 69, 0);
-$shadow-cocooning: 0 4px 44px 2px rgba(143, 40, 8, 0);
-$shadow-icecream: 0 4px 44px 2px rgba(128, 150, 110, 0);
-$shadow-horror: 0 4px 44px 2px rgba(19, 7, 4, 0);
+$card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(86, 171, 145, 0));
+$beer-party: linear-gradient(to bottom right, rgb(248, 219, 157), $background-beer-party);
+$history: linear-gradient(to bottom right, rgba(249, 207, 161, 1), $background-history);
+$thriller: linear-gradient(to bottom right, rgba(169, 170, 169, 1), $background-thriller);
+$kids: linear-gradient(to bottom right, rgb(233, 184, 179), $background-kids);
+$adventure: linear-gradient(to bottom right, rgb(201, 255, 139), $background-adventure);
+$cocooning: linear-gradient(to bottom right, rgba(254, 162, 1, 1), $background-cocooning);
+$icecream: linear-gradient(to bottom right, rgb(196, 212, 181), $background-icecream);
+$horror: linear-gradient(to bottom right, rgb(150, 42, 27), $background-horror);
+
+$shadow-beer-party: 0 4px 44px 2px rgba(150, 102, 30, 0.753);
+$shadow-history: 0 4px 44px 2px rgba(128, 88, 56, 0.753);
+$shadow-thriller: 0 4px 44px 2px rgba(51, 53, 51, 0.753);
+$shadow-kids: 0 4px 44px 2px rgba(119, 124, 129, 0.753);
+$shadow-adventure: 0 4px 44px 2px rgba(148, 131, 69, 0.753);
+$shadow-cocooning: 0 4px 44px 2px rgba(143, 40, 8, 0.753);
+$shadow-icecream: 0 4px 44px 2px rgba(110, 150, 140, 0.753);
+$shadow-horror: 0 4px 44px 2px rgba(19, 7, 4, 0.753);
 
 .main-card {
   background-image: $card-home-color;
