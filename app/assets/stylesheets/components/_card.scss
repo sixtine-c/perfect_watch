@@ -1,5 +1,22 @@
 // Variable couleur
 $card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(86, 171, 145, 0));
+$beer-party: linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 167, 33, 0));
+$history: linear-gradient(to bottom right, rgba(249, 207, 161, 1), rgba(166, 114, 71, 0));
+$thriller: linear-gradient(to bottom right, rgba(169, 170, 169, 1), rgba(26, 27, 26, 0));
+$kids: linear-gradient(to bottom right, rgba(216, 193, 191, 1), rgba(142, 149, 156, 0));
+$adventure: linear-gradient(to bottom right, rgba(188, 205, 95, 1), rgba(200, 178, 95, 0));
+$cocooning: linear-gradient(to bottom right, rgba(254, 162, 1, 1), rgba(182, 50, 9, 0));
+$icecream: linear-gradient(to bottom right, rgba(229, 236, 222, 1), rgba(162, 189, 140, 0));
+$horror: linear-gradient(to bottom right, rgba(153, 96, 51, 1), rgba(39, 14, 7, 0));
+
+$shadow-beer-party: 0 4px 44px 2px rgba(117, 80, 23, 0);
+$shadow-history: 0 4px 44px 2px rgba(128, 88, 56, 0);
+$shadow-thriller: 0 4px 44px 2px rgba(51, 53, 51, 0);
+$shadow-kids: 0 4px 44px 2px rgba(119, 124, 129, 0);
+$shadow-adventure: 0 4px 44px 2px rgba(148, 131, 69, 0);
+$shadow-cocooning: 0 4px 44px 2px rgba(143, 40, 8, 0);
+$shadow-icecream: 0 4px 44px 2px rgba(128, 150, 110, 0);
+$shadow-horror: 0 4px 44px 2px rgba(19, 7, 4, 0);
 
 .main-card {
   background-image: $card-home-color;
@@ -13,11 +30,37 @@ $card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(
   align-items: center;
   flex-direction: column;
   box-shadow: 0 4px 44px 2px rgba(37, 62, 54, 1);
+  // Changement de couleur de card en fonction du mood
+  &.beer-party{
+    background-image: $beer-party;
+    box-shadow: $shadow-beer-party;
+  }
+  &.history {
+    background-image: $history;
+    box-shadow: $shadow-history;
+  }
+  &.thriller {
+    background-image: $thriller;
+    box-shadow: $shadow-thriller;
+  }
+  &.kids {
+    background-image: $kids;
+    box-shadow: $shadow-kids;
+  }
+  &.adventure {
+    background-image: $adventure;
+    box-shadow: $shadow-adventure;
+  }
+  &.cocooning {
+    background-image: $cocooning;
+    box-shadow: $shadow-cocooning;
+  }
+  &.icecream {
+    background-image: $icecream;
+    box-shadow: $shadow-icecream;
+  }
+  &.horror {
+    background-image: $horror;
+    box-shadow: $shadow-horror;
+  }
 }
-
-// @media {
-//   .main-card {
-//     padding: 110px;
-//     width: 900px;
-//   }
-// }
