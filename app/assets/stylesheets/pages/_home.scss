@@ -57,6 +57,7 @@ $background-horror: rgb(32, 25, 21);
     @media (max-width: 1250px) {
     padding: 1rem 0;
   }
+
 }
 
 // Set le top de la question d'après à 100vh pour qu'il ne soit pas visible
@@ -104,10 +105,6 @@ $background-horror: rgb(32, 25, 21);
 
   @media (min-width: 1150px) {
     height: 100vh;
-  }
-
-  @media (max-width: 1250px) {
-    padding: 1rem;
   }
 
 }

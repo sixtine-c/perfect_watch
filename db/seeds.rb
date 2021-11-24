@@ -3,35 +3,8 @@ require 'net/http'
 require 'openssl'
 
 
-Genre.create(name: "Biography", api_genre_id: 1)
-Genre.create(name: "Film Noir", api_genre_id: 2)
-Genre.create(name: "Game Show", api_genre_id: 3)
-Genre.create(name: "Musical", api_genre_id: 4)
-Genre.create(name: "Sport", api_genre_id: 5)
-Genre.create(name: "Short", api_genre_id: 6)
-Genre.create(name: "Adult", api_genre_id: 7)
-Genre.create(name: "Adventure", api_genre_id: 12)
-Genre.create(name: "Fantasy", api_genre_id: 14)
-Genre.create(name: "Animation", api_genre_id: 16)
-Genre.create(name: "Drama", api_genre_id: 18)
-Genre.create(name: "Horror", api_genre_id: 27)
-Genre.create(name: "Action", api_genre_id: 28)
-Genre.create(name: "Comedy", api_genre_id: 35)
-Genre.create(name: "History", api_genre_id: 36)
-Genre.create(name: "Western", api_genre_id: 37)
-Genre.create(name: "Thriller", api_genre_id: 53)
-Genre.create(name: "Crime", api_genre_id: 80)
-Genre.create(name: "Documentary", api_genre_id: 99)
-Genre.create(name: "Science Fiction", api_genre_id: 878)
-Genre.create(name: "Mystery", api_genre_id: 9648)
-Genre.create(name: "Music", api_genre_id: 10402)
-Genre.create(name: "Romance", api_genre_id: 10749)
-Genre.create(name: "Family", api_genre_id: 10751)
-Genre.create(name: "War", api_genre_id: 10752)
-Genre.create(name: "News", api_genre_id: 10763)
-Genre.create(name: "Reality", api_genre_id: 10764)
-Genre.create(name: "Talk Show", api_genre_id: 10767)
 
+Movies Netflix
 
 def scrapping_method(page_number)
   url = URI("https://streaming-availability.p.rapidapi.com/search/basic?country=fr&service=netflix&type=movie&page=#{page_number}")
@@ -45,7 +18,7 @@ def scrapping_method(page_number)
   http.request(request)
 end
 
-page_number = 1
+page_number = 99
 #page_number = 82
 response = scrapping_method(page_number)
 while JSON.parse(response.read_body)["total_pages"] > page_number
@@ -65,3 +38,100 @@ while JSON.parse(response.read_body)["total_pages"] > page_number
   response = scrapping_method(page_number)
   puts page_number
 end
+
+
+
+
+#Genre
+#seed already done
+
+# Genre.create(name: "Biography", api_genre_id: 1)
+# Genre.create(name: "Film Noir", api_genre_id: 2)
+# Genre.create(name: "Game Show", api_genre_id: 3)
+# Genre.create(name: "Musical", api_genre_id: 4)
+# Genre.create(name: "Sport", api_genre_id: 5)
+# Genre.create(name: "Short", api_genre_id: 6)
+# Genre.create(name: "Adult", api_genre_id: 7)
+# Genre.create(name: "Adventure", api_genre_id: 12)
+# Genre.create(name: "Fantasy", api_genre_id: 14)
+# Genre.create(name: "Animation", api_genre_id: 16)
+# Genre.create(name: "Drama", api_genre_id: 18)
+# Genre.create(name: "Horror", api_genre_id: 27)
+# Genre.create(name: "Action", api_genre_id: 28)
+# Genre.create(name: "Comedy", api_genre_id: 35)
+# Genre.create(name: "History", api_genre_id: 36)
+# Genre.create(name: "Western", api_genre_id: 37)
+# Genre.create(name: "Thriller", api_genre_id: 53)
+# Genre.create(name: "Crime", api_genre_id: 80)
+# Genre.create(name: "Documentary", api_genre_id: 99)
+# Genre.create(name: "Science Fiction", api_genre_id: 878)
+# Genre.create(name: "Mystery", api_genre_id: 9648)
+# Genre.create(name: "Music", api_genre_id: 10402)
+# Genre.create(name: "Romance", api_genre_id: 10749)
+# Genre.create(name: "Family", api_genre_id: 10751)
+# Genre.create(name: "War", api_genre_id: 10752)
+# Genre.create(name: "News", api_genre_id: 10763)
+# Genre.create(name: "Reality", api_genre_id: 10764)
+# Genre.create(name: "Talk Show", api_genre_id: 10767)
+
+#Moods
+#already seed
+# Mood.create(name: "Bière & Pizza")
+# Mood.create(name: "What's in the box ?")
+# Mood.create(name: "Retour vers le passé")
+# Mood.create(name: "Kids friendly")
+# Mood.create(name: "Ben & Jerry's (& Cry)")
+# Mood.create(name: "I'm Going on an Adventure !")
+# Mood.create(name: "Cocooning")
+
+#MoodGenre
+#already seed
+
+# count = Mood.first.id
+# genre_associated_biere_pizza = [28,	35,	12,	14,	878, 16,	27]
+
+# genre_associated_biere_pizza.each do |genre|
+#    MoodGenre.create!(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
+# end
+
+# count +=1
+# genre_associated_what_inthebox = [53,	80,	27,	2,	9648,	7]
+
+# genre_associated_what_inthebox.each do |genre|
+#    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
+# end
+
+# count +=1
+# genre_associated_retour_passe = [37,	99,	10752,	10763,	10764,	1,	36]
+
+# genre_associated_retour_passe.each do |genre|
+#    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
+# end
+
+# count +=1
+# genre_associated_kids = [10751,	14,	10749,	4,	16,	35,	3]
+
+# genre_associated_kids.each do |genre|
+#    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
+# end
+
+# count +=1
+# genre_associated_ben_jerry = [10749,	18]
+
+# genre_associated_ben_jerry.each do |genre|
+#    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
+# end
+
+# count +=1
+# genre_associated_adventure = [12,	14,	878,	9648]
+
+# genre_associated_adventure.each do |genre|
+#    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
+# end
+
+# count +=1
+# genre_associated_cocooning = [35, 10749, 14]
+
+# genre_associated_cocooning.each do |genre|
+#    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
+# end

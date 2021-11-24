@@ -1,18 +1,19 @@
-<div class="custom-container">
-  <div class="main-card d-flex flex-row flex-wrap p-3 w-75">
-  <h2 class="m-3">bjr,</h2>
-  <div class="d-flex flex-row flex-wrap justify-content-center">
-    <% @movies.each do |movie| %>
-      <div class="movie-card m-3">
-        <div class="movie-poster">
-          <%= image_tag(movie.poster, class:"cover") %>
+
+    <div class="movie-container">
+      <div class="movies-card d-flex flex-row flex-wrap">
+        <h2 class="m-1">Notre sélection de dix films</h2>
+        <div class="d-flex flex-row flex-wrap justify-content-center">
+          <% @movies.each do |movie| %>
+            <div class="movie-card">
+              <div class="movie-poster" style="background: url(<%=movie.poster if movie.poster != nil%>); background-size: cover">
+                <%# <%= image_tag(movie.poster, class:"cover") if movie.poster != nil %>
+              </div>
+              <div class="card-description p-1<%= ' bad-note'if movie.rating < 50 %>">
+                <p><%= movie.rating/10%></p>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <div class="card-description w-100 d-flex justify-content-between p-2">
-        <p class="text-truncate"><%= movie.title %></p>
-        <p><%= movie.rating %></p>
-        </div>
-        </div>
-    <% end %>
       </div>
-  </div>
+
 </div>
