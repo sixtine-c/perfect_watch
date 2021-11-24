@@ -27,56 +27,74 @@
     </div>
   </div>
 
-  <div class="custom-container next-question">
-    <div class="">
-      <div class="main-card">
-        <h2 class='mb-4'>Quelle sera l'ambiance de ta soirée?</h2>
-        <div class="platforms d-flex justify-content-between">
-            <%#= image_tag '#' %>
-          <% @moods.each do |mood| %>
-            <div class="mood-card">
-            <p><%= mood.name %></p>
-            </div>
-          <% end %>
+  <div data-controller='add-color'>
+    <div class="custom-container visible-question">
+      <div class="">
+        <div class="main-card">
+          <h2 class='mb-4'>Quelle sera l'ambiance de ta soirée?</h2>
+          <div class="platforms d-flex justify-content-between">
+            <div class="mood-card" data-action='click->add-color#changecolor' data-color='beer-party'>
+            Mood</div>
+            <div class="mood-card" data-action='click->add-color#changecolor' data-color='history'>
+            Mood</div>
+            <div class="mood-card" data-action='click->add-color#changecolor' data-color='thriller'>
+            Mood</div>
+            <div class="mood-card" data-action='click->add-color#changecolor' data-color='kids'>
+            Mood</div>
+            <div class="mood-card" data-action='click->add-color#changecolor' data-color='adventure'>
+            Mood</div>
+            <div class="mood-card" data-action='click->add-color#changecolor' data-color='cocooning'>
+            Mood</div>
+            <div class="mood-card" data-action='click->add-color#changecolor' data-color='icecream'>
+            Mood</div>
+            <div class="mood-card" data-action='click->add-color#changecolor' data-color='horror'>
+            Mood</div>
+              <%#= image_tag '#' %>
+            <%# @moods.each do |mood| %>
+              <%# <div class="mood-card"> %>
+              <%# <%= mood.name %>
+              <%# </div> %>
+            <%# end %>
+          </div>
         </div>
-      </div>
-      <div class="btn-suivant text-start">
-        <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous' %>
+        <div class="btn-suivant text-start">
+          <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous' %>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="custom-container visible-question horror">
-    <div class="">
-      <div class="main-card horror">
-        <h2 class='mb-4'>Combien de temps as-tu devant toi?</h2>
-        <div class="platforms d-flex justify-content-between">
-          <%= link_to 'Moins de 2h', '#', class: 'btn-general horror' %>
-          <%= link_to 'Plus de 2h', '#', class: 'btn-general horror' %>
+    <div class="custom-container next-question" data-add-color-target='bgcolor'>
+      <div class="">
+        <div class="main-card" data-add-color-target='bgcolor'>
+          <h2 class='mb-4'>Combien de temps as-tu devant toi?</h2>
+          <div class="platforms d-flex justify-content-between">
+            <%= link_to 'Moins de 2h', '#', class: 'btn-general', data: { add_color_target: 'bgcolor'} %>
+            <%= link_to 'Plus de 2h', '#', class: 'btn-general', data: { add_color_target: 'bgcolor'} %>
+          </div>
         </div>
-      </div>
-      <div class="btn-suivant text-start">
-        <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous horror' %>
+        <div class="btn-suivant text-start">
+          <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous', data: { add_color_target: 'bgcolor'} %>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="custom-container next-question">
-    <div class="">
-      <div class="main-card">
-        <h2 class='mb-4'>Plutôt un incontournable ou une pépite?</h2>
-        <div class="platforms d-flex justify-content-between">
-          <%= link_to 'Un incontournable!', '#', class: 'btn-general' %>
-          <%= link_to 'Une pépite!', '#', class: 'btn-general' %>
+    <div class="custom-container next-question" data-add-color-target='bgcolor'>
+      <div class="">
+        <div class="main-card" data-add-color-target='bgcolor'>
+          <h2 class='mb-4'>Plutôt un incontournable ou une pépite?</h2>
+          <div class="platforms d-flex justify-content-between">
+            <%= link_to 'Un incontournable!', '#', class: 'btn-general', data: { add_color_target: 'bgcolor'} %>
+            <%= link_to 'Une pépite!', '#', class: 'btn-general', data: { add_color_target: 'bgcolor'} %>
+          </div>
         </div>
-      </div>
-      <div class="d-flex justify-content-between">
-      <div class="btn-suivant text-start">
-        <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous' %>
-      </div>
-      <div class="text-end">
-        <%= link_to 'Résultats', '#', class: 'btn-question effect-next' %>
-      </div>
+        <div class="d-flex justify-content-between">
+        <div class="btn-suivant text-start">
+          <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous', data: { add_color_target: 'bgcolor'} %>
+        </div>
+        <div class="text-end">
+          <%= link_to 'Résultats', '#', class: 'btn-question effect-next', data: { add_color_target: 'bgcolor'} %>
+        </div>
+        </div>
       </div>
     </div>
   </div>
