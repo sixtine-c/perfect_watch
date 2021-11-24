@@ -1,5 +1,24 @@
 // Variable couleur
+@import 'pages/home';
+
 $card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(86, 171, 145, 0));
+$beer-party: linear-gradient(to bottom right, rgb(248, 219, 157), $background-beer-party);
+$history: linear-gradient(to bottom right, rgba(249, 207, 161, 1), $background-history);
+$thriller: linear-gradient(to bottom right, rgba(169, 170, 169, 1), $background-thriller);
+$kids: linear-gradient(to bottom right, rgb(233, 184, 179), $background-kids);
+$adventure: linear-gradient(to bottom right, rgb(201, 255, 139), $background-adventure);
+$cocooning: linear-gradient(to bottom right, rgba(254, 162, 1, 1), $background-cocooning);
+$icecream: linear-gradient(to bottom right, rgb(196, 212, 181), $background-icecream);
+$horror: linear-gradient(to bottom right, rgb(150, 42, 27), $background-horror);
+
+$shadow-beer-party: 0 4px 44px 2px rgba(150, 102, 30, 0.753);
+$shadow-history: 0 4px 44px 2px rgba(128, 88, 56, 0.753);
+$shadow-thriller: 0 4px 44px 2px rgba(51, 53, 51, 0.753);
+$shadow-kids: 0 4px 44px 2px rgba(119, 124, 129, 0.753);
+$shadow-adventure: 0 4px 44px 2px rgba(148, 131, 69, 0.753);
+$shadow-cocooning: 0 4px 44px 2px rgba(143, 40, 8, 0.753);
+$shadow-icecream: 0 4px 44px 2px rgba(110, 150, 140, 0.753);
+$shadow-horror: 0 4px 44px 2px rgba(19, 7, 4, 0.753);
 
 .main-card {
   background-image: $card-home-color;
@@ -13,11 +32,92 @@ $card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(
   align-items: center;
   flex-direction: column;
   box-shadow: 0 4px 44px 2px rgba(37, 62, 54, 1);
+  // Changement de couleur de card en fonction du mood
+  &.beer-party{
+    background-image: $beer-party;
+    box-shadow: $shadow-beer-party;
+  }
+  &.history {
+    background-image: $history;
+    box-shadow: $shadow-history;
+  }
+  &.thriller {
+    background-image: $thriller;
+    box-shadow: $shadow-thriller;
+  }
+  &.kids {
+    background-image: $kids;
+    box-shadow: $shadow-kids;
+  }
+  &.adventure {
+    background-image: $adventure;
+    box-shadow: $shadow-adventure;
+  }
+  &.cocooning {
+    background-image: $cocooning;
+    box-shadow: $shadow-cocooning;
+  }
+  &.icecream {
+    background-image: $icecream;
+    box-shadow: $shadow-icecream;
+  }
+  &.horror {
+    background-image: $horror;
+    box-shadow: $shadow-horror;
+  }
+  @media (max-width: 700px) {
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+    }
 }
 
-// @media {
-//   .main-card {
-//     padding: 110px;
-//     width: 900px;
-//   }
-// }
+.movies-card {
+  background-image: $card-home-color;
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 44px 2px rgba(37, 62, 54, 1);
+
+&.beer-party{
+    background-image: $beer-party;
+    box-shadow: $shadow-beer-party;
+  }
+  &.history {
+    background-image: $history;
+    box-shadow: $shadow-history;
+  }
+  &.thriller {
+    background-image: $thriller;
+    box-shadow: $shadow-thriller;
+  }
+  &.kids {
+    background-image: $kids;
+    box-shadow: $shadow-kids;
+  }
+  &.adventure {
+    background-image: $adventure;
+    box-shadow: $shadow-adventure;
+  }
+  &.cocooning {
+    background-image: $cocooning;
+    box-shadow: $shadow-cocooning;
+  }
+  &.icecream {
+    background-image: $icecream;
+    box-shadow: $shadow-icecream;
+  }
+  &.horror {
+    background-image: $horror;
+    box-shadow: $shadow-horror;
+  }
+    @media (max-width: 1150px) {
+      padding: 10px;
+    }
+}

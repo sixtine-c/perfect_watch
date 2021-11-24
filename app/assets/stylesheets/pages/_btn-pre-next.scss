@@ -1,5 +1,4 @@
 .btn-question {
-  border: 1px solid white;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -10,6 +9,30 @@
   padding: 10px 0;
   border-radius: 10px;
   width: 195px;
+  &.beer-party{
+    background: $buttons-beer-party;
+  }
+  &.history {
+    background: $buttons-history;
+  }
+  &.thriller {
+    background: $buttons-thriller;
+  }
+  &.kids {
+    background: $buttons-kids;
+  }
+  &.adventure {
+    background: $buttons-adventure;
+  }
+  &.cocooning {
+    background: $buttons-cocooning;
+  }
+  &.icecream {
+    background: $buttons-icecream;
+  }
+  &.horror {
+    background: $buttons-horror;
+  }
 }
 
 // Uniquement question suivante

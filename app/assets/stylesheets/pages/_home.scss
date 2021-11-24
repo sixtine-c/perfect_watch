@@ -1,5 +1,13 @@
 // Variables de couleurs
 $home-color: #035A5A;
+$background-beer-party: rgba(255, 167, 33, 1);
+$background-history: rgba(166, 114, 71, 1);
+$background-thriller: rgba(26, 27, 26, 1);
+$background-kids: rgb(145, 166, 187);
+$background-adventure: rgb(147, 168, 70);
+$background-cocooning: rgb(211, 57, 11);
+$background-icecream: rgb(97, 163, 158);
+$background-horror: rgb(32, 25, 21);
 
 // Set le container avec une height et une max-height pour ne pas pouvoir scroller
 .main-container {
@@ -21,6 +29,34 @@ $home-color: #035A5A;
   width: 100vw;
   background-color: $home-color;
   font-family: 'Hind', sans-serif;
+  // Changement de fond en fonction du mood
+  &.beer-party{
+    background-color: $background-beer-party;
+  }
+  &.history {
+    background-color: $background-history;
+  }
+  &.thriller {
+    background-color: $background-thriller;
+  }
+  &.kids {
+    background-color: $background-kids;
+  }
+  &.adventure {
+    background-color: $background-adventure;
+  }
+  &.cocooning {
+    background-color: $background-cocooning;
+  }
+  &.icecream {
+    background-color: $background-icecream;
+  }
+  &.horror {
+    background-color: $background-horror;
+  }
+    @media (max-width: 1250px) {
+    padding: 1rem 0;
+  }
 }
 
 // Set le top de la question d'après à 100vh pour qu'il ne soit pas visible
@@ -31,4 +67,47 @@ $home-color: #035A5A;
 // Set la question actuelle à un top 0 pour qu'elle apparaisse en haut de la page
 .visible-question {
   top: 0;
+}
+
+.movie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  background-color: $home-color;
+  font-family: 'Hind', sans-serif;
+  &.beer-party{
+    background-color: $background-beer-party;
+  }
+  &.history {
+    background-color: $background-history;
+  }
+  &.thriller {
+    background-color: $background-thriller;
+  }
+  &.kids {
+    background-color: $background-kids;
+  }
+  &.adventure {
+    background-color: $background-adventure;
+  }
+  &.cocooning {
+    background-color: $background-cocooning;
+  }
+  &.icecream {
+    background-color: $background-icecream;
+  }
+  &.horror {
+    background-color: $background-horror;
+  }
+
+  @media (min-width: 1150px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 1250px) {
+    padding: 1rem;
+  }
+
 }
