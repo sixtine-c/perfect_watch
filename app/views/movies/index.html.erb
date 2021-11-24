@@ -1,0 +1,18 @@
+<div class="custom-container">
+  <div class="main-card d-flex flex-row flex-wrap p-3 w-75">
+  <h2 class="m-3">bjr,</h2>
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <% @movies.each do |movie| %>
+      <div class="movie-card m-3">
+        <div class="movie-poster">
+          <%= image_tag(movie.poster, class:"cover") %>
+        </div>
+        <div class="card-description w-100 d-flex justify-content-between p-2">
+        <p class="text-truncate"><%= movie.title %></p>
+        <p><%= movie.rating %></p>
+        </div>
+        </div>
+    <% end %>
+      </div>
+  </div>
+</div>

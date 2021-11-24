@@ -65,4 +65,59 @@ $shadow-horror: 0 4px 44px 2px rgba(19, 7, 4, 0.753);
     background-image: $horror;
     box-shadow: $shadow-horror;
   }
+  @media (max-width: 700px) {
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.movies-card {
+  background-image: $card-home-color;
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 44px 2px rgba(37, 62, 54, 1);
+
+&.beer-party{
+    background-image: $beer-party;
+    box-shadow: $shadow-beer-party;
+  }
+  &.history {
+    background-image: $history;
+    box-shadow: $shadow-history;
+  }
+  &.thriller {
+    background-image: $thriller;
+    box-shadow: $shadow-thriller;
+  }
+  &.kids {
+    background-image: $kids;
+    box-shadow: $shadow-kids;
+  }
+  &.adventure {
+    background-image: $adventure;
+    box-shadow: $shadow-adventure;
+  }
+  &.cocooning {
+    background-image: $cocooning;
+    box-shadow: $shadow-cocooning;
+  }
+  &.icecream {
+    background-image: $icecream;
+    box-shadow: $shadow-icecream;
+  }
+  &.horror {
+    background-image: $horror;
+    box-shadow: $shadow-horror;
+  }
+    @media (max-width: 1150px) {
+      padding: 10px;
+    }
 }
