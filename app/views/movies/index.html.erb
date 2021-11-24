@@ -1,19 +1,53 @@
 
-    <div class="movie-container">
-      <div class="movies-card d-flex flex-row flex-wrap">
-        <h2 class="m-1">Notre sélection de dix films</h2>
-        <div class="d-flex flex-row flex-wrap justify-content-center">
-          <% @movies.each do |movie| %>
-            <div class="movie-card">
-              <div class="movie-poster" style="background: url(<%=movie.poster if movie.poster != nil%>); background-size: cover">
-                <%# <%= image_tag(movie.poster, class:"cover") if movie.poster != nil %>
+<div class="movie-container">
+  <div class="movies-card d-flex flex-row flex-wrap">
+    <h2 class="m-1">Notre sélection de dix films</h2>
+    <div class="d-flex flex-row flex-wrap justify-content-center">
+      <% @movies.each do |movie| %>
+
+      <button type="button" class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#movie-<%= movie.id %>">
+        <div class="movie-card">
+          <div class="movie-poster" style="background: url(<%=movie.poster if movie.poster != nil%>); background-size: cover">
+            <%# <%= image_tag(movie.poster, class:"cover") if movie.poster != nil %>
+          </div>
+          <div class="card-description p-1<%= ' bad-note'if movie.rating < 50 %>">
+            <p><%= movie.rating/10%></p>
+          </div>
+        </div>
+      </button>
+
+<!-- Modal -->
+<div class="modal fade" id="movie-<%= movie.id %>" tabindex="-1" role="dialog" aria-labelledby="movie-<%= movie.id %>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content rounded-3">
+      <div class="fond">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel"><%= movie.title%> - <%= movie.year %></h1>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex">
+            <%= image_tag(movie.poster, class:"showmovie") if movie.poster != nil %>
+              <div class="d-flex">
+                <h4><%= movie.directors.join(", ") %></h4>
+                <p><%= movie.actors.join(", ") %></p>
+                <%= movie.platforms.join(", ") %>
+                <p><%= movie.duration %> minutes</p>
+                <%# <%= movie.genre %>
               </div>
-              <div class="card-description p-1<%= ' bad-note'if movie.rating < 50 %>">
-                <p><%= movie.rating/10%></p>
+              <div class="d-flex">
+                <%= movie.synopsis %>
               </div>
-            </div>
-          <% end %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          </div>
         </div>
       </div>
+  </div>
+</div>
 
+      <% end %>
+    </div>
+  </div>
 </div>
