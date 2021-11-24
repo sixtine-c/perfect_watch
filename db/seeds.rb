@@ -14,7 +14,7 @@ Mood.create(name: "Cocooning")
 genre_associated_biere_pizza = [28,	35,	12,	14,	878, 16,	27]
 
 genre_associated_biere_pizza.each do |genre|
-   MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 1)
+   MoodGenre.create!(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: 1)
 end
 
 
