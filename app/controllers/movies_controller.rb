@@ -8,7 +8,6 @@ class MoviesController < ApplicationController
     params["search"]["duration"] ? @duration = 119 : @duration = 121
     params["search"]["famous"] ? @famous = "blockbuster" : @famous = "pépite"
     @mega_test = Mood.find_by(name: params["search"]["mood"])
-    raise
 
     # filter on genres via mood
     @mood = Mood.find(22) # to change later
