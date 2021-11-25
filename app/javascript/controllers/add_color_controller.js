@@ -14,14 +14,23 @@ export default class extends Controller {
   static values = { color: String }
 
   changecolor(event) {
-    const moodList = ['beer-party', 'history', 'thriller', 'kids', 'adventure', 'cocooning', 'icecream', 'horror']
+    const moodList = ['beer-party', 'thriller', 'history', 'kids', 'icecream', 'adventure', 'cocooning', 'horror']
+
+    const colors = { 'search_mood_bière__pizza': moodList[0],
+                      'search_mood_whats_in_the_box_': moodList[1],
+                      'search_mood_retour_vers_le_passé': moodList[2],
+                      'search_mood_kids_friendly': moodList[3],
+                      'search_mood_ben__jerrys__cry': moodList[4],
+                      'search_mood_im_going_on_an_adventure_': moodList[5],
+                      'search_mood_cocooning': moodList[6] }
+    const target_id = event.currentTarget.id;
+    const class_color = colors[target_id];
+
     this.bgcolorTargets.forEach(element => {
       moodList.forEach(mood => {
-        if (element.classList.contains(mood)) {
-          element.classList.remove(mood)
-        }
+        element.classList.remove(mood)
       });
-      element.classList.add(event.currentTarget.dataset.color)
+      element.classList.add(class_color)
     });
   }
 }

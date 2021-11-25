@@ -20,8 +20,21 @@ $hover-cocooning: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $butto
 $hover-icecream: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-icecream 50%);
 $hover-horror: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-horror 50%);
 
+
+.hiddenbox {
+  position: absolute;
+  transform: scale(0)
+}
+
+.hiddenbox:checked + label {
+  color: black;
+  background-color: black;
+}
+
 // Tous les boutons de la page
 .btn-general {
+  border: none;
+  cursor: pointer;
   width: 210px;
   padding: 8px 25px;
   border-radius: 10px;
@@ -33,6 +46,9 @@ $hover-horror: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all .5s ease-out;
+  // &.netflix {
+  //   background-image: asset-url('');
+  // }
   &.beer-party{
     background: $hover-beer-party;
     background-size: 200% 100%;

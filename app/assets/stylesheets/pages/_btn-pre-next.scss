@@ -1,4 +1,5 @@
 .btn-question {
+  cursor: pointer;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -9,6 +10,7 @@
   padding: 10px 0;
   border-radius: 10px;
   width: 195px;
+  border: none;
   &.beer-party{
     background: $buttons-beer-party;
   }
