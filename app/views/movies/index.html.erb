@@ -6,7 +6,6 @@
       <div class="wrapper">
       <% i = 1 %>
         <% @movies.each do |movie| %>
-
           <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movie-<%= i %>">
             <div class="movie-poster" style="background: url(<%=movie.poster if movie.poster != nil%>); background-size: cover"></div>
             <div class="card-description p-1<%= ' bad-note'if movie.rating < 50 %>">
