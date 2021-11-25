@@ -35,6 +35,7 @@ gem 'simple_form'
 
 #own gem
 gem 'cloudinary', '~> 1.16.0'
+gem 'bullet', group: 'development'
 
 group :development, :test do
   gem 'pry-byebug'
