@@ -4,7 +4,7 @@ require 'openssl'
 
 
 
-Movies Netflix
+#Movies Netflix
 
 def scrapping_method(page_number)
   url = URI("https://streaming-availability.p.rapidapi.com/search/basic?country=fr&service=netflix&type=movie&page=#{page_number}")
@@ -19,7 +19,7 @@ def scrapping_method(page_number)
 end
 
 page_number = 99
-#page_number = 82
+#page_number = 99
 response = scrapping_method(page_number)
 while JSON.parse(response.read_body)["total_pages"] > page_number
   JSON.parse(response.read_body)["results"].each do |movie|
