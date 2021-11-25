@@ -33,6 +33,7 @@ $hover-horror: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-
 
 // Tous les boutons de la page
 .btn-general {
+  border: none;
   cursor: pointer;
   width: 210px;
   padding: 8px 25px;

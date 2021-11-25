@@ -18,7 +18,7 @@
           <h2 class='mb-5'>Quels sont les services auxquels tu es abonné(e)?</h2>
           <div class="platforms d-flex flex-wrap justify-content-around">
             <div>
-              <%= f.input :platform, label: '', as: :check_boxes, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: Movie::PLATFORMS, label_method: :second, value_method: :first %>
+              <%= f.input :platform, label: '', as: :check_boxes, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: Movie::PLATFORMS %>
             </div>
           </div>
         </div>
@@ -46,9 +46,13 @@
               <%# end %>
             </div>
           </div>
-          <div class="btn-suivant text-start">
-            <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous', data: { action:'click->changing-slide#nextquestion' } %>
-          </div>
+          <div class="d-flex justify-content-between">
+            <div class="btn-suivant text-start">
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Question précedente</button>
+            </div>
+            <div class="btn-suivant text-end">
+              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'>Question suivante</button>
+            </div>
         </div>
       </div>
 
@@ -58,17 +62,17 @@
             <h2 class='mb-4'>Combien de temps as-tu devant toi?</h2>
             <div class="platforms d-flex justify-content-between">
               <div>
-                <label class='btn-general' data-add-color-target='bgcolor' for="time">Moins de 2h</label>
-                <input class='hiddenbox' id="time" type='checkbox'>
-              </div>
-              <div>
-                <label class='btn-general' data-add-color-target='bgcolor' for="time">Plus de 2h</label>
-                <input class='hiddenbox' id="time" type='checkbox'>
+                <%= f.input :duration, label: '', as: :radio_buttons, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: [['Moins de 2h', true], ['Plus de 2h', false]] %>
               </div>
             </div>
           </div>
-          <div class="btn-suivant text-start">
-            <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous', data: { add_color_target: 'bgcolor', action:'click->changing-slide#nextquestion'} %>
+          <div class="d-flex justify-content-between">
+            <div class="btn-suivant text-start">
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion' data-add-color-target='bgcolor'>Question précedente</button>
+            </div>
+            <div class="btn-suivant text-end">
+              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion' data-add-color-target='bgcolor'>Question suivante</button>
+            </div>
           </div>
         </div>
       </div>
@@ -79,23 +83,18 @@
             <h2 class='mb-4'>Plutôt un incontournable ou une pépite?</h2>
             <div class="platforms d-flex justify-content-between">
               <div>
-                <label class='btn-general' data-add-color-target='bgcolor' for="famous">Un incontournable!</label>
-                <input class='hiddenbox' id="famous" type='checkbox'>
-              </div>
-              <div>
-                <label class='btn-general' data-add-color-target='bgcolor' for="famous">Une pépite!</label>
-                <input class='hiddenbox' id="famous" type='checkbox'>
+                <%= f.input :famous, label: '', as: :radio_buttons, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: [['Un incontournable!', true], ['Une pépite!', false]] %>
               </div>
             </div>
           </div>
           <div class="d-flex justify-content-between">
-          <div class="btn-suivant text-start">
-            <%= link_to 'Question précedente', '#', class: 'btn-question effect-previous', data: { add_color_target: 'bgcolor', action:'click->changing-slide#nextquestion'} %>
-          </div>
-          <div class="text-end">
-            <label class='btn-question effect-next' data-add-color-target='bgcolor' for='result'>Résultats</label>
-            <input class='hiddenbox' id="result" type='submit' value='Résultats'>
-          </div>
+            <div class="btn-suivant text-start">
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion' data-add-color-target='bgcolor'>Question précedente</button>
+            </div>
+            <div class="text-end">
+              <label class='btn-question effect-next' data-add-color-target='bgcolor' for='result'>Résultats</label>
+              <input class='hiddenbox' id="result" type='submit' value='Résultats'>
+            </div>
           </div>
         </div>
       </div>
@@ -105,3 +104,8 @@
 
 <%# avec js ajouter la classe next question a la question d'apres et visible-question à la question affichée %>
 <%# transition passage de 100vh à 0vh en 250ms %>
+
+
+<%# pour supprimer champ vide dans plateform: params[search][platform].delete_at(0) %>
+<%# duration: true = duration > 120, false = duration < 120 %>
+<%# famous: true = number_of_rating > 35 000, false = number_of_rating < 35 000  %>
