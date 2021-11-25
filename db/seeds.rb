@@ -2,7 +2,9 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 
-
+# id 1583 Movie.create(title: "titanic", actors: ["leo",'lea'], directors: ["john"], synopsis: "genial", rating: 80, year: 2012 ,platforms: ["netflix"],duration: 200, number_of_ratings: 130000,link: ["https://www.google.com/search?q=titanic"],poster: "ok")
+#id 1584 Movie.create(title: "hello london", actors: ["chris",'tuk'], directors: ["ta mère"], synopsis: "bouh", rating: 56, year: 2019 ,platforms: ["amazon"],duration: 95, number_of_ratings: 33000,link: ["https://www.google.com/search?q=nul"],poster: "ok")
+#id 1585 Movie.create(title: "James B", actors: ["Daniel",'monica'], directors: ["ton père"], synopsis: "my name is bond", rating: 72, year: 2023 ,platforms: ["netflix","amazon"],duration: 123, number_of_ratings: 38000,link: ["https://www.google.com/search?q=james"],poster: "ok")
 
 #Movies Netflix
 
@@ -18,8 +20,8 @@ def scrapping_method(page_number)
   http.request(request)
 end
 
-page_number = 99
-#page_number = 99
+page_number = 201
+#page_number = 201
 response = scrapping_method(page_number)
 while JSON.parse(response.read_body)["total_pages"] > page_number
   JSON.parse(response.read_body)["results"].each do |movie|
