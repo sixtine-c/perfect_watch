@@ -4,8 +4,8 @@
     <div class="">
       <div class="main-card">
         <h1>Perfect Watch</h1>
-        <p>Tu ne sais pas quoi regarder?</p>
-        <button type='button' class='btn-general', data-action='click->changing-slide#nextquestion'>Parfait</button>
+        <p>Don't know what to watch?</p>
+        <button type='button' class='btn-general', data-action='click->changing-slide#nextquestion'>Perfect.</button>
         <%#= link_to 'Parfait', '', class: 'btn-general', data: { action:'click->changing-slide#nextquestion' %>
       </div>
     </div>
@@ -15,7 +15,7 @@
     <div class="custom-container next-question" data-changing-slide-target='question'>
       <div class="">
         <div class="main-card">
-          <h2 class='mb-5'>Quels sont les services auxquels tu es abonné(e)?</h2>
+          <h2 class='mb-5'>What platforms do you have?</h2>
           <div class="platforms d-flex flex-wrap justify-content-around">
             <div>
               <%= f.input :platform, label: '', as: :check_boxes, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: Movie::PLATFORMS %>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="btn-suivant text-end">
-          <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'>Question suivante</button>
+          <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'>Next question</button>
           <%#= link_to 'Question suivante', '#', class: 'btn-question effect-next', data: { action:'click->changing-slide#nextquestion' } %>
         </div>
       </div>
@@ -33,7 +33,7 @@
       <div class="custom-container next-question" data-changing-slide-target='question'>
         <div class="">
           <div class="main-card">
-            <h2 class='mb-4'>Quelle sera l'ambiance de ta soirée?</h2>
+            <h2 class='mb-4'>What will be the mood of your evening?</h2>
             <div class="platforms d-flex justify-content-around flex-wrap">
               <div class="mood-card">
                 <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: 'click->add-color#changecolor'}, class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: Mood::MOODS %>
@@ -48,10 +48,10 @@
           </div>
           <div class="d-flex justify-content-between">
             <div class="btn-suivant text-start">
-              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Question précedente</button>
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Previous question</button>
             </div>
             <div class="btn-suivant text-end">
-              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'>Question suivante</button>
+              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'>Next question</button>
             </div>
         </div>
       </div>
@@ -59,19 +59,19 @@
       <div class="custom-container next-question" data-add-color-target='bgcolor' data-changing-slide-target='question'>
         <div class="">
           <div class="main-card">
-            <h2 class='mb-4'>Combien de temps as-tu devant toi?</h2>
+            <h2 class='mb-4'>How much time do you have?</h2>
             <div class="platforms d-flex justify-content-between">
               <div>
-                <%= f.input :duration, label: '', as: :radio_buttons, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: [['Moins de 2h', true], ['Plus de 2h', false]] %>
+                <%= f.input :duration, label: '', as: :radio_buttons, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: [['Less than 2 hours', true], ['More than 2 hours', false]] %>
               </div>
             </div>
           </div>
           <div class="d-flex justify-content-between">
             <div class="btn-suivant text-start">
-              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Question précedente</button>
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Previous question</button>
             </div>
             <div class="btn-suivant text-end">
-              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'>Question suivante</button>
+              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'>Next question</button>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
 
       <div class="custom-container next-question" data-add-color-target='bgcolor' data-changing-slide-target='question'>
         <div class="">
-          <div class="main-card" data-add-color-target='bgcolor'>
+          <div class="main-card">
             <h2 class='mb-4'>Plutôt un incontournable ou une pépite?</h2>
             <div class="platforms d-flex justify-content-between">
               <div>
@@ -89,10 +89,10 @@
           </div>
           <div class="d-flex justify-content-between">
             <div class="btn-suivant text-start">
-              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion' data-add-color-target='bgcolor'>Question précedente</button>
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Question précedente</button>
             </div>
             <div class="text-end">
-              <label class='btn-question effect-next' data-add-color-target='bgcolor' for='result'>Résultats</label>
+              <label class='btn-question effect-next' for='result'>Résultats</label>
               <input class='hiddenbox' id="result" type='submit' value='Résultats'>
             </div>
           </div>
