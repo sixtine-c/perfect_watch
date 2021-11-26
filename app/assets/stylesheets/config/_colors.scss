@@ -1,5 +1,52 @@
 // Define variables for your color scheme
+$home-color: #035A5A;
+$background-beer-party: rgba(255, 167, 33, 1);
+$background-history: rgba(166, 114, 71, 1);
+$background-thriller: rgba(26, 27, 26, 1);
+$background-kids: rgb(145, 166, 187);
+$background-adventure: rgb(147, 168, 70);
+$background-cocooning: rgb(211, 57, 11);
+$background-icecream: rgb(97, 163, 158);
+$background-horror: rgb(32, 25, 21);
+$buttons: #56AB91;
+$link-text-color: #fff;
+$overlay-color: #fff;
+$buttons-beer-party: rgb(207, 138, 33);
+$buttons-history: rgb(128, 82, 45);
+$buttons-thriller: rgb(53, 53, 53);
+$buttons-kids: rgb(112, 149, 189);
+$buttons-adventure: rgb(98, 200, 95);
+$buttons-cocooning: rgba(182, 50, 9, 1);
+$buttons-icecream: rgb(108, 158, 147);
+$buttons-horror: rgb(53, 19, 9);
 
+$hover-beer-party: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, ($buttons-beer-party) 50%);
+$hover-history: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-history 50%);
+$hover-thriller: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-thriller 50%);
+$hover-kids: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-kids 50%);
+$hover-adventure: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-adventure 50%);
+$hover-cocooning: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-cocooning 50%);
+$hover-icecream: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-icecream 50%);
+$hover-horror: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-horror 50%);
+
+$card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(86, 171, 145, 0));
+$beer-party: linear-gradient(to bottom right, rgb(248, 219, 157), $background-beer-party);
+$history: linear-gradient(to bottom right, rgba(249, 207, 161, 1), $background-history);
+$thriller: linear-gradient(to bottom right, rgba(169, 170, 169, 1), $background-thriller);
+$kids: linear-gradient(to bottom right, rgb(233, 184, 179), $background-kids);
+$adventure: linear-gradient(to bottom right, rgb(201, 255, 139), $background-adventure);
+$cocooning: linear-gradient(to bottom right, rgba(254, 162, 1, 1), $background-cocooning);
+$icecream: linear-gradient(to bottom right, rgb(196, 212, 181), $background-icecream);
+$horror: linear-gradient(to bottom right, rgb(150, 42, 27), $background-horror);
+
+$shadow-beer-party: 0 4px 44px 2px rgba(150, 102, 30, 0.753);
+$shadow-history: 0 4px 44px 2px rgba(128, 88, 56, 0.753);
+$shadow-thriller: 0 4px 44px 2px rgba(51, 53, 51, 0.753);
+$shadow-kids: 0 4px 44px 2px rgba(119, 124, 129, 0.753);
+$shadow-adventure: 0 4px 44px 2px rgba(148, 131, 69, 0.753);
+$shadow-cocooning: 0 4px 44px 2px rgba(143, 40, 8, 0.753);
+$shadow-icecream: 0 4px 44px 2px rgba(110, 150, 140, 0.753);
+$shadow-horror: 0 4px 44px 2px rgba(19, 7, 4, 0.753);
 // For example:
 $red: #FD1015;
 $blue: #167FFB;
