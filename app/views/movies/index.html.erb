@@ -13,10 +13,6 @@
             </div>
           </div>
 
-          <% content_for :meta_title, "#{movie.title} is on #{DEFAULT_META["meta_product_name"]}" %>
-          <% content_for :meta_description, movie.synopsis %>
-          <% content_for :meta_image, cl_image_path(movie.photo.path) %>
-
           <div class="modal fade" id="movie-<%= i %>" tabindex="-1" role="dialog" aria-labelledby="movie-<%= i %>" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
               <div class="modal-content">
