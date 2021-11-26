@@ -19,6 +19,7 @@
   width: 100vw;
   background-color: $home-color;
   font-family: 'Hind', sans-serif;
+  transition-duration: 750ms;
   // Changement de fond en fonction du mood
   &.beer-party{
     background-color: $background-beer-party;
