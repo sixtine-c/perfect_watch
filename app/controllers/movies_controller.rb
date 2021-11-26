@@ -6,8 +6,8 @@ class MoviesController < ApplicationController
 
     params["search"]["platform"].delete_at(0)
     @platforms = params["search"]["platform"]
-    params["search"]["duration"] ? @duration = 119 : @duration = 121
-    params["search"]["famous"] ? @type = "blockbuster" : @type = "pépite"
+    params["search"]["duration"] == "true" ? @duration = 119 : @duration = 121
+    params["search"]["famous"] == "true" ? @type = "blockbuster" : @type = "pépite"
     @mood = Mood.find_by(name: params["search"]["mood"])
     # filter on genres via mood
 
