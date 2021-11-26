@@ -206,27 +206,51 @@
   font-family: 'Hind', sans-serif;
   &.beer-party{
     background-color: $background-beer-party;
+    .btn-question{
+      background: $buttons-beer-party;
+    }
   }
   &.history {
     background-color: $background-history;
+    .btn-question {
+      background: $buttons-history;
+    }
   }
   &.thriller {
     background-color: $background-thriller;
+    .btn-question {
+      background: $buttons-thriller;
+    }
   }
   &.kids {
     background-color: $background-kids;
+    .btn-question {
+      background: $buttons-kids;
+    }
   }
   &.adventure {
     background-color: $background-adventure;
+    .btn-question {
+      background: $buttons-adventure;
+    }
   }
   &.cocooning {
     background-color: $background-cocooning;
+    .btn-question {
+      background: $buttons-cocooning;
+    }
   }
   &.icecream {
     background-color: $background-icecream;
+    .btn-question {
+      background: $buttons-icecream;
+    }
   }
   &.horror {
     background-color: $background-horror;
+    .btn-question {
+      background: $buttons-horror;
+    }
   }
 
   @media (min-width: 1150px) {
