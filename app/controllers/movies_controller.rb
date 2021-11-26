@@ -11,6 +11,8 @@ class MoviesController < ApplicationController
 
     # filter on genres via mood
     @mood = Mood.find(22) # to change later
+    @mood_class = moodclass(@mood)
+
     @movies_global = filter_movie_by_genre_through_mood(@mood)
     # filter on platforms
     platforms = ["netflix"] # to change later
@@ -26,6 +28,17 @@ class MoviesController < ApplicationController
     # mini algorithm
 
     @movies = filter_10_movies_with_7_top(movies_by_type)
+  end
+
+  def moodclass(mood)
+    return "beer-party" if mood.name == "Bière & Pizza"
+    return "history" if mood.name == "Retour vers le passé"
+    return "thriller" if mood.name == "What's in the box ?"
+    return "kids" if mood.name == "Kids friendly"
+    return "adventure" if mood.name == "I'm Going on an Adventure !"
+    return "cocooning" if mood.name == "Cocooning"
+    return "icecream" if mood.name == "Ben & Jerry's (& Cry)"
+    # "horror" if mood.name == ""
   end
 
 end
