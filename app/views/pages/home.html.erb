@@ -80,19 +80,19 @@
       <div class="custom-container next-question" data-add-color-target='bgcolor' data-changing-slide-target='question'>
         <div class="">
           <div class="main-card">
-            <h2 class='mb-4'>Plutôt un incontournable ou une pépite?</h2>
+            <h2 class='mb-4'>A must to watch or a discovery?</h2>
             <div class="platforms d-flex justify-content-between">
               <div>
-                <%= f.input :famous, label: '', as: :radio_buttons, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: [['Un incontournable!', true], ['Une pépite!', false]] %>
+                <%= f.input :famous, label: '', as: :radio_buttons, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: [['A must!', true], ['A discovery!!', false]] %>
               </div>
             </div>
           </div>
           <div class="d-flex justify-content-between">
             <div class="btn-suivant text-start">
-              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Question précedente</button>
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Previous question</button>
             </div>
             <div class="text-end">
-              <label class='btn-question effect-next' for='result'>Résultats</label>
+              <label class='btn-question effect-next' for='result'>Results</label>
               <input class='hiddenbox' id="result" type='submit' value='Résultats'>
             </div>
           </div>
