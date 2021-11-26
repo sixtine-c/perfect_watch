@@ -1,13 +1,3 @@
-// Variables de couleurs
-$home-color: #035A5A;
-$background-beer-party: rgba(255, 167, 33, 1);
-$background-history: rgba(166, 114, 71, 1);
-$background-thriller: rgba(26, 27, 26, 1);
-$background-kids: rgb(145, 166, 187);
-$background-adventure: rgb(147, 168, 70);
-$background-cocooning: rgb(211, 57, 11);
-$background-icecream: rgb(97, 163, 158);
-$background-horror: rgb(32, 25, 21);
 
 // Set le container avec une height et une max-height pour ne pas pouvoir scroller
 .main-container {
@@ -32,27 +22,163 @@ $background-horror: rgb(32, 25, 21);
   // Changement de fond en fonction du mood
   &.beer-party{
     background-color: $background-beer-party;
+    .main-card {
+      background-image: $beer-party;
+      box-shadow: $shadow-beer-party;
+    }
+    .btn-question{
+      background: $buttons-beer-party;
+    }
+    .btn-general {
+      background: $hover-beer-party;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.history {
     background-color: $background-history;
+    .main-card {
+      background-image: $history;
+      box-shadow: $shadow-history;
+    }
+    .btn-question {
+      background: $buttons-history;
+    }
+    .btn-general {
+      background: $hover-history;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.thriller {
     background-color: $background-thriller;
+    .main-card {
+      background-image: $thriller;
+      box-shadow: $shadow-thriller;
+    }
+    .btn-question {
+      background: $buttons-thriller;
+    }
+    .btn-general {
+      background: $hover-thriller;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.kids {
     background-color: $background-kids;
+    .main-card {
+      background-image: $kids;
+      box-shadow: $shadow-kids;
+    }
+    .btn-question {
+      background: $buttons-kids;
+    }
+    .btn-general {
+      background: $hover-kids;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.adventure {
     background-color: $background-adventure;
+    .main-card {
+      background-image: $adventure;
+      box-shadow: $shadow-adventure;
+    }
+    .btn-question {
+      background: $buttons-adventure;
+    }
+    .btn-general {
+      background: $hover-adventure;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.cocooning {
     background-color: $background-cocooning;
+    .main-card {
+      background-image: $cocooning;
+      box-shadow: $shadow-cocooning;
+    }
+    .btn-question {
+      background: $buttons-cocooning;
+    }
+    .btn-general {
+      background: $hover-cocooning;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.icecream {
     background-color: $background-icecream;
+    .main-card {
+      background-image: $icecream;
+      box-shadow: $shadow-icecream;
+    }
+    .btn-question {
+      background: $buttons-icecream;
+    }
+    .btn-general {
+      background: $hover-icecream;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.horror {
     background-color: $background-horror;
+    .main-card {
+      background-image: $horror;
+      box-shadow: $shadow-horror;
+    }
+    .btn-question {
+      background: $buttons-horror;
+    }
+    .btn-general {
+      background: $hover-horror;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
     @media (max-width: 1250px) {
     padding: 1rem 0;
