@@ -1,15 +1,16 @@
+# sixtom #29c61d4aa3msh407fb303d51c6c3p174007jsnd233e6568de4
+# six ff8764a8abmsh44ba9d0a973d4e8p166054jsn4cfba7d3235d
+# nico 052bfc2d15mshbb71bb1352ba53ap1dd95bjsn478b8aa1888a
+# brice e252da852cmshf59f72eb56d0fdap1358dcjsnae23afd90969
+
 require 'uri'
 require 'net/http'
 require 'openssl'
 
-# id 1583 Movie.create(title: "titanic", actors: ["leo",'lea'], directors: ["john"], synopsis: "genial", rating: 80, year: 2012 ,platforms: ["netflix"],duration: 200, number_of_ratings: 130000,link: ["https://www.google.com/search?q=titanic"],poster: "ok")
-#id 1584 Movie.create(title: "hello london", actors: ["chris",'tuk'], directors: ["ta mère"], synopsis: "bouh", rating: 56, year: 2019 ,platforms: ["amazon"],duration: 95, number_of_ratings: 33000,link: ["https://www.google.com/search?q=nul"],poster: "ok")
-#id 1585 Movie.create(title: "James B", actors: ["Daniel",'monica'], directors: ["ton père"], synopsis: "my name is bond", rating: 72, year: 2023 ,platforms: ["netflix","amazon"],duration: 123, number_of_ratings: 38000,link: ["https://www.google.com/search?q=james"],poster: "ok")
+# title: "Arrival", actors: ["Amy Adams", "Jeremy Renner", "Forest Whitaker", "Michael Stuhlbarg", "Tzi Ma", "Mark O'Brien", "Julia Scarlett Dan"], directors: ["Denis Villeneuve"],synopsis:"Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat.",rating: 79.0,year: 2016,platforms: ["prime"],duration: 116,number_of_ratings: 647439,link: ["https://www.amazon.com/title/80117799/"],poster: "https://image.tmdb.org/t/p/original/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg">
 
-#Movies Netflix
-
-def scrapping_method(page_number)
-  url = URI("https://streaming-availability.p.rapidapi.com/search/basic?country=fr&service=netflix&type=movie&page=#{page_number}")
+def scrapping_method(platform, page_number)
+  url = URI("https://streaming-availability.p.rapidapi.com/search/basic?country=fr&service=#{platform}&type=movie&page=#{page_number}")
   http = Net::HTTP.new(url.host, url.port)
   http.use_ssl = true
   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
@@ -20,15 +21,40 @@ def scrapping_method(page_number)
   http.request(request)
 end
 
-page_number = 201
-#page_number = 201
-response = scrapping_method(page_number)
+# platform = 'netflix'
+# page_number = 201
+# #page_number = 201
+# response = scrapping_method(platform, page_number)
+# while JSON.parse(response.read_body)["total_pages"] > page_number
+#   JSON.parse(response.read_body)["results"].each do |movie|
+#     if Movie.find_by(title: movie["title"])
+#       db_movie = Movie.find_by(title: movie["title"])
+#       db_movie.link << movie["streamingInfo"].first[1].first[1]["link"].split unless db_movie.link.include? movie["streamingInfo"].first[1].first[1]["link"]
+#       db_movie.platforms << movie["streamingInfo"].first[0].split unless db_movie.platforms.include? movie["streamingInfo"].first[0]
+#     else
+#       new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
+#       movie["genres"].each do |genre|
+#         MovieGenre.create!(movie_id: new_movie.id, genre_id: Genre.find_by(api_genre_id: genre).id)
+#       end
+#     end
+#   end
+#   page_number += 1
+#   response = scrapping_method(platform, page_number)
+#   puts page_number
+# end
+
+# Movies Prime
+puts 'starting seed'
+platform = 'prime'
+page_number = 10
+response = scrapping_method(platform, page_number)
 while JSON.parse(response.read_body)["total_pages"] > page_number
   JSON.parse(response.read_body)["results"].each do |movie|
     if Movie.find_by(title: movie["title"])
       db_movie = Movie.find_by(title: movie["title"])
-      db_movie.link << movie["streamingInfo"].first[1].first[1]["link"].split unless db_movie.link.include? movie["streamingInfo"].first[1].first[1]["link"]
-      db_movie.platforms << movie["streamingInfo"].first[0].split unless db_movie.platforms.include? movie["streamingInfo"].first[0]
+      puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
+      db_movie.link << movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
+      db_movie.platforms << movie["streamingInfo"][platform] unless db_movie.platforms.include? movie["streamingInfo"][platform]
     else
       new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
       movie["genres"].each do |genre|
@@ -36,16 +62,15 @@ while JSON.parse(response.read_body)["total_pages"] > page_number
       end
     end
   end
+
   page_number += 1
-  response = scrapping_method(page_number)
+  response = scrapping_method(platform, page_number)
   puts page_number
 end
+puts 'done'
 
-
-
-
-#Genre
-#seed already done
+# Genre
+# seed already done
 
 # Genre.create(name: "Biography", api_genre_id: 1)
 # Genre.create(name: "Film Noir", api_genre_id: 2)
@@ -76,8 +101,8 @@ end
 # Genre.create(name: "Reality", api_genre_id: 10764)
 # Genre.create(name: "Talk Show", api_genre_id: 10767)
 
-#Moods
-#already seed
+# Moods
+# already seeded
 # Mood.create(name: "Bière & Pizza")
 # Mood.create(name: "What's in the box ?")
 # Mood.create(name: "Retour vers le passé")
@@ -86,8 +111,8 @@ end
 # Mood.create(name: "I'm Going on an Adventure !")
 # Mood.create(name: "Cocooning")
 
-#MoodGenre
-#already seed
+# MoodGenre
+# already seeded
 
 # count = Mood.first.id
 # genre_associated_biere_pizza = [28,	35,	12,	14,	878, 16,	27]
@@ -136,4 +161,13 @@ end
 
 # genre_associated_cocooning.each do |genre|
 #    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
+# end
+
+
+# platforms_to_search = %w[netflix prime] # par ex
+# movie_associations = platforms_to_search.map do |platform|
+#   Movie.where("platforms @> ?", "{#{platform}}")
+# end
+# filtered_results = movie_associations.reduce do |accumulator, element|
+#   accumulator & element
 # end
