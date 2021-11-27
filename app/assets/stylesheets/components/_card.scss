@@ -75,7 +75,12 @@
 }
 
 .mood-card {
-    // background-image: asset-url('Unit 2.jpeg');
+  .mood-pic {
+    background-image: asset-url('beerparty.jpeg');
+  }
+  // #search_mood_bière__pizza + label {
+
+  // }
   // background-image: asset-url('');
   fieldset {
     display: flex;
