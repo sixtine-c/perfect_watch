@@ -37,7 +37,7 @@
             <h2 class='mb-4'>What will be the mood of your evening?</h2>
             <div class="platforms d-flex justify-content-around flex-wrap">
               <div class="mood-card">
-                <%# <% if @moods.name ==  %> %>
+                <%# <% if @moods.name ==  %>
                 <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: 'click->add-color#changecolor'}, class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: Mood::MOODS %>
               </div>
                 <%#= image_tag '#' %>
