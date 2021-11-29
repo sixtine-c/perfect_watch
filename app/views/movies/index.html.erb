@@ -9,7 +9,7 @@
           <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movie-<%= i %>">
             <div class="movie-poster" style="background: url(<%=movie.poster if movie.poster != nil%>); background-size: cover"></div>
             <div class="card-description p-1<%= ' bad-note'if movie.rating < 50 %>">
-              <p><%= movie.rating/10%></p>
+              <p title="This movie has a rating of <%= movie.rating/10 %>/10 on IMDB"><%= movie.rating/10%></p>
             </div>
           </div>
 
@@ -57,7 +57,10 @@
                             <% end %>
                           <% end %>
                         </div class="d-flex align-items-center">
-                          <p class="rating<%= ' bad-note'if movie.rating < 50 %>"><%= movie.rating/10 %></p>
+                          <div class="">
+                            <%= image_tag("imdb.png", size: "60x60", style: "position: relative", title: "This movie has a rating of #{movie.rating/10}/10 on IMDB")%>
+                            <p class="rating<%= ' bad-note'if movie.rating < 50 %>" style="position: absolute; right: 0px; bottom: -10px" title="This movie has a rating of <%= movie.rating/10 %>/10 on IMDB"><%= movie.rating/10 %></p>
+                          </div>
                         </div>
                       </div>
                     </div>
