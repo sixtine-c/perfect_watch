@@ -30,17 +30,19 @@ class MoviesController < ApplicationController
     # mini algorithm
 
     @movies = filter_10_movies_with_7_top(movies_by_type)
+
   end
 
+
   def moodclass(mood)
-    return "beer-party" if mood.name == "Bière & Pizza"
-    return "history" if mood.name == "Retour vers le passé"
-    return "thriller" if mood.name == "What's in the box ?"
+    return "beer-party" if mood.name == "Beer & Pizza"
+    return "history" if mood.name == "Time flies"
+    return "thriller" if mood.name == "Cold Blood"
     return "kids" if mood.name == "Kids friendly"
     return "adventure" if mood.name == "I'm Going on an Adventure !"
     return "cocooning" if mood.name == "Cocooning"
     return "icecream" if mood.name == "Ben & Jerry's (& Cry)"
-    # "horror" if mood.name == ""
+    return "horror" if mood.name == "Not ready to sleep"
   end
 
 end
