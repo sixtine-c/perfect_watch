@@ -107,38 +107,38 @@ puts 'done'
 # Genre.create(name: "Reality", api_genre_id: 10764)
 # Genre.create(name: "Talk Show", api_genre_id: 10767)
 
-#Moods
-#already seeded
+# Moods
+# already seeded
 Mood.create(name: "Beer & Pizza")
-Mood.create(name: "What's in the box ?")
-Mood.create(name: "Back to the past")
+Mood.create(name: "Cold Blood ?")
+Mood.create(name: "Time flies")
 Mood.create(name: "Kids friendly")
 Mood.create(name: "Ben & Jerry's (& Cry)")
 Mood.create(name: "I'm Going on an Adventure !")
 Mood.create(name: "Cocooning")
-Mood.create(name: "Horror")
+Mood.create(name: "Not ready to sleep")
 
 # MoodGenre
 # already seeded
 
 count = Mood.first.id
-genre_associated_biere_pizza = [28,	35,	12,	14,	878, 16,	27]
+genre_associated_biere_pizza = [28,	35,	12,	14,	878, 16]
 
 genre_associated_biere_pizza.each do |genre|
    MoodGenre.create!(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
 count +=1
-genre_associated_what_inthebox = [53,	80,	27,	2,	9648,	7]
+genre_associated_cold_blood = [53,	80,	2,	9648,	7]
 
-genre_associated_what_inthebox.each do |genre|
+genre_associated_cold_blood.each do |genre|
    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
 count +=1
-genre_associated_retour_passe = [37,	99,	10752,	10763,	10764,	1,	36]
+genre_associated_time_flies = [37,	99,	10752,	10763,	10764,	1,	36]
 
-genre_associated_retour_passe.each do |genre|
+genre_associated_time_flies.each do |genre|
    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
@@ -171,15 +171,16 @@ genre_associated_cocooning.each do |genre|
 end
 
 count +=1
-genre_associated_horror = [27]
+genre_associated_not_ready_tosleep = [27]
 
-genre_associated_horror.each do |genre|
+genre_associated_not_ready_tosleep.each do |genre|
    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
 
 # MoodGenreExclusion
 # seeded chez sixtine
+
 puts 'starting to seed exclusion genre'
 
 count = Mood.first.id
@@ -190,16 +191,16 @@ genre_excluded_biere_pizza.each do |genre|
 end
 
 count +=1
-genre_excluded_what_inthebox = [10749, 35]
+genre_excluded_cold_blood = [10749, 35]
 
-genre_excluded_what_inthebox.each do |genre|
+genre_excluded_cold_blood.each do |genre|
    MoodGenreExclusion.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
 count +=1
-genre_excluded_retour_passe = [14, 878]
+genre_excluded_time_flies = [14, 878]
 
-genre_excluded_retour_passe.each do |genre|
+genre_excluded_time_flies.each do |genre|
    MoodGenreExclusion.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
@@ -232,13 +233,14 @@ genre_excluded_cocooning.each do |genre|
 end
 
 count +=1
-genre_excluded_horror = [10749, 35]
+genre_excluded_not_ready_tosleep = [10749, 35]
 
-genre_excluded_horror.each do |genre|
+genre_excluded_not_ready_tosleep.each do |genre|
    MoodGenreExclusion.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 end
 
 puts 'done'
+
 
 # platforms_to_search = %w[netflix prime] # par ex
 # movie_associations = platforms_to_search.map do |platform|
