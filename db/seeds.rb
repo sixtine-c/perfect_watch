@@ -30,9 +30,6 @@ end
 #   JSON.parse(response.read_body)["results"].each do |movie|
 #     if Movie.find_by(title: movie["title"])
     #   db_movie = Movie.find_by(title: movie["title"])
-    #   # if db_movie.link.first.match?(/^https:\/\/www.netflix.com\//)
-    #   #   byebug
-    #   # end
     #   puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
     #   db_movie.update(link: db_movie.link << movie["streamingInfo"][platform].first[1]["link"]) unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
     #   db_movie.update(platforms: db_movie.platform << "Netflix") unless db_movie.platforms.include? "Netflix"
