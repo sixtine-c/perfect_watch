@@ -1,16 +1,16 @@
 const moodPic = () => {
   // Mood beer party
-  const moodBeerParty = document.getElementById('search_mood_bière__pizza')
+  const moodBeerParty = document.getElementById('search_mood_beer__pizza')
   if(moodBeerParty) {
     moodBeerParty.parentElement.classList.add('mood_beer_party')
   }
   // Mood cold blood
-  const moodThriller = document.getElementById('search_mood_whats_in_the_box_')
+  const moodThriller = document.getElementById('search_mood_cold_blood')
   if(moodThriller) {
     moodThriller.parentElement.classList.add('mood_thriller')
   }
   // Mood history
-  const moodHistory = document.getElementById('search_mood_retour_vers_le_passé')
+  const moodHistory = document.getElementById('search_mood_time_flies')
   if(moodHistory) {
     moodHistory.parentElement.classList.add('mood_history')
   }
@@ -30,10 +30,10 @@ const moodPic = () => {
     moodKids.parentElement.classList.add('mood_kids')
   }
   // Mood Not ready to sleep
-  // const moodHorror = document.getElementById('search_mood_whats_in_the_box_')
-  // if(moodHorror) {
-  //   moodHorror.parentElement.classList.add('mood_horror')
-  // }
+  const moodHorror = document.getElementById('search_mood_not_ready_to_sleep')
+  if(moodHorror) {
+    moodHorror.parentElement.classList.add('mood_horror')
+  }
   // Mood I'm going on an adventure
   const moodAdventure = document.getElementById('search_mood_im_going_on_an_adventure_')
   if(moodAdventure) {
