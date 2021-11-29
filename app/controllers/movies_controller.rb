@@ -30,6 +30,7 @@ class MoviesController < ApplicationController
 
     @movies = filter_10_movies_with_7_top(movies_by_type)
 
+
     @movie = filter_1_movie(movies_by_type)
 
     respond_to do |format|
@@ -49,5 +50,6 @@ class MoviesController < ApplicationController
     return "cocooning" if mood.name == "Cocooning"
     return "icecream" if mood.name == "Ben & Jerry's (& Cry)"
     return "horror" if mood.name == "Not ready to sleep"
+    return "random" if mood.name == "Random"
   end
 end
