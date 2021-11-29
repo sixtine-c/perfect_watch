@@ -30,7 +30,6 @@ class MoviesController < ApplicationController
 
     @movies = filter_10_movies_with_7_top(movies_by_type)
 
-
     @movie = filter_1_movie(movies_by_type)
 
     respond_to do |format|
