@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_115247) do
+ActiveRecord::Schema.define(version: 2021_11_29_093209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 2021_11_24_115247) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "api_genre_id"
+  end
+
+  create_table "mood_genre_exclusions", force: :cascade do |t|
+    t.bigint "mood_id", null: false
+    t.bigint "genre_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_mood_genre_exclusions_on_genre_id"
+    t.index ["mood_id"], name: "index_mood_genre_exclusions_on_mood_id"
   end
 
   create_table "mood_genres", force: :cascade do |t|
@@ -84,6 +93,8 @@ ActiveRecord::Schema.define(version: 2021_11_24_115247) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "mood_genre_exclusions", "genres"
+  add_foreign_key "mood_genre_exclusions", "moods"
   add_foreign_key "mood_genres", "genres"
   add_foreign_key "mood_genres", "moods"
   add_foreign_key "movie_genres", "genres"
