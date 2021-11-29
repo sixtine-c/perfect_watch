@@ -16,13 +16,14 @@ export default class extends Controller {
   changecolor(event) {
     const moodList = ['beer-party', 'thriller', 'history', 'kids', 'icecream', 'adventure', 'cocooning', 'horror']
 
-    const colors = { 'search_mood_bière__pizza': moodList[0],
-                      'search_mood_whats_in_the_box_': moodList[1],
-                      'search_mood_retour_vers_le_passé': moodList[2],
+    const colors = { 'search_mood_beer__pizza': moodList[0],
+                      'search_mood_cold_blood': moodList[1],
+                      'search_mood_time_flies': moodList[2],
                       'search_mood_kids_friendly': moodList[3],
                       'search_mood_ben__jerrys__cry': moodList[4],
                       'search_mood_im_going_on_an_adventure_': moodList[5],
-                      'search_mood_cocooning': moodList[6] }
+                      'search_mood_cocooning': moodList[6],
+                      'search_mood_not_ready_to_sleep': moodList[7] }
     const target_id = event.currentTarget.id;
     const class_color = colors[target_id];
 
