@@ -1,0 +1,142 @@
+// Card des moods avec photos
+.mood-card {
+  .mood_beer_party {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), asset-url('beerparty.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: all 250ms ease;
+    width: 242px;
+    height: 100px;
+    border-radius: 10px;
+    label {
+      opacity: 1;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 39px 25px;
+
+    }
+    &:hover {
+      background-image:asset-url('beerparty.jpeg');
+      label {
+        color: transparent;
+      }
+    }
+  }
+  .mood_history {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), asset-url('history.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: all 250ms ease;
+    width: 242px;
+    height: 100px;
+    border-radius: 10px;
+    label {
+      opacity: 1;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 39px 25px;
+
+    }
+    &:hover {
+      background-image:asset-url('history.jpeg');
+      label {
+        color: transparent;
+      }
+    }
+  }
+  .mood_thriller {
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('thriller.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: all 250ms ease;
+    width: 242px;
+    height: 100px;
+    border-radius: 10px;
+    label {
+      opacity: 1;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 39px 25px;
+    }
+    &:hover {
+      background-image:asset-url('thriller.jpeg');
+      label {
+        color: transparent;
+      }
+    }
+  }
+  .mood_cocooning {
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('cocooning.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: all 250ms ease;
+    width: 242px;
+    height: 100px;
+    border-radius: 10px;
+    label {
+      opacity: 1;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 39px 25px;
+    }
+    &:hover {
+      background-image:asset-url('cocooning.jpeg');
+      label {
+        color: transparent;
+      }
+    }
+  }
+  .mood_adventure {
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('adventure.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: all 250ms ease;
+    width: 242px;
+    height: 100px;
+    border-radius: 10px;
+    label {
+      opacity: 1;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 39px 25px;
+    }
+    &:hover {
+      background-image:asset-url('adventure.jpeg');
+      label {
+        color: transparent;
+      }
+    }
+  }
+  .mood_horror {
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('horror.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: all 250ms ease;
+    width: 242px;
+    height: 100px;
+    border-radius: 10px;
+    label {
+      opacity: 1;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 39px 25px;
+    }
+    &:hover {
+      background-image:asset-url('horror.jpeg');
+      label {
+        color: transparent;
+      }
+    }
+  }
+  fieldset {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}

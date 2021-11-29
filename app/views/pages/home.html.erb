@@ -2,12 +2,12 @@
 
   <div class="custom-container home-screen visible-question">
     <div class="">
-      <div class="main-card">
+      <div class="d-flex justify-content-center align-items-center flex-column">
         <%= image_tag 'Logo.png', height: 90, width: 200 %>
         <br>
         <p>Don't know what to watch?</p>
-        <button type='button' class='btn-general', data-action='click->changing-slide#nextquestion'>Perfect.</button>
-        <%#= link_to 'Parfait', '', class: 'btn-general', data: { action:'click->changing-slide#nextquestion' %>
+        <p>Try our quiz to find a movie in 5 minutes for your platforms!</p>
+        <button type='button' class='btn-general', data-action='click->changing-slide#nextquestion'>Let's start!</button>
       </div>
     </div>
   </div>
@@ -19,13 +19,12 @@
           <h2 class='mb-5'>What platforms do you have?</h2>
           <div class="platforms d-flex flex-wrap justify-content-around">
             <div>
-              <%= f.input :platform, label: '', as: :check_boxes, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: Movie::PLATFORMS %>
+              <%= f.input :platform, label: '', as: :check_boxes, input_html: {class: 'hiddenbox platform-btn'}, item_wrapper_class: '', collection: Movie::PLATFORMS %>
             </div>
           </div>
         </div>
         <div class="btn-suivant text-end">
           <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'>Next question</button>
-          <%#= link_to 'Question suivante', '#', class: 'btn-question effect-next', data: { action:'click->changing-slide#nextquestion' } %>
         </div>
       </div>
     </div>
@@ -37,7 +36,7 @@
             <h2 class='mb-4'>What will be the mood of your evening?</h2>
             <div class="platforms d-flex justify-content-around flex-wrap">
               <div class="mood-card">
-                <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: 'click->add-color#changecolor'}, class: 'hiddenbox'}, item_wrapper_class: 'btn-general mood-pic', collection: Mood::MOODS %>
+                <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: 'click->add-color#changecolor'}, class: 'hiddenbox'}, item_wrapper_class: "checkboxes", collection: Mood::MOODS %>
               </div>
             </div>
           </div>
@@ -96,9 +95,6 @@
     </div>
   <% end %>
 </div>
-
-<%# avec js ajouter la classe next question a la question d'apres et visible-question à la question affichée %>
-<%# transition passage de 100vh à 0vh en 250ms %>
 
 
 <%# pour supprimer champ vide dans plateform: params[search][platform].delete_at(0) %>
