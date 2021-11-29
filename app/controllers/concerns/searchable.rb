@@ -28,5 +28,8 @@ module Searchable
     (movies_top + movies_bof).sample(10)
   end
 
+  def filter_1_movie(movies)
+    movies.sample(1)
+  end
 
 end
