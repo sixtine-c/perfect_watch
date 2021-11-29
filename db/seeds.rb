@@ -100,7 +100,7 @@ end
 # Movies Disney
 puts 'starting seed'
 platform = 'disney'
-page_number = 35
+page_number = 1
 response = scrapping_method(platform, page_number)
 while JSON.parse(response.read_body)["total_pages"] > page_number
   JSON.parse(response.read_body)["results"].each do |movie|
