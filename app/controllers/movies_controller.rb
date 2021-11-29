@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
     @mood = Mood.find_by(name: params["search"]["mood"])
     # filter on genres via mood
     @mood_class = moodclass(@mood)
-
+raise
     @movies_global = filter_movie_by_genre_through_mood(@mood)
     # filter on platforms
     @movies_by_platform = filter_movies_by_platforms(@platforms)
@@ -44,5 +44,4 @@ class MoviesController < ApplicationController
     return "icecream" if mood.name == "Ben & Jerry's (& Cry)"
     return "horror" if mood.name == "Not ready to sleep"
   end
-
 end
