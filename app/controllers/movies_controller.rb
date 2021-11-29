@@ -3,14 +3,19 @@ class MoviesController < ApplicationController
   include Searchable
 
   def index
-
     params["search"]["platform"].delete_at(0)
-    @platforms = params["search"]["platform"]
+     @platforms = params["search"]["platform"].map do |platform|
+      if platform == "prime video"
+        "prime"
+      else
+        platform
+      end
+    end
+    # @platforms = params["search"]["platform"]
     params["search"]["duration"] == "true" ? @duration = 119 : @duration = 121
     params["search"]["famous"] == "true" ? @type = "blockbuster" : @type = "pépite"
     @mood = Mood.find_by(name: params["search"]["mood"])
     # filter on genres via mood
-
     @mood_class = moodclass(@mood)
 
     @movies_global = filter_movie_by_genre_through_mood(@mood)
