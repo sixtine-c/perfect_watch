@@ -20,3 +20,5 @@ import "controllers"
 import "bootstrap"
 import { moodPic } from "./moodcard"
 moodPic()
+import { platformColor } from "./platforms"
+platformColor()

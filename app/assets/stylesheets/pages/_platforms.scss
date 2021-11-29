@@ -1,0 +1,104 @@
+// Bouton des plateformes
+.platforms {
+  fieldset {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+.platformbox {
+  position: absolute;
+  transform: scale(0);
+}
+
+.platformbox:checked + label {
+  display: block;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+  opacity: 1;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.platformbox.platform-btn:checked + label {
+  color: transparent;
+  background-color: transparent;
+  box-shadow: transparent;
+}
+
+.platform-netflix:checked + label {
+  color: transparent;
+  width: 242px;
+  height: 40px;
+  margin: 21px;
+  background-color: red !important;
+}
+
+label[for="search_platform_netflix"] {
+  cursor: pointer;
+  background-image: asset-url('netflix-white.png');
+  color: transparent;
+  width: 242px;
+  height: 40px;
+  margin: 21px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+label[for="search_platform_prime_video"] {
+  cursor: pointer;
+  background-image: asset-url('prime-white.png');
+  color: transparent;
+  width: 242px;
+  height: 55px;
+  margin: 21px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+label[for="search_platform_apple_tv"] {
+  cursor: pointer;
+  background-image: asset-url('atv.png');
+  color: transparent;
+  width: 242px;
+  height: 50px;
+  margin: 21px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+label[for="search_platform_disney_"] {
+  cursor: pointer;
+  background-image: asset-url('disney-white.png');
+  color: transparent;
+  width: 242px;
+  height: 70px;
+  margin: 18px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
