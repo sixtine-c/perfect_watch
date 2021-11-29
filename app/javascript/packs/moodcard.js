@@ -30,10 +30,10 @@ const moodPic = () => {
     moodKids.parentElement.classList.add('mood_kids')
   }
   // Mood Not ready to sleep
-  const moodHorror = document.getElementById('search_mood_whats_in_the_box_')
-  if(moodHorror) {
-    moodHorror.parentElement.classList.add('mood_horror')
-  }
+  // const moodHorror = document.getElementById('search_mood_whats_in_the_box_')
+  // if(moodHorror) {
+  //   moodHorror.parentElement.classList.add('mood_horror')
+  // }
   // Mood I'm going on an adventure
   const moodAdventure = document.getElementById('search_mood_im_going_on_an_adventure_')
   if(moodAdventure) {
