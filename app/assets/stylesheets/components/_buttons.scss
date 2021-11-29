@@ -1,22 +1,53 @@
-
+// Checkboxes generales
 .hiddenbox {
   position: absolute;
-  transform: scale(0)
+  transform: scale(0);
 }
 
 .hiddenbox:checked + label {
+  display: block;
   color: white;
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 8px 25px;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(7, 7, 7, 0.3);
   border-radius: 10px;
+  opacity: 1;
+  box-shadow: 0 4px 20px 2px rgb(154, 168, 164);
+  &:hover {
+    background-color: transparent;
+    box-shadow: 0 4px 20px 2px rgb(154, 168, 164);
+  }
+}
+
+// Bouton des plateformes
+.hiddenbox.platform-btn:checked + label {
+  color: transparent;
+  background-color: transparent;
+}
+
+label[for="search_platform_netflix"] {
+  cursor: pointer;
+  background-image: asset-url('netflix-white.png');
+  color: transparent;
+  width: 242px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 // Tous les boutons de la page
 .btn-general {
+  flex: 0 0 30%;
   border: none;
   cursor: pointer;
   width: 242px;
-  padding: 8px 25px;
+  height: 40px;
+  padding: 10px;
   border-radius: 10px;
   text-decoration: none;
   color: white;
@@ -26,32 +57,13 @@
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all .5s ease-out;
-  // &.netflix {
-  //   background-image: asset-url('');
-  // }
   &:hover {
+    cursor: pointer;
     color: white;
     transition-duration: 500ms;
     background-position: left bottom;
   }
 }
 
-
-// .text {
-//   text-align: center;
-//   font-size: 16px;
-//   line-height: 30px;
-//   color: black;
-//   transition: all .6s ease-out;
-//   display: block;
-// }
-
-// .text:hover {
-//   color: white;
-// }
-
 // Uniquement les boutons questions suivantes et precedentes
 @import 'pages/btn-pre-next';
-
-// Uniquement les boutons plateforms
-// @import 'pages/btn-platforms';
