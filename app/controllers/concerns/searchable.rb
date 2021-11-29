@@ -22,4 +22,8 @@ module Searchable
     movies_bof = movies.select{|movie| movie.rating < 70}.sample(3)
     (movies_top + movies_bof).sample(10)
   end
+
+  def filter_1_movie(movies)
+    movies.sample(1)
+  end
 end

@@ -3,7 +3,6 @@ class MoviesController < ApplicationController
   include Searchable
 
   def index
-
     params["search"]["platform"].delete_at(0)
     @platforms = params["search"]["platform"]
     params["search"]["duration"] == "true" ? @duration = 119 : @duration = 121
@@ -25,6 +24,14 @@ class MoviesController < ApplicationController
     # mini algorithm
 
     @movies = filter_10_movies_with_7_top(movies_by_type)
+
+    @movie = filter_1_movie(movies_by_type)
+
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: 'tenmovies.html', locals: { movies: @movies } }
+    end
+
   end
 
   def moodclass(mood)
