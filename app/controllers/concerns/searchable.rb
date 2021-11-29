@@ -1,8 +1,13 @@
 module Searchable
   def filter_movie_by_genre_through_mood(mood)
     array_genres_id = MoodGenre.where(mood_id: @mood).pluck(:genre_id)
-    movie_ids = MovieGenre.where(genre_id: array_genres_id).pluck(:movie_id)
-    Movie.where(id: movie_ids)
+    array_excluded_genres_id = MoodGenreExclusion.where(mood_id: @mood).pluck(:genre_id)
+
+    movie_ids_without_filter = MovieGenre.where(genre_id: array_genres_id).pluck(:movie_id)
+    movie_ids_exclusion_filter = MovieGenre.where(genre_id: array_excluded_genres_id).pluck(:movie_id)
+    movie_ids_filtered = movie_ids_without_filter.difference(movie_ids_exclusion_filter)
+
+    Movie.where(id: movie_ids_filtered)
   end
 
   def filter_movies_by_platforms(platforms)
@@ -26,4 +31,5 @@ module Searchable
   def filter_1_movie(movies)
     movies.sample(1)
   end
+
 end
