@@ -10,17 +10,17 @@ require 'openssl'
 # title: "Arrival", actors: ["Amy Adams", "Jeremy Renner", "Forest Whitaker", "Michael Stuhlbarg", "Tzi Ma", "Mark O'Brien", "Julia Scarlett Dan"], directors: ["Denis Villeneuve"],synopsis:"Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat.",rating: 79.0,year: 2016,platforms: ["prime"],duration: 116,number_of_ratings: 647439,link: ["https://www.amazon.com/title/80117799/"],poster: "https://image.tmdb.org/t/p/original/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg">
 
 
-# def scrapping_method(platform, page_number)
-#   url = URI("https://streaming-availability.p.rapidapi.com/search/basic?country=fr&service=#{platform}&type=movie&page=#{page_number}")
-#   http = Net::HTTP.new(url.host, url.port)
-#   http.use_ssl = true
-#   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+def scrapping_method(platform, page_number)
+  url = URI("https://streaming-availability.p.rapidapi.com/search/basic?country=fr&service=#{platform}&type=movie&page=#{page_number}")
+  http = Net::HTTP.new(url.host, url.port)
+  http.use_ssl = true
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-#   request = Net::HTTP::Get.new(url)
-#   request["x-rapidapi-host"] = 'streaming-availability.p.rapidapi.com'
-#   request["x-rapidapi-key"] = ENV['RAPID_API']
-#   http.request(request)
-# end
+  request = Net::HTTP::Get.new(url)
+  request["x-rapidapi-host"] = 'streaming-availability.p.rapidapi.com'
+  request["x-rapidapi-key"] = ENV['RAPID_API']
+  http.request(request)
+end
 
 # platform = 'netflix'
 # page_number = 201
@@ -72,30 +72,30 @@ require 'openssl'
 # puts 'done'
 
 # Movies Apple TV
-# puts 'starting seed'
-# platform = 'apple'
-# page_number = 35
-# response = scrapping_method(platform, page_number)
-# while JSON.parse(response.read_body)["total_pages"] > page_number
-#   JSON.parse(response.read_body)["results"].each do |movie|
-#     if Movie.find_by(title: movie["title"])
-#       db_movie = Movie.find_by(title: movie["title"])
-#       puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
-#       db_movie.update(link: db_movie.link << movie["streamingInfo"][platform].first[1]["link"]) unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
-#       db_movie.update(platforms: db_movie.platforms << "apple") unless db_movie.platforms.include? "apple"
-#     else
-#       new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
-#       movie["genres"].each do |genre|
-#         MovieGenre.create!(movie_id: new_movie.id, genre_id: Genre.find_by(api_genre_id: genre).id)
-#       end
-#     end
-#   end
+puts 'starting seed'
+platform = 'apple'
+page_number = 1
+response = scrapping_method(platform, page_number)
+while JSON.parse(response.read_body)["total_pages"] > page_number
+  JSON.parse(response.read_body)["results"].each do |movie|
+    if Movie.find_by(title: movie["title"])
+      db_movie = Movie.find_by(title: movie["title"])
+      puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
+      db_movie.update(link: db_movie.link << movie["streamingInfo"][platform].first[1]["link"]) unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
+      db_movie.update(platforms: db_movie.platforms << "apple") unless db_movie.platforms.include? "apple"
+    else
+      new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
+      movie["genres"].each do |genre|
+        MovieGenre.create!(movie_id: new_movie.id, genre_id: Genre.find_by(api_genre_id: genre).id)
+      end
+    end
+  end
 
-#   page_number += 1
-#   response = scrapping_method(platform, page_number)
-#   puts page_number
-# end
-# puts 'done'
+  page_number += 1
+  response = scrapping_method(platform, page_number)
+  puts page_number
+end
+puts 'done'
 
 # Movies Disney
 # puts 'starting seed'
