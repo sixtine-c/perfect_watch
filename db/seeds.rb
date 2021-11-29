@@ -107,7 +107,7 @@ require 'openssl'
 # Moods
 # already seeded
 Mood.create(name: "Beer & Pizza")
-Mood.create(name: "Cold Blood ?")
+Mood.create(name: "Cold Blood")
 Mood.create(name: "Time flies")
 Mood.create(name: "Kids friendly")
 Mood.create(name: "Ben & Jerry's (& Cry)")
