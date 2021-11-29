@@ -17,7 +17,7 @@ def scrapping_method(platform, page_number)
 
   request = Net::HTTP::Get.new(url)
   request["x-rapidapi-host"] = 'streaming-availability.p.rapidapi.com'
-  request["x-rapidapi-key"] = ENV['RAPID_API']
+  request["x-rapidapi-key"] = "052bfc2d15mshbb71bb1352ba53ap1dd95bjsn478b8aa1888a"
   http.request(request)
 end
 
@@ -28,14 +28,18 @@ end
 # while JSON.parse(response.read_body)["total_pages"] > page_number
 #   JSON.parse(response.read_body)["results"].each do |movie|
 #     if Movie.find_by(title: movie["title"])
-#       db_movie = Movie.find_by(title: movie["title"])
-#       db_movie.link << movie["streamingInfo"].first[1].first[1]["link"].split unless db_movie.link.include? movie["streamingInfo"].first[1].first[1]["link"]
-#       db_movie.platforms << movie["streamingInfo"].first[0].split unless db_movie.platforms.include? movie["streamingInfo"].first[0]
-#     else
-#       new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
-#       movie["genres"].each do |genre|
-#         MovieGenre.create!(movie_id: new_movie.id, genre_id: Genre.find_by(api_genre_id: genre).id)
-#       end
+    #   db_movie = Movie.find_by(title: movie["title"])
+    #   # if db_movie.link.first.match?(/^https:\/\/www.netflix.com\//)
+    #   #   byebug
+    #   # end
+    #   puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
+    #   db_movie.update(link: db_movie.link << movie["streamingInfo"][platform].first[1]["link"]) unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
+    #   db_movie.update(platforms: db_movie.platform << movie["streamingInfo"][platform]) unless db_movie.platforms.include? movie["streamingInfo"][platform]
+    # else
+    #   new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
+    #   movie["genres"].each do |genre|
+    #     MovieGenre.create!(movie_id: new_movie.id, genre_id: Genre.find_by(api_genre_id: genre).id)
+    #   end
 #     end
 #   end
 #   page_number += 1
@@ -46,15 +50,18 @@ end
 # Movies Prime
 puts 'starting seed'
 platform = 'prime'
-page_number = 10
+page_number = 35
 response = scrapping_method(platform, page_number)
 while JSON.parse(response.read_body)["total_pages"] > page_number
   JSON.parse(response.read_body)["results"].each do |movie|
     if Movie.find_by(title: movie["title"])
       db_movie = Movie.find_by(title: movie["title"])
+      # if db_movie.link.first.match?(/^https:\/\/www.netflix.com\//)
+      #   byebug
+      # end
       puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
-      db_movie.link << movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
-      db_movie.platforms << movie["streamingInfo"][platform] unless db_movie.platforms.include? movie["streamingInfo"][platform]
+      db_movie.update(link: db_movie.link << movie["streamingInfo"][platform].first[1]["link"]) unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
+      db_movie.update(platforms: db_movie.platforms << "prime") unless db_movie.platforms.include? "prime"
     else
       new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
       movie["genres"].each do |genre|
@@ -162,7 +169,6 @@ puts 'done'
 # genre_associated_cocooning.each do |genre|
 #    MoodGenre.create(genre_id: Genre.find_by(api_genre_id: genre).id, mood_id: count)
 # end
-
 
 # platforms_to_search = %w[netflix prime] # par ex
 # movie_associations = platforms_to_search.map do |platform|
