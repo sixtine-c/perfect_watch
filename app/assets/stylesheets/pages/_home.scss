@@ -22,8 +22,8 @@
   transition-duration: 750ms;
   // Changement de fond en fonction du mood
   &.beer-party{
-        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        asset-url('beerparty.jpeg');
+        background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        asset-url('beerpartest.jpeg');
         background-size: cover;
     .main-card {
       background-image: $beer-party;
@@ -88,7 +88,9 @@
     }
   }
   &.kids {
-    background-color: $background-kids;
+     background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+     asset-url('kidsfriendlytest.jpeg');
+     background-size: cover;
     .main-card {
       background-image: $kids;
       box-shadow: $shadow-kids;
@@ -152,7 +154,9 @@
     }
   }
   &.icecream {
-    background-color: $background-icecream;
+     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     asset-url('icecream.jpeg');
+     background-size: cover;
     .main-card {
       background-image: $icecream;
       box-shadow: $shadow-icecream;
@@ -173,7 +177,7 @@
   }
   &.horror {
        background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-       asset-url('horror.jpeg');
+       asset-url('TestHorreur.jpeg');
        background-size: cover;
     .main-card {
       background-image: $horror;
