@@ -222,51 +222,179 @@
   background-color: $home-color;
   font-family: 'Hind', sans-serif;
   &.beer-party{
-    background-color: $background-beer-party;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        asset-url('beerpartest.jpeg');
+        background-size: cover;
+    .main-card {
+      background-image: $beer-party;
+      box-shadow: $shadow-beer-party;
+    }
     .btn-question{
       background: $buttons-beer-party;
     }
+    .btn-general {
+      background: $hover-beer-party;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+      }
+    }
   }
   &.history {
-    background-color: $background-history;
+      background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      asset-url('history.jpeg');
+      background-size: cover;
+    .main-card {
+      background-image: $history;
+      box-shadow: $shadow-history;
+    }
     .btn-question {
       background: $buttons-history;
     }
+    .btn-general {
+      background: $hover-history;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.thriller {
-    background-color: $background-thriller;
+       background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+       asset-url('thriller.jpeg');
+       background-size: cover;
+    .main-card {
+      background-image: $thriller;
+      box-shadow: $shadow-thriller;
+    }
     .btn-question {
       background: $buttons-thriller;
     }
+    .btn-general {
+      background: $hover-thriller;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.kids {
-    background-color: $background-kids;
+     background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+     asset-url('kidsfriendlytest.jpeg');
+     background-size: cover;
+    .main-card {
+      background-image: $kids;
+      box-shadow: $shadow-kids;
+    }
     .btn-question {
       background: $buttons-kids;
     }
+    .btn-general {
+      background: $hover-kids;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.adventure {
-    background-color: $background-adventure;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    asset-url('adventure.jpeg');
+    background-size: cover;
+    .main-card {
+      background-image: $adventure;
+      box-shadow: $shadow-adventure;
+    }
     .btn-question {
       background: $buttons-adventure;
     }
+    .btn-general {
+      background: $hover-adventure;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.cocooning {
-    background-color: $background-cocooning;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    asset-url('cocooning.jpeg');
+    background-size: cover;
+    .main-card {
+      background-image: $cocooning;
+      box-shadow: $shadow-cocooning;
+    }
     .btn-question {
       background: $buttons-cocooning;
     }
+    .btn-general {
+      background: $hover-cocooning;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.icecream {
-    background-color: $background-icecream;
+     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     asset-url('icecream.jpeg');
+     background-size: cover;
+    .main-card {
+      background-image: $icecream;
+      box-shadow: $shadow-icecream;
+    }
     .btn-question {
       background: $buttons-icecream;
     }
+    .btn-general {
+      background: $hover-icecream;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
+    }
   }
   &.horror {
-    background-color: $background-horror;
+       background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+       asset-url('TestHorreur.jpeg');
+       background-size: cover;
+    .main-card {
+      background-image: $horror;
+      box-shadow: $shadow-horror;
+    }
     .btn-question {
       background: $buttons-horror;
+    }
+    .btn-general {
+      background: $hover-horror;
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        color: white;
+        transition-duration: 500ms;
+        background-position: left bottom;
+  }
     }
   }
 
