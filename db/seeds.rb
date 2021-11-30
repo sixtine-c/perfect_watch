@@ -30,7 +30,7 @@ while JSON.parse(response.read_body)["total_pages"] > page_number
       db_movie = Movie.find_by(title: movie["title"])
       puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
       db_movie.update(link: db_movie.link << movie["streamingInfo"][platform].first[1]["link"]) unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
-      db_movie.update(platforms: db_movie.platform << "netflix") unless db_movie.platforms.include? "netflix"
+      db_movie.update(platforms: db_movie.platforms << "netflix") unless db_movie.platforms.include? "netflix"
     else
       new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
       movie["genres"].each do |genre|
