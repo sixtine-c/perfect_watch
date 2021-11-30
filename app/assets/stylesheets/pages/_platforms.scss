@@ -1,4 +1,6 @@
 // Bouton des plateformes
+
+// Pour toutes les plateformes
 .platforms {
   fieldset {
     display: flex;
@@ -12,7 +14,7 @@
   transform: scale(0);
 }
 
-.platformbox:checked + label {
+.platformbox + label {
   display: block;
   color: white;
   cursor: pointer;
@@ -22,6 +24,7 @@
   opacity: 1;
   &:hover {
     background-color: transparent;
+    opacity: 1;
   }
 }
 
@@ -31,21 +34,28 @@
   box-shadow: transparent;
 }
 
+// Plateforme Netflix
 .platform-netflix:checked + label {
   color: transparent;
-  width: 242px;
-  height: 40px;
-  margin: 21px;
-  background-color: red !important;
+  width: 180px;
+  height: 70px;
+  margin: 11px;
+  opacity: 1;
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(229, 9, 20) !important;
 }
 
 label[for="search_platform_netflix"] {
   cursor: pointer;
   background-image: asset-url('netflix-white.png');
+  background-size: 110px !important;
   color: transparent;
-  width: 242px;
-  height: 40px;
-  margin: 21px;
+  width: 180px;
+  height: 70px;
+  margin: 11px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,15 +63,30 @@ label[for="search_platform_netflix"] {
   &:hover {
     opacity: 1;
   }
+}
+
+// Plateform Prime Video
+.platform-prime-video:checked + label {
+  color: transparent;
+  width: 180px;
+  height: 70px;
+  margin: 11px;
+  opacity: 1;
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(0, 168, 225) !important;
 }
 
 label[for="search_platform_prime_video"] {
   cursor: pointer;
   background-image: asset-url('prime-white.png');
+  background-size: 110px !important;
   color: transparent;
-  width: 242px;
-  height: 55px;
-  margin: 21px;
+  width: 180px;
+  height: 70px;
+  margin: 11px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,15 +94,30 @@ label[for="search_platform_prime_video"] {
   &:hover {
     opacity: 1;
   }
+}
+
+// Plateform Apple TV
+.platform-appletv:checked + label {
+  color: transparent;
+  width: 180px;
+  height: 70px;
+  margin: 11px;
+  opacity: 1;
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(64, 64, 64) !important;
 }
 
 label[for="search_platform_apple_tv"] {
   cursor: pointer;
   background-image: asset-url('atv.png');
+  background-size: 110px !important;
   color: transparent;
-  width: 242px;
-  height: 50px;
-  margin: 21px;
+  width: 180px;
+  height: 70px;
+  margin: 11px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -87,13 +127,28 @@ label[for="search_platform_apple_tv"] {
   }
 }
 
+// Plateforme Disney +
+.platform-disney:checked + label {
+  color: transparent;
+  width: 180px;
+  height: 70px;
+  margin: 11px;
+  opacity: 1;
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(16, 28, 80) !important;
+}
+
 label[for="search_platform_disney_"] {
   cursor: pointer;
   background-image: asset-url('disney-white.png');
+  background-size: 110px !important;
   color: transparent;
-  width: 242px;
+  width: 180px;
   height: 70px;
-  margin: 18px;
+  margin: 11px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

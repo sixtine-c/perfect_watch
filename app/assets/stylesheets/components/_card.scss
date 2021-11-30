@@ -18,6 +18,9 @@
     padding: 30px 15px;
     margin-bottom: 25px;
   }
+  &.card-platform {
+    width: 968px;
+  }
 
   // Media queries
   @media (max-width: 700px) {
