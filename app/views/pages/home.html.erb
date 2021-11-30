@@ -34,7 +34,7 @@
         <div class="">
           <div class="main-card card-mood">
             <h2 class='mb-4'>What will be the mood of your evening?</h2>
-            <div class="platforms d-flex justify-content-around flex-wrap">
+            <div class="d-flex justify-content-around flex-wrap">
               <div class="mood-card">
                 <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: "change->add-color#changecolor click->add-color#setField"}, class: 'hiddenbox'}, item_wrapper_class: "checkboxes", collection: Mood::MOODS %>
               </div>
@@ -54,7 +54,7 @@
         <div class="">
           <div class="main-card">
             <h2 class='mb-4'>How much time do you have?</h2>
-            <div class="platforms d-flex justify-content-between">
+            <div class="m-0 platforms d-flex justify-content-between">
               <div>
                 <%= f.input :duration, label: '', as: :radio_buttons, input_html: {class: 'otherbox'}, item_wrapper_class: 'btn-general', collection: [['Less than 2 hours', true], ['More than 2 hours', false]] %>
               </div>
@@ -86,7 +86,7 @@
               <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'>Previous question</button>
             </div>
             <div class="text-end">
-              <label class='btn-question effect-next' for='result'>Results</label>
+              <label class='btn-question effect-next p-0' for='result'>Results</label>
               <input class='hiddenbox' id="result" type='submit' value='Résultats'>
             </div>
           </div>

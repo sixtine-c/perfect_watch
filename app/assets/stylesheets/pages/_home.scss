@@ -36,11 +36,21 @@
       background: $hover-beer-party;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
         background-position: left bottom;
       }
+    }
+    .form-check-input[type="radio"]:checked+label {
+      background: #6893ac;
+      box-shadow: 3px 3px 13px #424d54c2;
+    }
+
+    label {
+      height: 40px;
+      line-height: 40px;
     }
   }
   &.history {
@@ -58,11 +68,21 @@
       background: $hover-history;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
         background-position: left bottom;
-  }
+      }
+    }
+    .form-check-input[type="radio"]:checked+label {
+      background: #c09377;
+      box-shadow: 3px 3px 13px #534033;
+    }
+
+    label {
+      height: 40px;
+      line-height: 40px;
     }
   }
   &.thriller {
@@ -80,11 +100,21 @@
       background: $hover-thriller;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
         background-position: left bottom;
-  }
+      }
+    }
+    .form-check-input[type="radio"]:checked+label {
+      background: rgb(36, 35, 35);
+      box-shadow: 1px 1px 13px black;
+    }
+
+    label {
+      height: 40px;
+      line-height: 40px;
     }
   }
   &.kids {
@@ -102,11 +132,21 @@
       background: $hover-kids;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
         background-position: left bottom;
-  }
+      }
+    }
+    .form-check-input[type="radio"]:checked+label {
+      background: #6893ac;
+      box-shadow: 3px 3px 13px #424d54c2;
+    }
+
+    label {
+      height: 40px;
+      line-height: 40px;
     }
   }
   &.adventure {
@@ -124,11 +164,21 @@
       background: $hover-adventure;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
         background-position: left bottom;
-  }
+      }
+    }
+    .form-check-input[type="radio"]:checked+label {
+      background: #15770f;
+      box-shadow: 3px 3px 13px #0A3B07;
+    }
+
+    label {
+      height: 40px;
+      line-height: 40px;
     }
   }
   &.cocooning {
@@ -146,11 +196,21 @@
       background: $hover-cocooning;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
         background-position: left bottom;
-  }
+      }
+    }
+    .form-check-input[type="radio"]:checked+label {
+      background: #b3754c;
+      box-shadow: 1px 1px 13px #613f29;
+    }
+
+    label {
+      height: 40px;
+      line-height: 40px;
     }
   }
   &.icecream {
@@ -168,11 +228,21 @@
       background: $hover-icecream;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
         background-position: left bottom;
-  }
+      }
+    }
+    .form-check-input[type="radio"]:checked+label {
+        background: #6893ac;
+        box-shadow: 3px 3px 13px #424d54c2;
+    }
+
+    label {
+        height: 40px;
+        line-height: 40px;
     }
   }
   &.horror {
@@ -190,12 +260,23 @@
       background: $hover-horror;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
         background-position: left bottom;
-  }
+      }
     }
+    .form-check-input[type="radio"]:checked + label {
+      background: #6893ac;
+      box-shadow: 3px 3px 13px #424d54c2;
+    }
+
+    label {
+      height: 40px;
+      line-height: 40px;
+    }
+
   }
     @media (max-width: 1250px) {
     padding: 1rem 0;
@@ -236,6 +317,7 @@
       background: $hover-beer-party;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
@@ -258,6 +340,7 @@
       background: $hover-history;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
@@ -280,6 +363,7 @@
       background: $hover-thriller;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
@@ -302,6 +386,7 @@
       background: $hover-kids;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
@@ -324,6 +409,7 @@
       background: $hover-adventure;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
@@ -346,6 +432,7 @@
       background: $hover-cocooning;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
@@ -368,6 +455,7 @@
       background: $hover-icecream;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;
@@ -390,6 +478,7 @@
       background: $hover-horror;
       background-size: 200% 100%;
       background-position: right bottom;
+      padding: 0px;
       &:hover {
         color: white;
         transition-duration: 500ms;

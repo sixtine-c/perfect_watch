@@ -4,19 +4,41 @@
   transform: scale(0);
 }
 
+.otherbox + label {
+  flex: 0 0 30%;
+  border: none;
+  cursor: pointer;
+  width: 222px;
+  // height: 40px;
+  // padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  // margin: 15px;
+  display: block;
+  // background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, #56AB91 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+    transition-duration: 500ms;
+    background-position: left bottom;
+  }
+}
+
 .otherbox:checked + label {
   display: block;
   color: white;
   cursor: pointer;
   box-sizing: border-box;
-  width: 100%;
-  background-color: rgba(7, 7, 7, 0.3);
+  width: 222px;
   border-radius: 10px;
   opacity: 1;
-  box-shadow: 0 4px 20px 2px rgb(154, 168, 164);
   &:hover {
     background-color: transparent;
-    box-shadow: 0 4px 20px 2px rgb(154, 168, 164);
   }
 }
 
