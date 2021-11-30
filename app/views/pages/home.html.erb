@@ -36,7 +36,8 @@
             <h2 class='mb-4'>What will be the mood of your evening?</h2>
             <div class="platforms d-flex justify-content-around flex-wrap">
               <div class="mood-card">
-                <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: "change->add-color#changecolor click->add-color#setField"}, class: 'hiddenbox'}, item_wrapper_class: "checkboxes", collection: Mood::MOODS %>
+                <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: "click->add-color#changecolor click->add-color#setField"}, class: 'hiddenbox'}, item_wrapper_class: "checkboxes", collection: Mood::MOODS %>
+                <%= f.input :random_mood, input_html: {data: {add_color_target: "randomMoodField"}}, wrapper_html: {style: "display: none"} %>
               </div>
             </div>
           </div>

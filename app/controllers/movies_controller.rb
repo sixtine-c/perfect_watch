@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     # @platforms = params["search"]["platform"]
     params["search"]["duration"] == "true" ? @duration = 119 : @duration = 121
     params["search"]["famous"] == "true" ? @type = "blockbuster" : @type = "pépite"
-    @mood = Mood.find_by(name: params["search"]["mood"])
+    @mood = params["search"]["random_mood"].present? ? Mood.find_by(name: moodname(params["search"]["random_mood"])) : Mood.find_by(name: params["search"]["mood"])
     # filter on genres via mood
     @mood_class = moodclass(@mood)
     @movies_global = filter_movie_by_genre_through_mood(@mood)
@@ -51,5 +51,16 @@ class MoviesController < ApplicationController
     return "icecream" if mood.name == "Ben & Jerry's (& Cry)"
     return "horror" if mood.name == "Not ready to sleep"
     return "random" if mood.name == "Random"
+  end
+
+  def moodname(mood_class)
+    return "Beer & Pizza" if mood_class == "beer-party"
+    return "Time flies" if mood_class == "history"
+    return "Cold Blood" if mood_class == "thriller"
+    return "Kids friendly" if mood_class == "kids"
+    return "I'm Going on an Adventure !" if mood_class == "adventure"
+    return "Cocooning" if mood_class == "cocooning"
+    return "Ben & Jerry's (& Cry)" if mood_class == "icecream"
+    return "Not ready to sleep" if mood_class == "horror"
   end
 end
