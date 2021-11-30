@@ -1,12 +1,11 @@
-
 <div class="movie-container <%= @mood_class %>" data-controller="renderer">
   <div class="movies-card d-flex flex-column flex-row <%= @mood_class %>">
     <h2 class="m-1"><%= @movies.count %> movies, just for you</h2>
-    <div class="d-flex flex-row justify-content-center">
+    <div class="d-flex flex-column justify-content-center">
       <div class="wrapper" data-renderer-target="display" >
         <%= render 'tenmovies' %>
       </div>
-      <div class="d-flex">
+      <div class="d-flex justify-content-center">
         <div class="btn-suivant text-start m-1">
           <%= link_to 'Search again', root_path, class: "btn-question effect-previous" %>
         </div>
