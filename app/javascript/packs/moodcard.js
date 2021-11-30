@@ -39,5 +39,10 @@ const moodPic = () => {
   if(moodAdventure) {
     moodAdventure.parentElement.classList.add('mood_adventure')
   }
+  // Mood Random
+  const moodRandom = document.getElementById('search_mood_random')
+  if (moodRandom) {
+    moodRandom.parentElement.classList.add('mood_random')
+  }
 };
 export { moodPic };
