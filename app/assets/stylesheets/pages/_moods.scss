@@ -42,7 +42,7 @@
 // Card des moods avec photos
 .mood-card {
   .mood_beer_party {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), asset-url('beerparty.jpeg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), asset-url('beerpartest.jpeg');
     background-size: cover;
     background-position: center;
     transition: all 250ms ease;
@@ -60,7 +60,7 @@
       font-weight: bold;
     }
     &:hover {
-      background-image:asset-url('beerparty.jpeg');
+      background-image:asset-url('beerpartest.jpeg');
       label {
         color: transparent;
       }
@@ -167,7 +167,7 @@
     }
   }
   .mood_horror {
-    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('horror.jpeg');
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('TestHorreur.jpeg');
     background-size: cover;
     background-position: center;
     transition: all 250ms ease;
@@ -185,7 +185,7 @@
       font-weight: bold;
     }
     &:hover {
-      background-image:asset-url('horror.jpeg');
+      background-image:asset-url('TestHorreur.jpeg');
       label {
         color: transparent;
       }
@@ -217,7 +217,7 @@
     }
   }
   .mood_kids {
-    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('kidsfriendly.jpeg');
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('kidsfriendlytest.jpeg');
     background-size: cover;
     background-position: center;
     transition: all 250ms ease;
@@ -235,7 +235,7 @@
       font-weight: bold;
     }
     &:hover {
-      background-image:asset-url('kidsfriendly.jpeg');
+      background-image:asset-url('kidsfriendlytest.jpeg');
       label {
         color: transparent;
       }

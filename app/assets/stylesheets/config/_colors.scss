@@ -6,17 +6,17 @@ $link-text-color: #fff;
 $overlay-color: #fff;
 
 // MOOD BEER PARTY
-$background-beer-party: rgba(255, 167, 33, 1);
-$beer-party: linear-gradient(to bottom right, rgb(248, 219, 157), $background-beer-party);
-$shadow-beer-party: 0 4px 44px 2px rgba(150, 102, 30, 0.753);
+$background-beer-party: rgb(136, 72, 13);
+$beer-party: linear-gradient(to bottom right, rgb(180, 145, 5), $background-beer-party);
+$shadow-beer-party: 0 4px 44px 2px rgba(92, 72, 6, 0.753);
 $buttons-beer-party: rgb(207, 138, 33);
 $hover-beer-party: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, ($buttons-beer-party) 50%);
 
 // MOOD HISTORY
-$background-history: rgb(122, 98, 78);
-$history: linear-gradient(to bottom right, rgb(175, 155, 134), $background-history);
-$shadow-history: 0 4px 44px 2px rgba(112, 84, 61, 0.753);
-$buttons-history: rgb(99, 75, 57);
+$background-history: rgb(73, 50, 36);
+$history: linear-gradient(to bottom right, rgb(165, 131, 108), $background-history);
+$shadow-history: 0 4px 44px 2px rgba(92, 70, 51, 0.753);
+$buttons-history: rgb(83, 64, 51);
 $hover-history: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-history 50%);
 
 // MOOD THRILLER
@@ -27,39 +27,39 @@ $buttons-thriller: rgb(53, 53, 53);
 $hover-thriller: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-thriller 50%);
 
 // MOOD KIS FRIENDLY
-$background-kids: rgb(145, 166, 187);
-$kids: linear-gradient(to bottom right, rgb(233, 184, 179), $background-kids);
+$background-kids: rgb(238, 210, 164);
+$kids: linear-gradient(to bottom right, rgb(197, 199, 199), $background-kids);
 $shadow-kids: 0 4px 44px 2px rgba(119, 124, 129, 0.753);
-$buttons-kids: rgb(112, 149, 189);
+$buttons-kids: rgb(127, 169, 214);
 $hover-kids: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-kids 50%);
 
 // MOOD ADVENTURE
-$background-adventure: rgb(147, 168, 70);
-$adventure: linear-gradient(to bottom right, rgb(201, 255, 139), $background-adventure);
-$shadow-adventure: 0 4px 44px 2px rgba(148, 131, 69, 0.753);
-$buttons-adventure: rgb(98, 200, 95);
+$background-adventure: rgb(58, 129, 36);
+$adventure: linear-gradient(to bottom right, rgb(127, 139, 63), $background-adventure);
+$shadow-adventure: 0 4px 44px 2px rgba(37, 92, 26, 0.753);
+$buttons-adventure: rgb(10, 59, 8);
 $hover-adventure: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-adventure 50%);
 
 // MOOD COCOONING
-$background-cocooning: rgb(160, 88, 43);
-$cocooning: linear-gradient(to bottom right, rgb(209, 158, 121), $background-cocooning);
+$background-cocooning: #92603c;
+$cocooning: linear-gradient(to bottom right, #c2a88b, $background-cocooning);
 $shadow-cocooning: 0 4px 44px 2px rgba(133, 71, 33, 0.753);
-$buttons-cocooning: rgb(122, 67, 33);
+$buttons-cocooning: #794f33;
 $hover-cocooning: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-cocooning 50%);
 
 // MOOD ICECREAM
-$background-icecream: rgb(97, 163, 158);
-$icecream: linear-gradient(to bottom right, rgb(196, 212, 181), $background-icecream);
-$shadow-icecream: 0 4px 44px 2px rgba(110, 150, 140, 0.753);
-$buttons-icecream: rgb(97, 141, 131);
+$background-icecream: rgb(79, 87, 63);
+$icecream: linear-gradient(to bottom right, rgb(119, 138, 111), $background-icecream);
+$shadow-icecream: 0 4px 44px 2px rgba(100, 109, 96, 0.753);
+$buttons-icecream: rgb(66, 77, 61);
 $hover-icecream: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-icecream 50%);
 
 // MOOD HORROR
-$background-horror: rgb(32, 25, 21);
-$buttons-horror: rgb(53, 19, 9);
+$background-horror: rgb(43, 74, 91);
+$buttons-horror: #062946;
 $shadow-horror: 0 4px 44px 2px rgba(19, 7, 4, 0.753);
 $hover-horror: linear-gradient(to right, rgba(255, 255, 255, 0.3) 50%, $buttons-horror 50%);
-$horror: linear-gradient(to bottom right, rgb(150, 42, 27), $background-horror);
+$horror: linear-gradient(to bottom right, rgb(135, 171, 191), $background-horror);
 
 // $card-home-color: linear-gradient(to bottom right, rgba(103, 185, 154, 1), rgba(86, 171, 145, 0));
 // $beer-party: linear-gradient(to bottom right, rgb(248, 219, 157), $background-beer-party);
