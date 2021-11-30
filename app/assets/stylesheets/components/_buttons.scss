@@ -20,26 +20,6 @@
   }
 }
 
-// Bouton des plateformes
-.hiddenbox.platform-btn:checked + label {
-  color: transparent;
-  background-color: transparent;
-}
-
-label[for="search_platform_netflix"] {
-  cursor: pointer;
-  background-image: asset-url('netflix-white.png');
-  color: transparent;
-  width: 242px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  &:hover {
-    opacity: 1;
-  }
-}
-
 // Tous les boutons de la page
 .btn-general {
   flex: 0 0 30%;

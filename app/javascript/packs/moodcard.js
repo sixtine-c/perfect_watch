@@ -39,5 +39,5 @@ const moodPic = () => {
   if(moodAdventure) {
     moodAdventure.parentElement.classList.add('mood_adventure')
   }
-}
-export { moodPic }
+};
+export { moodPic };
