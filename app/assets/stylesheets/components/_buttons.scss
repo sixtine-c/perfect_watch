@@ -1,10 +1,10 @@
-// Checkboxes generales
-.hiddenbox {
+// Autre boutons de la page
+.otherbox {
   position: absolute;
   transform: scale(0);
 }
 
-.hiddenbox:checked + label {
+.otherbox:checked + label {
   display: block;
   color: white;
   cursor: pointer;

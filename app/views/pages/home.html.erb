@@ -36,7 +36,7 @@
             <h2 class='mb-4'>What will be the mood of your evening?</h2>
             <div class="platforms d-flex justify-content-around flex-wrap">
               <div class="mood-card">
-                <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: 'click->add-color#changecolor'}, class: 'hiddenbox'}, item_wrapper_class: "checkboxes", collection: Mood::MOODS %>
+                <%= f.input :mood, label: '', as: :radio_buttons, input_html: { data: {action: "change->add-color#changecolor click->add-color#setField"}, class: 'hiddenbox'}, item_wrapper_class: "checkboxes", collection: Mood::MOODS %>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@
             <h2 class='mb-4'>How much time do you have?</h2>
             <div class="platforms d-flex justify-content-between">
               <div>
-                <%= f.input :duration, label: '', as: :radio_buttons, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: [['Less than 2 hours', true], ['More than 2 hours', false]] %>
+                <%= f.input :duration, label: '', as: :radio_buttons, input_html: {class: 'otherbox'}, item_wrapper_class: 'btn-general', collection: [['Less than 2 hours', true], ['More than 2 hours', false]] %>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@
             <h2 class='mb-4'>A must to watch or a discovery?</h2>
             <div class="platforms d-flex justify-content-between">
               <div>
-                <%= f.input :famous, label: '', as: :radio_buttons, input_html: {class: 'hiddenbox'}, item_wrapper_class: 'btn-general', collection: [['A must!', true], ['A discovery!', false]] %>
+                <%= f.input :famous, label: '', as: :radio_buttons, input_html: {class: 'otherbox'}, item_wrapper_class: 'btn-general', collection: [['A must!', true], ['A discovery!', false]] %>
               </div>
             </div>
           </div>
