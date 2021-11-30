@@ -13,10 +13,11 @@
   background-color: rgba(7, 7, 7, 0.3);
   border-radius: 10px;
   opacity: 1;
-  box-shadow: 0 4px 20px 2px rgb(154, 168, 164);
+  box-shadow: 0 4px 20px 2px rgb(69, 77, 74);
+  background-color: transparent;
   &:hover {
     background-color: transparent;
-    box-shadow: 0 4px 20px 2px rgb(154, 168, 164);
+    box-shadow: 0 4px 20px 2px rgb(69, 77, 74);
   }
 }
 
@@ -50,6 +51,12 @@
     height: 130px;
     border-radius: 10px;
     margin: 5px;
+      .hiddenbox:checked+label {
+        background-image: asset-url('beerpartest.jpeg');
+        background-size: cover;
+        background-position: center;
+        color: transparent;
+      }
     label {
       opacity: 1;
       cursor: pointer;
@@ -65,6 +72,7 @@
         color: transparent;
       }
     }
+
   }
   .mood_history {
     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), asset-url('history.jpeg');
@@ -75,6 +83,12 @@
     height: 130px;
     border-radius: 10px;
     margin: 5px;
+    .hiddenbox:checked+label {
+      background-image: asset-url('history.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: transparent;
+    }
     label {
       opacity: 1;
       cursor: pointer;
@@ -100,6 +114,12 @@
     height: 130px;
     border-radius: 10px;
     margin: 5px;
+     .hiddenbox:checked+label {
+       background-image: asset-url('thriller.jpeg');
+       background-size: cover;
+       background-position: center;
+       color: transparent;
+     }
     label {
       opacity: 1;
       cursor: pointer;
@@ -125,6 +145,12 @@
     height: 130px;
     border-radius: 10px;
     margin: 5px;
+      .hiddenbox:checked+label {
+        background-image: asset-url('cocooning.jpeg');
+        background-size: cover;
+        background-position: center;
+        color: transparent;
+      }
     label {
       opacity: 1;
       cursor: pointer;
@@ -150,6 +176,12 @@
     height: 130px;
     border-radius: 10px;
     margin: 5px;
+     .hiddenbox:checked+label {
+       background-image: asset-url('adventure.jpeg');
+       background-size: cover;
+       background-position: center;
+       color: transparent;
+     }
     label {
       opacity: 1;
       cursor: pointer;
@@ -175,6 +207,12 @@
     height: 130px;
     border-radius: 10px;
     margin: 5px;
+      .hiddenbox:checked+label {
+        background-image: asset-url('TestHorreur.jpeg');
+        background-size: cover;
+        background-position: center;
+        color: transparent;
+      }
     label {
       opacity: 1;
       cursor: pointer;
@@ -200,6 +238,12 @@
     height: 130px;
     border-radius: 10px;
     margin: 5px;
+      .hiddenbox:checked+label {
+        background-image: asset-url('icecream.jpeg');
+        background-size: cover;
+        background-position: center;
+        color: transparent;
+      }
     label {
       opacity: 1;
       cursor: pointer;
@@ -225,6 +269,12 @@
     height: 130px;
     border-radius: 10px;
     margin: 5px;
+    .hiddenbox:checked + label {
+        background-image: asset-url('kidsfriendlytest.jpeg');
+        background-size: cover;
+        background-position: center;
+        color: transparent;
+    }
     label {
       opacity: 1;
       cursor: pointer;
