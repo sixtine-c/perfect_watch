@@ -194,3 +194,17 @@
   }
 
 }
+
+#shuffle {
+  color :rgb(255, 255, 255);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+    &:hover {
+    cursor: pointer;
+    color: black;
+    background: white;
+    transition-duration: 500ms;
+    background-position: left bottom;
+  }
+}
