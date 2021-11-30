@@ -22,7 +22,9 @@
   transition-duration: 750ms;
   // Changement de fond en fonction du mood
   &.beer-party{
-    background-color: $background-beer-party;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        asset-url('beerparty.jpeg');
+        background-size: cover;
     .main-card {
       background-image: $beer-party;
       box-shadow: $shadow-beer-party;
@@ -42,7 +44,9 @@
     }
   }
   &.history {
-    background-color: $background-history;
+      background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      asset-url('history.jpeg');
+      background-size: cover;
     .main-card {
       background-image: $history;
       box-shadow: $shadow-history;
@@ -62,7 +66,9 @@
     }
   }
   &.thriller {
-    background-color: $background-thriller;
+       background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+       asset-url('thriller.jpeg');
+       background-size: cover;
     .main-card {
       background-image: $thriller;
       box-shadow: $shadow-thriller;
@@ -102,7 +108,9 @@
     }
   }
   &.adventure {
-    background-color: $background-adventure;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    asset-url('adventure.jpeg');
+    background-size: cover;
     .main-card {
       background-image: $adventure;
       box-shadow: $shadow-adventure;
@@ -122,7 +130,9 @@
     }
   }
   &.cocooning {
-    background-color: $background-cocooning;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    asset-url('cocooning.jpeg');
+    background-size: cover;
     .main-card {
       background-image: $cocooning;
       box-shadow: $shadow-cocooning;
@@ -162,7 +172,9 @@
     }
   }
   &.horror {
-    background-color: $background-horror;
+       background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+       asset-url('horror.jpeg');
+       background-size: cover;
     .main-card {
       background-image: $horror;
       box-shadow: $shadow-horror;
