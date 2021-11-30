@@ -10,7 +10,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "bgcolor" ]
+  static targets = [ "bgcolor", "randomMoodField" ]
   static values = { color: String }
 
   changecolor(event) {
@@ -40,41 +40,25 @@ export default class extends Controller {
   // Une méthode pour remplir le formulaire aka set checked sur 1 des radio buttons
   // Checked field selected at random
   setField(event) {
-    if (event.currentTarget.id !== "search_mood_random") return false ;
+    if (event.currentTarget.id === "search_mood_random") {
+      const moodList = ['beer-party', 'thriller', 'history', 'kids', 'icecream', 'adventure', 'cocooning', 'horror']
+      const randomMood = moodList[Math.floor(Math.random() * moodList.length)]
+      this.randomMoodFieldTarget.value = randomMood
 
-    const moodList = ['beer-party', 'thriller', 'history', 'kids', 'icecream', 'adventure', 'cocooning', 'horror'];
-    const randomMood = Math.floor(Math.random() * moodList.length);
-    const moodPicked = moodList[randomMood] ;
-    console.log (randomMood);
-    console.log (moodPicked);
-
-    const ids = {
-      'beer-party': 'search_mood_beer__pizza',
-      'thriller': 'search_mood_cold_blood' ,
-      'history': 'search_mood_time_flies',
-      'kids': 'search_mood_kids_friendly',
-      'icecream': 'search_mood_ben__jerrys__cry',
-      'adventure': 'search_mood_im_going_on_an_adventure_',
-      'cocooning': 'search_mood_cocooning',
-      'horror': 'search_mood_not_ready_to_sleep'
+      this.bgcolorTargets.forEach(element => {
+        moodList.forEach(mood => {
+          if (mood === randomMood) {
+            element.classList.add(mood)
+          } else {
+            element.classList.remove(mood)
+          }
+        });
+      })
+      this.bgcolorTargets.forEach(element => {
+        element.classList.add(randomMood)
+      })
+    } else {
+      this.randomMoodFieldTarget.value = null
     }
-    const idPicked = (ids[moodPicked]);
-    console.log(idPicked);
-
-    const elementMoodPicked = document.getElementById(idPicked);
-    const elementMoodRandom = document.getElementById("search_mood_random");
-    elementMoodPicked.checked = true;
-
-    elementMoodPicked.remove("hiddenbox");
-    elementMoodPicked.classList.add("random-mood");
-    // elementMoodRandom.remove("hiddenbox");
-    // elementMoodRandom.classList.add("hiddenbox");
-
-
-
-    // Pick a mood at random
-    // check chosen mood radio button
-    // change css on random but to appear as checked
-    // change css on selected radio button to appear as not checked
   }
 }
