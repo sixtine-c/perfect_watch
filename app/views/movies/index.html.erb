@@ -5,11 +5,11 @@
       <div class="wrapper" data-renderer-target="display" >
         <%= render 'tenmovies' %>
       </div>
-      <div class="d-flex justify-content-center">
-        <div class="btn-suivant text-start m-1">
+      <div class="d-flex justify-content-between">
+        <div class="btn-suivant text-start ms-3 mt-1">
           <%= link_to 'Search again', root_path, class: "btn-question effect-previous" %>
         </div>
-        <div class="text-start m-1" data-controller="timeout">
+        <div class="text-start me-3 mt-1" data-controller="timeout">
           <button class="btn-question" id="shuffle" data-timeout-target="button" data-action="click->renderer#update"><i class="fas fa-random"></i></button>
         </div>
       </div>
