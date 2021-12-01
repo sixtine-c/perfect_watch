@@ -21,7 +21,7 @@ def scrapping_method(platform, page_number)
   http.request(request)
 end
 
-# platform = 'netflix'
+platform = 'netflix'
 page_number = 301
 # page_number = 301
 response = scrapping_method(platform, page_number)
