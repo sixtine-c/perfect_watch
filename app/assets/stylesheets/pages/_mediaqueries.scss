@@ -1,6 +1,80 @@
 // Media queries
 @media(max-height: 600px) {
+  .main-card.card-mood {
+    width: 1030px;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+    .mb-4 {
+      margin-top: 11px;
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 115px;
+  }
+  .movie-card {
+    height: 190px;
+    width: 131px;
+  }
+  .movies-card {
+    padding: 15px;
+    margin-top: 45px;
+  }
+  .wrapper {
+    margin-bottom: 6px;
+  }
+  .modal {
+    height: 90%;
+  }
+  .query {
+    .querytext {
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+  }
+  .showmovie {
+    height: 465px;
+  }
+  .modal-body {
+    .prv {
+      top: 220px;
+    }
+    .nxt {
+      top: 220px;
+    }
+  }
+  .note {
+    img {
+      right: 8px;
+      top: -6px;
+    }
+    .rating {
+      position: absolute;
+      right: 10px !important;
+      bottom: 10px !important;
+    }
+  }
+}
 
+@media (min-height: 600px) {
+  .modal-dialog {
+      max-height: 75vw;
+      margin: 1.75rem auto;
+  }
 }
 
 @media(max-width: 992px) {
