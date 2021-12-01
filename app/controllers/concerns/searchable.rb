@@ -24,7 +24,8 @@ module Searchable
 
    def filter_10_movies_with_7_top(movies)
     movies_top = movies.select{|movie| movie.rating >= 70}.sample(7)
-    movies_bof = movies.select{|movie| movie.rating < 70}.sample(3)
+    movies_bof = movies_top.length == 7 ? movies.select{|movie| movie.rating < 70}.sample(3) :  movies.select{|movie| movie.rating < 70}.sample(10 - movies_top.length)
+    # movies_bof = movies.select{|movie| movie.rating < 70}.sample(3)
     (movies_top + movies_bof).sample(10)
   end
 
