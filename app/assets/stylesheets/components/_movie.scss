@@ -138,12 +138,6 @@
 
 .modal-content {
   border-radius: 10px;
-    @media (max-width: 700px) {
-    min-height: 100%;
-    height: auto;
-    min-height: 100%;
-    border-radius: 0;
-    }
 }
 
 .prv {
@@ -176,15 +170,6 @@
     opacity: 1;
   }
 }
-.modal-dialog {
-  @media (max-width: 700px) {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-  }
-
-}
 
 .modal-body .showmovie {
   @media (max-width: 700px) {
@@ -208,4 +193,11 @@
     transition: all ease 500ms;
     background-position: left bottom;
   }
+
 }
+
+  @media (hover:none) {
+    #shuffle:hover {
+      background: inherit;
+    }
+  }

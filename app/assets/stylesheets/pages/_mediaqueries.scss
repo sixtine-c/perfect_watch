@@ -1,7 +1,76 @@
 // Media queries
-@media(max-width: 1080px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
+@media(max-height: 600px) {
+  .main-card.card-mood {
+    width: 1030px;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+    .mb-4 {
+      margin-top: 11px;
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 115px;
+  }
+  .movie-card {
+    height: 190px;
+    width: 131px;
+  }
+  .movies-card {
+    padding: 15px;
+    margin-top: 45px;
+  }
+  .wrapper {
+    margin-bottom: 6px;
+  }
+  .query {
+    .querytext {
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+  }
+  .showmovie {
+    height: 465px;
+  }
+  .modal-body {
+    .prv {
+      top: 220px;
+    }
+    .nxt {
+      top: 220px;
+    }
+  }
+  .note {
+    img {
+      right: 8px;
+      top: -6px;
+    }
+    .rating {
+      position: absolute;
+      right: 10px !important;
+      bottom: 10px !important;
+    }
+  }
+}
+
+@media (min-height: 600px) {
+  .modal-dialog {
+      max-height: 75vw;
+      margin: 1.75rem auto;
   }
 }
 
@@ -97,5 +166,61 @@
   .wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
+  }
+  .movie-container {
+    height: 1250px;
+  }
+  .movie-card {
+    height: 180px;
+    width: 120px;
+  }
+  .query {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow: scroll;
+    .querytext {
+      margin-left: 0px !important;
+      margin-top: 8px !important;
+      margin-bottom: 8px;
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+  }
+  .modal-dialog {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      pointer-events: unset;
+  }
+  .note {
+    position: relative;
+    p {
+      position: absolute;
+      right: 0px;
+      bottom: 42px;
+    }
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .modal-dialog {
+      max-width: 75vw;
+      margin: 1.75rem auto;
   }
 }

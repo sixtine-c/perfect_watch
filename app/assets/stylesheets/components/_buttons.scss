@@ -67,5 +67,11 @@
   }
 }
 
+.test{
+  opacity:0;
+  visibility: hidden;
+
+}
+
 // Uniquement les boutons questions suivantes et precedentes
 @import 'pages/btn-pre-next';
