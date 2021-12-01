@@ -211,11 +211,13 @@
   color :rgb(255, 255, 255);
   background-size: 200% 100%;
   background-position: right bottom;
-  transition: all .5s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 500ms ease 0s;
     &:hover {
     cursor: pointer;
-    color: black;
-    background: white;
+    color: white;
+    background: rgba(255, 255, 255, 0.6);
     transition-duration: 500ms;
     background-position: left bottom;
   }
