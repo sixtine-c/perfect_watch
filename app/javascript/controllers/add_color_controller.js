@@ -40,7 +40,7 @@ export default class extends Controller {
   // Une méthode pour remplir le formulaire aka set checked sur 1 des radio buttons
   // Checked field selected at random
   setField(event) {
-    if (event.currentTarget.id === "search_mood_random") {
+    if (event.currentTarget.id === "search_mood_pick_a_mood_for_me") {
       const moodList = ['beer-party', 'thriller', 'history', 'kids', 'icecream', 'adventure', 'cocooning', 'horror']
       const randomMood = moodList[Math.floor(Math.random() * moodList.length)]
       this.randomMoodFieldTarget.value = randomMood
