@@ -2,15 +2,25 @@
 
   <div class="custom-container home-screen visible-question">
     <div class="">
-      <div class="d-flex justify-content-center align-items-center flex-column">
-        <%= image_tag 'Logo.png', height: 90, width: 200 %>
-        <br>
-        <p>Don't know what to watch?</p>
-        <p>Try our quiz to find a movie in 5 minutes for your platforms!</p>
-        <button type='button' class='btn-general', data-action='click->changing-slide#nextquestion'>Let's start!</button>
-      </div>
+
+        <div class="home-image-container">
+        </div>
+
+        <div class="home-content ">
+          <div class="logo-home my-3">
+            <%= image_tag 'Logo.png', height: 120, width: 240 %>
+          </div>
+          <div class="text-home mt-3 mb-3 text-center">
+            <h2>Find a movie in 5 minutes. <br> Available on your platforms.</h2>
+          </div>
+          <div class="btn-home ">
+            <button type='button' class='btn-general', data-action='click->changing-slide#nextquestion'>Let's start!</button>
+          </div>
+        </div>
+
     </div>
   </div>
+
 
   <%= simple_form_for :search, url: movies_path, method: 'GET' do |f| %>
     <div class="custom-container next-question" data-changing-slide-target='question'>
