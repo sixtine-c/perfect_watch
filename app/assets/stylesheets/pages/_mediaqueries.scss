@@ -84,8 +84,18 @@
         text-indent: 0;
       }
     }
+    &.mediaquery {
+      &:before {
+        content: "\f2f1";
+        font-family: "Font Awesome 5 Free";
+      }
+    }
   }
   .movies-card {
     padding: 10px;
+  }
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
 }
