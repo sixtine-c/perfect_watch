@@ -20,6 +20,9 @@
   background-color: $home-color;
   font-family: 'Hind', sans-serif;
   transition-duration: 750ms;
+  p {
+    text-align: center;
+  }
   // Changement de fond en fonction du mood
   &.beer-party{
         background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -486,9 +489,4 @@
   }
     }
   }
-
-  @media (min-width: 1150px) {
-    height: 100vh;
-  }
-
 }
