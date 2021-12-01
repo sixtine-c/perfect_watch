@@ -21,18 +21,12 @@
   &.card-platform {
     width: 968px;
   }
-
-  // Media queries
-  @media (max-width: 700px) {
-      padding: 10px;
-      width: 100%;
-      height: 100%;
-    }
 }
 
 .movies-card {
   background-image: $card-home-color;
   margin-bottom: 50px;
+  margin-top: 25px;
   padding: 10px;
   width: 80%;
   text-align: center;
@@ -75,7 +69,4 @@
     background-image: $horror;
     box-shadow: $shadow-horror;
   }
-    @media (max-width: 1150px) {
-      padding: 10px;
-    }
 }
