@@ -8,6 +8,6 @@ export default class extends Controller {
 
 
   connect() {
-    setTimeout(() => this.buttonTarget.classList.remove('disabled'), 10000)
+    setTimeout(() => this.buttonTarget.classList.add('visible','opacity-100'), 10000)
   }
 }
