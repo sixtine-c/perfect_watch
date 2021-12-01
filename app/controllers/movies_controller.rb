@@ -5,10 +5,14 @@ class MoviesController < ApplicationController
   def index
     params["search"]["platform"].delete_at(0)
      @platforms = params["search"]["platform"].map do |platform|
-      if platform == "prime video"
+      case platform
+      when "prime video"
         "prime"
-      else
-        platform
+      when "disney +"
+        "disney"
+      when "apple tv"
+        "apple"
+      else platform
       end
     end
     # @platforms = params["search"]["platform"]
