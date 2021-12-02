@@ -29,8 +29,6 @@
   flex-direction: column !important;
   left: 18%;
   top: 180px;
-
-
 }
 // Set le container de la question à une height pour ne pas scroller
 .custom-container {
@@ -46,6 +44,12 @@
   transition-duration: 750ms;
   p {
     text-align: center;
+  }
+
+  .platform-slide-dots {
+    width:  55%;
+    margin-left: auto;
+    margin-right: 0;
   }
   // Changement de fond en fonction du mood
   &.beer-party{
