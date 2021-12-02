@@ -13,55 +13,54 @@
   <div class="modal fade" id="movie-<%= i %>" tabindex="-1" role="dialog" aria-labelledby="movie-<%= i %>" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="modal-body fond p-2 <%= @mood_class %>">
-          <div class="prv" data-bs-toggle="modal" data-bs-target="#movie-<%= i == 1 ? @movies.count : i - 1 %>"><i class="fas fa-chevron-left"></i></div>
-          <div class="nxt" data-bs-toggle="modal" data-bs-target="#movie-<%= i == @movies.count ? 1 : i + 1 %>"><i class="fas fa-chevron-right"></i></div>
-          <div class="d-flex query">
-            <% if movie.poster == nil %>
-              <div class="poster-placeholder-modale" style="background: white"><h3 class="text-center text-break"><%= movie.title %></h3></div>
-            <% else %>
-              <%= image_tag(movie.poster, class:"showmovie") if movie.poster != nil %>
-            <% end %>
-            <div class="d-flex flex-column align-items-start justify-content-between ms-5 w-100 querytext">
-              <div class="d-flex flex-column align-items-start justify-content-start">
-                <div class="close-button" data-bs-dismiss="modal"><h4>+</h4></div>
-                <h1 class="text-start"><%= movie.title%></h1>
-                <h2><%= movie.year if movie.year != nil %> - <%= movie.duration if movie.duration != nil %> minutes</h2>
-                <% movie.genres.each do |genre| %>
-                  <div class="genre d-flex">
-                    <%= genre.name %>
+        <div class="fond p-2 <%= @mood_class %>">
+          <div class="modal-body">
+                <div class="prv" data-bs-toggle="modal" data-bs-target="#movie-<%= i == 1 ? @movies.count : i - 1 %>"><i class="fas fa-chevron-left"></i></div>
+                <div class="nxt" data-bs-toggle="modal" data-bs-target="#movie-<%= i == @movies.count ? 1 : i + 1 %>"><i class="fas fa-chevron-right"></i></div>
+            <div class="d-flex">
+              <% if movie.poster == nil %>
+                <div class="poster-placeholder-modale" style="background: white"><h3 class="text-center text-break"><%= movie.title %></h3></div>
+              <% else %>
+                <%= image_tag(movie.poster, class:"showmovie") if movie.poster != nil %>
+              <% end %>
+              <div class="d-flex flex-column align-items-start justify-content-between ms-5 w-100">
+                <div class="d-flex flex-column align-items-start justify-content-start">
+                  <div class="close-button" data-bs-dismiss="modal"><h4>+</h4></div>
+                  <h1 class="text-start"><%= movie.title%></h1>
+                  <h2><%= movie.year if movie.year != nil %> - <%= movie.duration if movie.duration != nil %> minutes</h2>
+                    <h5><%= safe_join(movie.genres.map { |genre| genre.name }, ', ') %></h5>
+                    <br>
+                  <p class="text-start">Director(s) : <%= movie.directors.join(", ") if movie.directors != nil%></p>
+                  <p class="text-start w-75">With : <%= movie.actors.join(", ") if movie.actors != nil%></p>
+                  <p class="text-start w-100 mt-3 h5"><%= movie.synopsis.truncate(400, separator: ' ') if movie.synopsis != nil%></p>
+                  <div class="d-flex">
                   </div>
-                <% end %>
-              </div>
-              <div class="d-flex flex-column align-items-start justify-content-start">
-                <p class="text-start">Director(s) : <%= movie.directors.join(", ") if movie.directors != nil%></p>
-                <p class="text-start w-75">With : <%= movie.actors.join(", ") if movie.actors != nil%></p>
-                <p class="text-start w-75 mt-3 h5"><%= movie.synopsis.truncate(400, separator: ' ') if movie.synopsis != nil%></p>
-              </div>
-              <div class="d-flex flex-column w-100">
-                <p class="d-flex align-items-end mb-0 ml-2">Watch now on:</p>
-                <div class="d-flex justify-content-between w-100">
-                  <div class="d-flex align-items-center">
-                    <% movie.link.each do |link| %>
-                      <%= link_to link, target: :_blank do %>
-                        <% if link.include? "netflix" %>
-                          <%= image_tag("netflix-white.png", size: "102x27", class: "vodlink mx-3")%>
-                        <% end %>
-                        <% if link.include? "prime" %>
-                          <%= image_tag("prime-white.png", size: "102x32", class: "vodlink mx-3")%>
-                        <% end %>
-                        <% if link.include? "disney" %>
-                          <%= image_tag("disney-white.png", size: "102x62", class: "vodlink mx-3")%>
-                        <% end %>
-                        <% if link.include? "apple" %>
-                          <%= image_tag("atv.png", size: "102x38", class: "vodlink mx-3")%>
+                </div>
+                <div class="d-flex flex-column w-100">
+                  <p class="d-flex align-items-end mb-0 ml-2">Watch now on:</p>
+                  <div class="d-flex justify-content-between w-100">
+                    <div class="d-flex align-items-center">
+                      <% movie.link.each do |link| %>
+                        <%= link_to link, target: :_blank do %>
+                          <% if link.include? "netflix" %>
+                            <%= image_tag("netflix-white.png", size: "102x27", class: "vodlink mx-3")%>
+                          <% end %>
+                          <% if link.include? "prime" %>
+                            <%= image_tag("prime-white.png", size: "102x32", class: "vodlink mx-3")%>
+                          <% end %>
+                          <% if link.include? "disney" %>
+                            <%= image_tag("disney-white.png", size: "102x62", class: "vodlink mx-3")%>
+                          <% end %>
+                          <% if link.include? "apple" %>
+                            <%= image_tag("atv.png", size: "102x38", class: "vodlink mx-3")%>
+                          <% end %>
                         <% end %>
                       <% end %>
-                    <% end %>
-                  </div>
-                  <div class="note d-flex align-items-center p-3">
-                    <%= image_tag("imdb.png", size: "60x60", style: "position: relative", title: "This movie has a rating of #{movie.rating/10}/10 on IMDB")%>
-                    <p class="rating<%= ' bad-note'if movie.rating < 50 %>" style="position: absolute; right: 10px; bottom: -10px" title="This movie has a rating of <%= movie.rating/10 %>/10 on IMDB"><%= movie.rating/10 %></p>
+                    </div>
+                    <div class="d-flex align-items-center p-3">
+                      <%= image_tag("imdb.png", size: "40x40", style: "position: relative", title: "This movie has a rating of #{movie.rating/10}/10 on IMDB")%>
+                      <p class="rating<%= ' bad-note'if movie.rating < 50 %>" style="position: absolute; right: 10px; bottom: 0px" title="This movie has a rating of <%= movie.rating/10 %>/10 on IMDB"><%= movie.rating/10 %></p>
+                    </div>
                   </div>
                 </div>
               </div>

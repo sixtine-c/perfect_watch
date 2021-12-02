@@ -29,6 +29,29 @@ export default class extends Controller {
     }
   };
 
+  goTo(evt) {
+    console.log(evt.params.step)
+    const [visible, hidden] = this.split(this.questionTargets, evt.params.step)
+    this._toggleVisible(visible)
+    this._toggleHidden(hidden)
+  }
+  _toggleVisible(items) {
+    items.forEach((item) => {
+      item.classList.add('visible-question')
+      item.classList.remove('next-question')
+    });
+  }
+  _toggleHidden(items) {
+    items.forEach((item) => {
+      item.classList.remove('visible-question')
+      item.classList.add('next-question')
+    })
+  }
+  split(array, n) {
+    return [array.slice(0, n), array.slice(n)]
+  }
+}
+
   //   console.log(this)
     // this.questionTarget.
 
@@ -42,4 +65,3 @@ export default class extends Controller {
     //   element.classList.add(event.currentTarget.dataset.color)
     // });
   // }
-}
