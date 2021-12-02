@@ -70,7 +70,7 @@ end
 # end
 # puts 'done'
 
-Movies Apple TV
+#Movies Apple TV
 puts 'starting seed'
 platform = 'apple'
 page_number = 1
@@ -96,7 +96,7 @@ while JSON.parse(response.read_body)["total_pages"] > page_number
 end
 puts 'done'
 
-Movies Disney
+#Movies Disney
 puts 'starting seed'
 platform = 'disney'
 page_number = 102
