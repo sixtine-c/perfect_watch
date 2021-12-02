@@ -40,7 +40,7 @@ const moodPic = () => {
     moodAdventure.parentElement.classList.add('mood_adventure')
   }
   // Mood Random
-  const moodRandom = document.getElementById('search_mood_random')
+  const moodRandom = document.getElementById('search_mood_pick_a_mood_for_me')
   if (moodRandom) {
     moodRandom.parentElement.classList.add('mood_random')
   }

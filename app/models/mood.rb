@@ -2,6 +2,6 @@ class Mood < ApplicationRecord
   has_many :mood_genres, dependent: :destroy
   has_many :mood_genre_exclusions, dependent: :destroy
   has_one_attached :photo
-  MOODS = ["Beer & Pizza", "Cold Blood", "Time flies", "Kids friendly","Random", "Ben & Jerry's (& Cry)",
+  MOODS = ["Beer & Pizza", "Cold Blood", "Time flies", "Kids friendly","Pick a mood for me", "Ben & Jerry's (& Cry)",
            "I'm Going on an Adventure !", "Cocooning", "Not ready to sleep"]
 end

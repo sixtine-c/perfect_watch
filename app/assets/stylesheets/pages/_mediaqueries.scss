@@ -1,39 +1,120 @@
 // Media queries
-@media(max-width: 1080px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
+
+// Adaptation sur tres grand ecran
+@media (min-width: 1024px) {
+  .modal-dialog {
+      max-width: 75vw;
+      margin: 1.75rem auto;
   }
 }
 
-@media(max-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
+// Adaptation sur ordi avec ecran court
+@media(max-height: 600px) {
+  .main-card.card-mood {
+    width: 1030px;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+    .mb-4 {
+      margin-top: 11px;
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 115px;
+  }
+  .movie-card {
+    height: 190px;
+    width: 131px;
+  }
+  .movies-card {
+    padding: 15px;
+    margin-top: 45px;
+  }
+  .wrapper {
+    margin-bottom: 6px;
+  }
+  .query {
+    .querytext {
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+  }
+  .showmovie {
+    height: 465px;
+  }
+  .modal-body {
+    .prv {
+      top: 220px;
+    }
+    .nxt {
+      top: 220px;
+    }
+  }
+  .note {
+    img {
+      right: 8px;
+      top: -6px;
+    }
+    .rating {
+      position: absolute;
+      right: 10px !important;
+      bottom: 10px !important;
+    }
   }
 }
-@media (max-width: 768px) {
 
-  }
-
-@media(max-width: 600px) {
-  .cards {
-    grid-template-columns: 1fr;
+@media (min-height: 600px) {
+  .modal-dialog {
+      max-height: 75vw;
+      margin: 1.75rem auto;
   }
 }
 
 // Adaptation sur iphone
-@media (max-width: 375px) {
+@media (max-width: 414px) {
+  .home-image-container {
+    top: -270px;
+    right: -53px;
+    width: 105%;
+    transform: rotate(336deg);
+  }
+  .home-content {
+    left: 18%;
+    top: 328px;
+  }
   .main-card {
+    max-height: 86vh;
     width: 330px;
     margin-bottom: 40px;
   }
   .main-card.card-platform {
     width: 330px;
+    .mb-5 {
+      margin-bottom: 0.5rem !important;
+    }
   }
   .main-card.card-mood {
     width: 330px;
     height: 705px;
     margin-left: auto;
     margin-right: auto;
+    .mb-4 {
+      margin-bottom: 0 !important;
+    }
   }
   .mood-card .checkboxes {
     height: 50px;
@@ -97,5 +178,148 @@
   .wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
+  }
+  .movie-container {
+    height: 1250px;
+  }
+  .movie-card {
+    height: 180px;
+    width: 120px;
+  }
+  .query {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow: scroll;
+    .querytext {
+      margin-left: 0px !important;
+      margin-top: 8px !important;
+      margin-bottom: 8px;
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+  }
+  .modal-dialog {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      pointer-events: unset;
+  }
+  .note {
+    position: relative;
+    p {
+      position: absolute;
+      right: 0px;
+      bottom: 42px;
+    }
+  }
+}
+
+// Adaptation sur ecran plus courts
+@media (max-width: 414px) and (max-height: 670px) {
+  .home-content {
+    left: 15%;
+    top: 295px;
+  }
+  .main-card {
+    max-height: 84vh;
+  }
+  .mood-card .checkboxes {
+    height: 42px;
+    label {
+      font-size: 15px;
+    }
+  }
+}
+
+// Adaptation sur Galaxy
+@media (max-width: 280px) {
+  .home-image-container {
+    top: -229px;
+    right: -112px;
+    transform: rotate(340deg);
+    width: 146%;
+  }
+  .home-content {
+    left: 4%;
+    top: 325px;
+  }
+  .main-card {
+    max-height: 86vh;
+    width: 260px;
+    margin-bottom: 40px;
+  }
+  .main-card.card-platform {
+    width: 260px;
+    .mb-5 {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .main-card.card-mood {
+    width: 260px;
+    height: 705px;
+    margin-left: auto;
+    margin-right: auto;
+    .mb-4 {
+      margin-bottom: 0 !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 43px;
+    width: 227px;
+    label {
+      font-size: 15px;
+    }
+  }
+}
+
+// Adaptation sur iphone 5/SE
+@media (max-width: 320px) and (max-height: 568px) {
+  .home-image-container {
+    top: -246px;
+    right: -53px;
+    width: 105%;
+    transform: rotate(336deg);
+  }
+  .home-content {
+    left: 11%;
+    top: 229px;
+  }
+  .main-card {
+    max-height: 83vh;
+    width: 291px;
+    margin-bottom: 30px;
+  }
+  .main-card.card-platform {
+    width: 291px;
+    .mb-5 {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .main-card.card-mood {
+    width: 291px;
+    height: 705px;
+    margin-left: auto;
+    margin-right: auto;
+    .mb-4 {
+      margin-bottom: 0 !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 36px;
   }
 }
