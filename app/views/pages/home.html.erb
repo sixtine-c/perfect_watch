@@ -1,11 +1,8 @@
 <div class="main-container" data-controller='changing-slide'>
-
   <div class="custom-container home-screen visible-question">
     <div class="">
-
         <div class="home-image-container">
         </div>
-
         <div class="home-content ">
           <div class="logo-home my-3">
             <%= image_tag 'Logo.png', height: 120, width: 240 %>
@@ -17,28 +14,28 @@
             <button type='button' class='btn-general', data-action='click->changing-slide#nextquestion'>Let's start!</button>
           </div>
         </div>
-
     </div>
   </div>
-
-
   <%= simple_form_for :search, url: movies_path, method: 'GET' do |f| %>
-    <div class="custom-container next-question" data-changing-slide-target='question'>
+    <div class="custom-container next-question" id= "question-1" data-changing-slide-target='question platform'>
       <div class="">
         <div class="main-card card-platform">
-          <h2 class='mb-5'>Select your platforms</h2>
+          <h2 class='mb-5 question' >Select your platforms</h2>
           <div class="platforms d-flex flex-wrap justify-content-around">
             <div>
               <%= f.input :platform, label: '', as: :check_boxes, input_html: {class: 'platformbox platform-btn'}, item_wrapper_class: '', collection: Movie::PLATFORMS %>
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-between align-items-center">
-         <div class="btn-suivant text-end test">
+        <div class="d-flex justify-content-between align-items-center platform-slide-dots">
+         <%# <div class="btn-suivant text-end test">
             <button type='button' class='btn-question'></button>
-          </div>
+          </div> %>
         <div class="">
-          <i class="fas fa-circle fa-xs p-1 mt-2"></i><i class="far fa-circle fa-xs p-1"></i><i class="far fa-circle fa-xs p-1"></i><i class="far fa-circle fa-xs p-1" ></i>
+          <i class="fas fa-circle fa-xs p-1 mt-2 dot" id='1' data-action='click->changing-slide#goTo' data-changing-slide-step-param="1"></i>
+          <i class="far fa-circle fa-xs p-1 dot" id='2' data-action='click->changing-slide#goTo' data-changing-slide-step-param="2"></i>
+          <i class="far fa-circle fa-xs p-1 dot" id='3' data-action='click->changing-slide#goTo' data-changing-slide-step-param="3"></i>
+          <i class="far fa-circle fa-xs p-1 dot" id='4' data-action='click->changing-slide#goTo' data-changing-slide-step-param="4"></i>
         </div>
           <div class="btn-suivant text-end">
             <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span><span>Next question</span></span></button>
@@ -46,9 +43,8 @@
         </div>
       </div>
     </div>
-
     <div data-controller='add-color'>
-      <div class="custom-container next-question" data-changing-slide-target='question'>
+      <div class="custom-container next-question" id= "question-2" data-changing-slide-target='question moods'>
         <div class="">
           <div class="main-card card-mood">
             <h2 class='mb-4'>Select your current Mood!</h2>
@@ -63,15 +59,18 @@
             <div class="btn-suivant text-start">
               <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Update my platforms</span></button>
             </div>
-            <div><i class="far fa-circle fa-xs p-1"></i><i class="fas fa-circle fa-xs p-1 mt-2"></i><i class="far fa-circle fa-xs p-1"></i><i class="far fa-circle fa-xs p-1" ></i>
+            <div>
+              <i class="far fa-circle fa-xs p-1 dot" id="1" data-action='click->changing-slide#goTo' data-changing-slide-step-param="1"></i>
+              <i class="fas fa-circle fa-xs p-1 mt-2 dot" id="2" data-action='click->changing-slide#goTo' data-changing-slide-step-param="2"></i>
+              <i class="far fa-circle fa-xs p-1 dot" id="3" data-action='click->changing-slide#goTo' data-changing-slide-step-param="3"></i>
+              <i class="far fa-circle fa-xs p-1 dot" id="4" data-action='click->changing-slide#goTo' data-changing-slide-step-param="4"></i>
             </div>
             <div class="btn-suivant text-end">
               <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span>Next question</span></button>
             </div>
         </div>
       </div>
-
-      <div class="custom-container next-question" data-add-color-target='bgcolor' data-changing-slide-target='question'>
+      <div class="custom-container next-question" id= "question-3" data-add-color-target='bgcolor' data-changing-slide-target='question duration'>
         <div class="">
           <div class="main-card">
             <h2 class='mb-4'>How much time do you have?</h2>
@@ -85,15 +84,19 @@
             <div class="btn-suivant text-start">
               <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Previous question</span></button>
             </div>
-              <div><i class="far fa-circle fa-xs p-1"></i><i class="far fa-circle fa-xs p-1"></i><i class="fas fa-circle fa-xs p-1 mt-2"></i><i class="far fa-circle fa-xs p-1" ></i></div>
+              <div>
+                <i class="far fa-circle fa-xs p-1 dot" id="1" data-action='click->changing-slide#goTo' data-changing-slide-step-param="1"></i>
+                <i class="far fa-circle fa-xs p-1 dot" id="2" data-action='click->changing-slide#goTo' data-changing-slide-step-param="2"></i>
+                <i class="fas fa-circle fa-xs p-1 mt-2 dot" id="3" data-action='click->changing-slide#goTo' data-changing-slide-step-param="3"></i>
+                <i class="far fa-circle fa-xs p-1 dot" id="4"  data-action='click->changing-slide#goTo' data-changing-slide-step-param="4"></i>
+              </div>
             <div class="btn-suivant text-end">
               <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span>Next question</span></button>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="custom-container next-question" data-add-color-target='bgcolor' data-changing-slide-target='question'>
+      <div class="custom-container next-question" id= "question-4" data-add-color-target='bgcolor' data-changing-slide-target='question fame'>
         <div class="">
           <div class="main-card">
             <h2 class='mb-4'>A must to watch or a discovery?</h2>
@@ -107,7 +110,12 @@
             <div class="btn-suivant text-start">
               <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Previous question</span></button>
             </div>
-            <div><i class="far fa-circle fa-xs p-1"></i><i class="far fa-circle fa-xs p-1"></i><i class="far fa-circle fa-xs p-1" ></i><i class="fas fa-circle fa-xs p-1 mt-2"></i></div>
+            <div>
+              <i class="far fa-circle fa-xs p-1 dot" id="1" data-action='click->changing-slide#goTo' data-changing-slide-step-param="1"></i>
+              <i class="far fa-circle fa-xs p-1 dot" id="2" data-action='click->changing-slide#goTo' data-changing-slide-step-param="2"></i>
+              <i class="far fa-circle fa-xs p-1 dot" id="3" data-action='click->changing-slide#goTo' data-changing-slide-step-param="3"></i>
+              <i class="fas fa-circle fa-xs p-1 mt-2 dot" id="4" data-action='click->changing-slide#goTo' data-changing-slide-step-param="4"></i>
+            </div>
             <div class="text-end">
               <button id='result' type='submit' class='btn-question effect-next'><span>Discover your movies</span></button>
             </div>
@@ -117,8 +125,3 @@
     </div>
   <% end %>
 </div>
-
-
-<%# pour supprimer champ vide dans plateform: params[search][platform].delete_at(0) %>
-<%# duration: true = duration > 120, false = duration < 120 %>
-<%# famous: true = number_of_rating > 35 000, false = number_of_rating < 35 000  %>
