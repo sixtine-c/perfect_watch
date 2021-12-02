@@ -1,6 +1,11 @@
 <div class="movie-container <%= @mood_class %>" data-controller="renderer">
   <div class="movies-card d-flex flex-column flex-row <%= @mood_class %>">
+  <% if @movies.count == 0 %>
+    <h2 class="m-1">We are sorry, did you select a platform?</h2>
+    <h2 class="m-1">Please search again.</h2>
+  <% else %>
     <h2 class="m-1"><%= @movies.count %> movies, just for you</h2>
+  <% end %>
     <div class="d-flex flex-column justify-content-center">
       <div class="wrapper" data-renderer-target="display" >
         <%= render 'tenmovies' %>
@@ -9,9 +14,11 @@
         <div class="btn-suivant text-start ms-3 mt-1">
           <button onclick="window.location.href = '/';" type='button' class='btn-question effect-previous mediaquery'><span>New search</span></button>
         </div>
-        <div class="text-start me-3 mt-1" data-controller="timeout">
-          <button class="btn-question" id="shuffle" data-timeout-target="button" data-action="click->renderer#update"><i class="fas fa-random"></i></button>
+        <% if @movies.count > 0 %>
+          <div class="text-start me-3 mt-1" data-controller="timeout">
+            <button class="btn-question" id="shuffle" data-timeout-target="button" data-action="click->renderer#update"><i class="fas fa-random"></i></button>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
