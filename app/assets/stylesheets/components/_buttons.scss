@@ -73,5 +73,28 @@
 
 }
 
+
+.hover-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .dot{
+    cursor: pointer;
+  }
+
+  .custom-hover{
+    opacity: 0;
+    position:absolute;
+    top: -25px;
+    transition: all 125ms ease;
+  }
+  &:hover{
+    .custom-hover{
+      opacity: 0.8;
+    }
+  }
+}
+
 // Uniquement les boutons questions suivantes et precedentes
 @import 'pages/btn-pre-next';
