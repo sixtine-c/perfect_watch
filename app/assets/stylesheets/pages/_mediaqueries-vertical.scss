@@ -1,0 +1,705 @@
+// Media queries
+// Summary:
+// - Ipad Pro
+// - Ipad
+// L-5 - Très grand ecran
+// L-14 - Ordi avec ecran court
+// L-91 - Smartphone Iphone
+// L-238 - Smartphone écran plus court
+// L-358 - Smartphone Galaxy
+// - Smartphone Iphone 5 / SE
+
+
+// Ipad Pro
+@media (max-width: 1024px) and (max-height: 1366px) {
+  .home-image-container {
+    top: -221px;
+    transform: rotate(338deg);
+    right: -287px;
+    width: 107%;
+  }
+  .home-content {
+    top: 650px;
+  }
+  .main-card {
+    width: 970px;
+  }
+  .main-card.card-platform {
+    width: 970px;
+  }
+  .main-card.card-mood {
+    width: 970px;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+    .mb-4 {
+      margin-top: 11px;
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 143px;
+    width: 230px;
+    margin: 5px 25px;
+  }
+  .movie-card {
+    height: 220px;
+    width: 140px;
+  }
+  .movies-card {
+    width: 87%;
+    height: 49vh;
+    padding: 15px;
+    margin-top: 45px;
+  }
+  .wrapper {
+    margin-bottom: 6px;
+  }
+  .query {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    align-items: center;
+    .querytext {
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+    .showmovie {
+      height: 405px;
+      width: 276px;
+      margin-bottom: 20px;
+    }
+  }
+  .modal-body {
+    .prv {
+      top: 382px;
+    }
+    .nxt {
+      top: 382px;
+    }
+  }
+  .note {
+    img {
+      right: 31px;
+      top: -5px;
+    }
+    .rating {
+      position: absolute;
+      right: 10px !important;
+      bottom: 10px !important;
+    }
+  }
+}
+
+// Ipad
+@media (max-width: 770px) and (max-height: 1024px) {
+  .home-image-container {
+    top: -237px;
+    transform: rotate(338deg);
+    right: -202px;
+    width: 107%;
+  }
+  .home-content {
+    top: 450px;
+  }
+  .main-card {
+    width: 710px;
+  }
+  .main-card.card-platform {
+    width: 710px;
+  }
+  .main-card.card-mood {
+    width: 710px;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+    .mb-4 {
+      margin-top: 11px;
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 143px;
+    width: 230px;
+    margin: 5px 25px;
+  }
+  .movie-card {
+    height: 160px;
+    width: 91px;
+  }
+  .movies-card {
+    padding: 15px;
+    margin-top: 45px;
+  }
+  .wrapper {
+    margin-bottom: 6px;
+  }
+  .query {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    align-items: center;
+    .querytext {
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+    .showmovie {
+      height: 405px;
+      width: 276px;
+      margin-bottom: 20px;
+    }
+  }
+  .modal-body {
+    .prv {
+      top: 382px;
+    }
+    .nxt {
+      top: 382px;
+    }
+  }
+  .note {
+    img {
+      right: 31px;
+      top: -5px;
+    }
+    .rating {
+      position: absolute;
+      right: 10px !important;
+      bottom: 10px !important;
+    }
+  }
+}
+
+
+@media (min-width: 1024px) and (max-height: 720px) {
+  .home-image-container {
+    top: -181px;
+    transform: rotate(329deg);
+    right: -64px;
+    width: 54%;
+  }
+  .home-content {
+    top: 330px;
+  }
+  .movies-card {
+    height: 84vh;
+  }
+}
+
+// Adaptation sur tres grand ecran
+// @media (min-width: 1024px) {
+//   .modal-dialog {
+//       max-width: 75vw;
+//       margin: 1.75rem auto;
+//   }
+//   .home-image-container {
+//     top: -213px;
+//     transform: rotate(327deg);
+//     right: -56px;
+//     width: 56%;
+//   }
+//   .movie-card {
+//     height: 196px;
+//     width: 128px;
+//   }
+//   .movies-card {
+//     height: 82vh;
+//   }
+// }
+
+// @media (max-width: 1024px) {
+// }
+
+// Adaptation sur ordi avec ecran court
+@media(max-height: 600px) {
+  .main-card.card-mood {
+    width: 1030px;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+    .mb-4 {
+      margin-top: 11px;
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 115px;
+  }
+  .movie-card {
+    height: 190px;
+    width: 131px;
+  }
+  .movies-card {
+    padding: 15px;
+    margin-top: 45px;
+  }
+  .wrapper {
+    margin-bottom: 6px;
+  }
+  .query {
+    .querytext {
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+  }
+  .showmovie {
+    height: 465px;
+  }
+  .modal-body {
+    .prv {
+      top: 220px;
+    }
+    .nxt {
+      top: 220px;
+    }
+  }
+  .note {
+    img {
+      right: 8px;
+      top: -6px;
+    }
+    .rating {
+      position: absolute;
+      right: 10px !important;
+      bottom: 10px !important;
+    }
+  }
+}
+
+// @media (min-height: 600px) {
+//   .modal-dialog {
+//       max-height: 75vw;
+//       margin: 1.75rem auto;
+//   }
+// }
+
+// Surface duo
+@media (max-width: 540px) and (max-height: 720px) {
+  .home-image-container {
+    top: -186px;
+    transform: rotate(333deg);
+    right: -142px;
+  }
+  .home-content {
+    top: 327px;
+  }
+  .main-card {
+    width: 490px;
+    height: 81vh;
+  }
+  .main-card.card-platform {
+    width: 490px;
+  }
+  .main-card.card-mood {
+    width: 490px;
+  }
+  .mood-card .checkboxes {
+    height: 44px;
+  }
+  .movie-card {
+    height: 113px;
+    width: 68px;
+    margin: 0.7rem;
+  }
+  .movies-card {
+    height: 56vh;
+  }
+  .btn-question {
+    width: 65px;
+    height: 40px;
+    margin: 0px 5px;
+    span {
+      display: none;
+    }
+  }
+  .effect-next {
+    &:before {
+      width: 65px;
+      background-color: transparent;
+      border-radius: 0px;
+      transform: none;
+      transform-origin: none;
+      transition: none;
+    }
+    &:hover {
+      text-indent: 0px;
+      color: none;
+
+      &:before {
+        transform: none;
+        text-indent: 0;
+      }
+    }
+  }
+
+  .effect-previous {
+    &:before {
+      width: 65px;
+      background-color: transparent;
+      border-radius: 0px;
+      transform: none;
+      transform-origin: none;
+      transition: none;
+    }
+    &:hover {
+      text-indent: 0px;
+      color: none;
+
+      &:before {
+        transform: none;
+        text-indent: 0;
+      }
+    }
+    &.mediaquery {
+      &:before {
+        content: "\f2f1";
+        font-family: "Font Awesome 5 Free";
+      }
+    }
+  }
+
+  .query {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow: scroll;
+    .querytext {
+      margin-left: 0px !important;
+      margin-top: 8px !important;
+      margin-bottom: 8px;
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        right: 5px !important;
+        bottom: -6px !important;
+      }
+    }
+  }
+  .modal-dialog {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      pointer-events: unset;
+  }
+  .note {
+    position: relative;
+    p {
+      position: absolute;
+      right: 0px;
+      bottom: 42px;
+    }
+    img {
+      right: 10px;
+      top: -3px;
+    }
+  }
+}
+
+// Adaptation sur iphone
+@media (max-width: 414px) {
+  .home-image-container {
+    top: -270px;
+    right: -53px;
+    width: 105%;
+    transform: rotate(336deg);
+  }
+  .home-content {
+    left: 18%;
+    top: 328px;
+  }
+  .main-card {
+    max-height: 86vh;
+    width: 330px;
+    margin-bottom: 40px;
+  }
+  .main-card.card-platform {
+    width: 330px;
+    .mb-5 {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .main-card.card-mood {
+    width: 330px;
+    height: 705px;
+    margin-left: auto;
+    margin-right: auto;
+    .mb-4 {
+      margin-bottom: 0 !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 50px;
+  }
+  .btn-question {
+    width: 65px;
+    height: 40px;
+    margin: 0px 5px;
+    span {
+      display: none;
+    }
+  }
+  .effect-next {
+    &:before {
+      width: 65px;
+      background-color: transparent;
+      border-radius: 0px;
+      transform: none;
+      transform-origin: none;
+      transition: none;
+    }
+    &:hover {
+      text-indent: 0px;
+      color: none;
+
+      &:before {
+        transform: none;
+        text-indent: 0;
+      }
+    }
+  }
+
+  .effect-previous {
+    &:before {
+      width: 65px;
+      background-color: transparent;
+      border-radius: 0px;
+      transform: none;
+      transform-origin: none;
+      transition: none;
+    }
+    &:hover {
+      text-indent: 0px;
+      color: none;
+
+      &:before {
+        transform: none;
+        text-indent: 0;
+      }
+    }
+    &.mediaquery {
+      &:before {
+        content: "\f2f1";
+        font-family: "Font Awesome 5 Free";
+      }
+    }
+  }
+  .movies-card {
+    height: 170vh;
+    padding: 10px;
+  }
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .movie-container {
+    height: 1250px;
+  }
+  .movie-card {
+    height: 180px;
+    width: 120px;
+  }
+  .query {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow: scroll;
+    .querytext {
+      margin-left: 0px !important;
+      margin-top: 8px !important;
+      margin-bottom: 8px;
+      p {
+        font-size: 80%;
+        margin-top: 5px;
+      }
+      .vodlink {
+        height: 22px;
+        width: 80px;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      .rating {
+        margin: 0px;
+        bottom: 16px;
+      }
+    }
+  }
+  .modal-dialog {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      pointer-events: unset;
+  }
+  .note {
+    position: relative;
+    p {
+      position: absolute;
+      right: 0px;
+      bottom: 42px;
+    }
+  }
+}
+
+// Adaptation sur ecran smartphone plus courts
+@media (min-width: 414px) and (max-height: 670px) {
+  .home-content {
+    left: 15%;
+    top: 295px;
+  }
+  .main-card {
+    max-height: 84vh;
+  }
+  .mood-card .checkboxes {
+    height: 42px;
+    label {
+      font-size: 15px;
+    }
+  }
+  .movies-card {
+    width: 85%;
+  }
+}
+
+// Adaptation sur iphone 5/SE
+@media (max-width: 320px) and (max-height: 568px) {
+  .home-image-container {
+    top: -246px;
+    right: -53px;
+    width: 105%;
+    transform: rotate(336deg);
+  }
+  .home-content {
+    left: 11%;
+    top: 229px;
+  }
+  .main-card {
+    max-height: 83vh;
+    width: 291px;
+    margin-bottom: 30px;
+  }
+  .main-card.card-platform {
+    width: 291px;
+    .mb-5 {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .main-card.card-mood {
+    width: 291px;
+    height: 705px;
+    margin-left: auto;
+    margin-right: auto;
+    .mb-4 {
+      margin-bottom: 0 !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 36px;
+  }
+  .movie-card {
+    height: 165px;
+    width: 100px;
+  }
+  .movies-card {
+    margin-top: -30px;
+  }
+  .card-description {
+    height: 30px;
+    width: 30px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+// Adaptation sur Galaxy
+@media (max-width: 280px) {
+  .home-image-container {
+    top: -229px;
+    right: -112px;
+    transform: rotate(340deg);
+    width: 146%;
+  }
+  .home-content {
+    left: 4%;
+    top: 325px;
+  }
+  .main-card {
+    max-height: 86vh;
+    width: 260px;
+    margin-bottom: 40px;
+  }
+  .main-card.card-platform {
+    width: 260px;
+    .mb-5 {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .main-card.card-mood {
+    width: 260px;
+    height: 705px;
+    margin-left: auto;
+    margin-right: auto;
+    .mb-4 {
+      margin-bottom: 0 !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 43px;
+    width: 227px;
+    label {
+      font-size: 15px;
+    }
+  }
+}
