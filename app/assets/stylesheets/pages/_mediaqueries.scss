@@ -1,4 +1,9 @@
 // Media queries
+// Summary:
+// L-5 - Très grand ecran
+// L-14 - Ordi avec ecran court
+// L-91 - Iphone
+// L-237 - Portable
 
 // Adaptation sur tres grand ecran
 @media (min-width: 1024px) {
@@ -188,8 +193,10 @@
   }
   .query {
     flex-direction: column;
+    align-items: center;
     max-height: 90vh;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     .querytext {
       margin-left: 0px !important;
       margin-top: 8px !important;
@@ -243,6 +250,9 @@
     label {
       font-size: 15px;
     }
+  }
+  .movies-card {
+    width: 85%;
   }
 }
 
@@ -321,5 +331,19 @@
   }
   .mood-card .checkboxes {
     height: 36px;
+  }
+  .movie-card {
+    height: 165px;
+    width: 100px;
+  }
+  .movies-card {
+    margin-top: -30px;
+  }
+  .card-description {
+    height: 30px;
+    width: 30px;
+    p {
+      font-size: 14px;
+    }
   }
 }
