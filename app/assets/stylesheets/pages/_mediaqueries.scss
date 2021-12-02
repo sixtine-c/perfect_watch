@@ -91,20 +91,20 @@
 
 // Adaptation sur iphone
 @media (max-width: 414px) {
-  .home-image-container {
-    top: -270px;
-    right: -53px;
-    width: 105%;
-    transform: rotate(336deg);
+  .custom-container .home-image-container {
+    top: -200px;
+    right: -154px;
+    width: 130%;
+    transform: rotate(342deg);
   }
-  .home-content {
+  .custom-container .home-content {
     left: 18%;
-    top: 328px;
+    top: 270px;
   }
   .main-card {
-    max-height: 86vh;
+    max-height: 70vh;
     width: 330px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
   .main-card.card-platform {
     width: 330px;
@@ -122,7 +122,10 @@
     }
   }
   .mood-card .checkboxes {
-    height: 50px;
+    height: 33px;
+  }
+  .mood-card .fieldset {
+    margin: 0px;
   }
   .btn-question {
     width: 65px;
@@ -179,6 +182,7 @@
   }
   .movies-card {
     padding: 10px;
+    margin-bottom: 110px;
   }
   .wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -186,6 +190,7 @@
   }
   .movie-container {
     height: 1250px;
+    // height: 674px;
   }
   .movie-card {
     height: 180px;
@@ -242,58 +247,17 @@
     left: 15%;
     top: 295px;
   }
-  .main-card {
-    max-height: 84vh;
-  }
+  // .main-card {
+  //   max-height: 84vh;
+  // }
   .mood-card .checkboxes {
-    height: 42px;
+    height: 33px;
     label {
       font-size: 15px;
     }
   }
   .movies-card {
     width: 85%;
-  }
-}
-
-// Adaptation sur Galaxy
-@media (max-width: 280px) {
-  .home-image-container {
-    top: -229px;
-    right: -112px;
-    transform: rotate(340deg);
-    width: 146%;
-  }
-  .home-content {
-    left: 4%;
-    top: 325px;
-  }
-  .main-card {
-    max-height: 86vh;
-    width: 260px;
-    margin-bottom: 40px;
-  }
-  .main-card.card-platform {
-    width: 260px;
-    .mb-5 {
-      margin-bottom: 0.5rem !important;
-    }
-  }
-  .main-card.card-mood {
-    width: 260px;
-    height: 705px;
-    margin-left: auto;
-    margin-right: auto;
-    .mb-4 {
-      margin-bottom: 0 !important;
-    }
-  }
-  .mood-card .checkboxes {
-    height: 43px;
-    width: 227px;
-    label {
-      font-size: 15px;
-    }
   }
 }
 
@@ -344,6 +308,47 @@
     width: 30px;
     p {
       font-size: 14px;
+    }
+  }
+}
+
+// Adaptation sur Galaxy
+@media (max-width: 280px) {
+  .home-image-container {
+    top: -229px;
+    right: -112px;
+    transform: rotate(340deg);
+    width: 146%;
+  }
+  .home-content {
+    left: 4%;
+    top: 325px;
+  }
+  .main-card {
+    max-height: 86vh;
+    width: 260px;
+    margin-bottom: 40px;
+  }
+  .main-card.card-platform {
+    width: 260px;
+    .mb-5 {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .main-card.card-mood {
+    width: 260px;
+    height: 705px;
+    margin-left: auto;
+    margin-right: auto;
+    .mb-4 {
+      margin-bottom: 0 !important;
+    }
+  }
+  .mood-card .checkboxes {
+    height: 43px;
+    width: 227px;
+    label {
+      font-size: 15px;
     }
   }
 }
