@@ -8,28 +8,6 @@
   font-family: 'Hind', sans-serif;
 }
 
-.home-image-container {
-  position: fixed;
-  height: 100vh;
-  top: 0px;
-  right: 0px;
-  width: 55%;
-  background-image: asset-url('ImageHome4lines.png');
-  background-size: cover;
-  background-position: center;
-
-
-}
-
-.home-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  flex-direction: column !important;
-  left: 18%;
-  top: 180px;
-}
 // Set le container de la question à une height pour ne pas scroller
 .custom-container {
   display: flex;
@@ -46,6 +24,26 @@
     text-align: center;
   }
 
+  .home-image-container {
+    position: fixed;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
+    width: 55%;
+    background-image: asset-url('ImageHome4lines.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column !important;
+    left: 18%;
+    top: 180px;
+  }
   .platform-slide-dots {
     width:  55%;
     margin-left: auto;
