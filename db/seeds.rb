@@ -21,33 +21,9 @@ def scrapping_method(platform, page_number)
   http.request(request)
 end
 
-platform = 'netflix'
-page_number = 477
+# platform = 'netflix'
 # page_number = 477
-response = scrapping_method(platform, page_number)
-while JSON.parse(response.read_body)["total_pages"] > page_number
-  JSON.parse(response.read_body)["results"].each do |movie|
-    if Movie.find_by(title: movie["title"], year: movie["year"])
-      db_movie = Movie.find_by(title: movie["title"])
-      puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
-      db_movie.update(link: db_movie.link << movie["streamingInfo"][platform].first[1]["link"]) unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
-      db_movie.update(platforms: db_movie.platforms << "netflix") unless db_movie.platforms.include? "netflix"
-    else
-      new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
-      movie["genres"].each do |genre|
-        MovieGenre.create!(movie_id: new_movie.id, genre_id: Genre.find_by(api_genre_id: genre).id)
-      end
-    end
-  end
-  page_number += 1
-  response = scrapping_method(platform, page_number)
-  puts page_number
-end
-
-#Movies Prime
-# puts 'starting seed'
-# platform = 'prime'
-# page_number = 140
+# # page_number = 477
 # response = scrapping_method(platform, page_number)
 # while JSON.parse(response.read_body)["total_pages"] > page_number
 #   JSON.parse(response.read_body)["results"].each do |movie|
@@ -55,7 +31,7 @@ end
 #       db_movie = Movie.find_by(title: movie["title"])
 #       puts movie["streamingInfo"][platform].first[1]["link"] unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
 #       db_movie.update(link: db_movie.link << movie["streamingInfo"][platform].first[1]["link"]) unless db_movie.link.include? movie["streamingInfo"][platform].first[1]["link"]
-#       db_movie.update(platforms: db_movie.platforms << "prime") unless db_movie.platforms.include? "prime"
+#       db_movie.update(platforms: db_movie.platforms << "netflix") unless db_movie.platforms.include? "netflix"
 #     else
 #       new_movie = Movie.create!(title: movie["title"], actors: movie["cast"], directors: movie["significants"], synopsis: movie["overview"], rating: movie["imdbRating"], year: movie["year"],platforms: movie["streamingInfo"].first[0].split,duration: movie["runtime"], number_of_ratings: movie["imdbVoteCount"],link: movie["streamingInfo"].first[1].first[1]["link"].split,poster: movie["posterURLs"]["original"])
 #       movie["genres"].each do |genre|
@@ -63,12 +39,12 @@ end
 #       end
 #     end
 #   end
-
 #   page_number += 1
 #   response = scrapping_method(platform, page_number)
 #   puts page_number
 # end
-# puts 'done'
+
+#Movies Prime
 
 # #Movies Apple TV
 # puts 'starting seed'
