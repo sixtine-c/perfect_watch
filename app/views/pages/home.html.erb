@@ -38,7 +38,7 @@
           <i class="far fa-circle fa-xs p-1 dot" id='4' data-action='click->changing-slide#goTo' data-changing-slide-step-param="4"></i>
         </div>
           <div class="btn-suivant text-end">
-            <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span><span>Next question</span></span></button>
+            <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span><span>Mood</span></span></button>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
           </div>
           <div class="d-flex justify-content-between">
             <div class="btn-suivant text-start">
-              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Update my platforms</span></button>
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Platform</span></button>
             </div>
             <div>
               <i class="far fa-circle fa-xs p-1 dot" id="1" data-action='click->changing-slide#goTo' data-changing-slide-step-param="1"></i>
@@ -66,7 +66,7 @@
               <i class="far fa-circle fa-xs p-1 dot" id="4" data-action='click->changing-slide#goTo' data-changing-slide-step-param="4"></i>
             </div>
             <div class="btn-suivant text-end">
-              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span>Next question</span></button>
+              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span>Duration</span></button>
             </div>
         </div>
       </div>
@@ -76,13 +76,13 @@
             <h2 class='mb-4'>How much time do you have?</h2>
             <div class="m-0 platforms d-flex justify-content-between">
               <div>
-                <%= f.input :duration, label: '', as: :radio_buttons, input_html: {class: 'otherbox'}, item_wrapper_class: 'btn-general', collection: [['Less than 2 hours', true], ['More than 2 hours', false]] %>
+                <%= f.input :duration, label: '', as: :radio_buttons, input_html: {class: 'otherbox'}, item_wrapper_class: 'btn-general', collection: [['Not so much 🤷', true], ['A lot 💅', false]] %>
               </div>
             </div>
           </div>
           <div class="d-flex justify-content-between">
             <div class="btn-suivant text-start">
-              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Previous question</span></button>
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Mood</span></button>
             </div>
               <div>
                 <i class="far fa-circle fa-xs p-1 dot" id="1" data-action='click->changing-slide#goTo' data-changing-slide-step-param="1"></i>
@@ -91,7 +91,7 @@
                 <i class="far fa-circle fa-xs p-1 dot" id="4"  data-action='click->changing-slide#goTo' data-changing-slide-step-param="4"></i>
               </div>
             <div class="btn-suivant text-end">
-              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span>Next question</span></button>
+              <button type='button' class='btn-question effect-next', data-action='click->changing-slide#nextquestion'><span>Fame</span></button>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@
           </div>
           <div class="d-flex justify-content-between">
             <div class="btn-suivant text-start">
-              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Previous question</span></button>
+              <button type='button' class='btn-question effect-previous', data-action='click->changing-slide#previousquestion'><span>Duration</span></button>
             </div>
             <div>
               <i class="far fa-circle fa-xs p-1 dot" id="1" data-action='click->changing-slide#goTo' data-changing-slide-step-param="1"></i>
