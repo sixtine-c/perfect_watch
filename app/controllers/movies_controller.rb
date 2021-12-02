@@ -1,10 +1,9 @@
 class MoviesController < ApplicationController
-
   include Searchable
 
   def index
     params["search"]["platform"].delete_at(0)
-     @platforms = params["search"]["platform"].map do |platform|
+    @platforms = params["search"]["platform"].map do |platform|
       case platform
       when "prime video"
         "prime"
@@ -18,8 +17,11 @@ class MoviesController < ApplicationController
     # @platforms = params["search"]["platform"]
     params["search"]["duration"] == "true" ? @duration = 119 : @duration = 121
     params["search"]["famous"] == "true" ? @type = "blockbuster" : @type = "pépite"
-    @mood = params["search"]["random_mood"].present? ? Mood.find_by(name: moodname(params["search"]["random_mood"])) : Mood.find_by(name: params["search"]["mood"])
+    @mood = params["search"]["random_mood"].present? || (params["search"]["mood"] == "" && params["search"]["random_mood"] == "") ? Mood.find_by(name: moodname(params["search"]["random_mood"])) : Mood.find_by(name: params["search"]["mood"])
     # filter on genres via mood
+    if @mood.nil?
+      @mood = Mood.find_by(name: ['Time flies', "Beer & Pizza", "Cold Blood", "Kids friendly", "I'm Going on an Adventure !", "Cocooning", "Ben & Jerry's (& Cry)", "Not ready to sleep"].sample)
+    end
     @mood_class = moodclass(@mood)
     @movies_global = filter_movie_by_genre_through_mood(@mood)
     # filter on platforms
@@ -29,11 +31,10 @@ class MoviesController < ApplicationController
     @movies_by_duration = filter_movies_by_duration(@duration)
 
     # filter on type (blockbuster / pépite)
-    movies_by_type =filter_movies_by_type(@type)
+    movies_by_type = filter_movies_by_type(@type)
     # mini algorithm
 
     @movies = filter_10_movies_with_7_top(movies_by_type)
-
 
     @movie = filter_1_movie(movies_by_type)
 
@@ -41,9 +42,7 @@ class MoviesController < ApplicationController
       format.html # Follow regular flow of Rails
       format.text { render partial: 'tenmovies.html', locals: { movies: @movies } }
     end
-
   end
-
 
   def moodclass(mood)
     return "beer-party" if mood.name == "Beer & Pizza"
